@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
-const { sequelize, DataTypes } = require('sequelize');
+// const { sequelize, DataTypes } = require('sequelize');
 
-module.exports = function User() {
+module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     'User',
     {

@@ -5,10 +5,10 @@
 
 # ######notes: will liekly have to figure out how to get env variables to update the nameof the app,
 
-#build frontend react
-echo "Making the React frontend Build"
-npm run build
-echo "...completed"
+# #build frontend react
+# echo "Making the React frontend Build"
+# npm run build
+# echo "...completed"
 
 # PROJECT_NAME="$(npm run project-name)"
 # STAGING_NAME="${PROJECT_NAME}-staging"
