@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const eventsRoutes = require('./events');
+const sprintsRoutes = require('./sprints');
 
-router.use('/events', eventsRoutes);
+router.use('/sprints', sprintsRoutes);
 
 module.exports = router;
