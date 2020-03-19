@@ -1,5 +1,5 @@
 {
-  "name": "charles",
+  "name": "MERNolithic_sql",
   "version": "1.0.0",
   "description": "",
   "main": "backend/server.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charlesmbrady/charles.git"
+    "url": "git+https://github.com/charlesmbrady/MERNolithic_sql.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/charlesmbrady/charles/issues"
+    "url": "https://github.com/charlesmbrady/MERNolithic_sql/issues"
   },
-  "homepage": "https://github.com/charlesmbrady/charles#readme",
+  "homepage": "https://github.com/charlesmbrady/MERNolithic_sql#readme",
   "devDependencies": {},
   "dependencies": {
     "express": "^4.17.1"
