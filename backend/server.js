@@ -1,7 +1,7 @@
 const express = require('express'); // Require express
 const app = express(); // Make app with express
 const PORT = process.env.PORT || 8080; // Set port to .env or default
-const dbConnection = require('./db/index.js'); // Require the database connection for server to access
+const db = require('./models/index.js'); // Require the database connection for server to access
 const routes = require('./routes'); // Require the routes to use for api endpoints
 const path = require('path'); // Lets us use __dirname as the relative filepath from this file
 const cookieParser = require('cookie-parser'); // for the auth token
@@ -46,5 +46,19 @@ app.use(function(err, req, res, next) {
     );
 });
 
-console.log(`Starting the server in ${process.env.NODE_ENV} mode...`);
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); // Turn server on
+const syncOptions = {
+  force: process.env.FORCE_SYNC === 'true'
+};
+
+if (app.get('env') === 'test') {
+  syncOptions.force = true;
+}
+
+db.sequelize.sync(syncOptions).then(() => {
+  // if (app.get('env') !== 'test' || syncOptions.force === 'true') {
+  //   require('./db/seed')(db);
+  // }
+
+  console.log(`Starting the server in ${process.env.NODE_ENV} mode...`);
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); // Turn server on
+});

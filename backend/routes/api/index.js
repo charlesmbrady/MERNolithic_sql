@@ -1,6 +1,6 @@
-const router = require('express').Router();
-const sprintsRoutes = require('./sprints');
+// const router = require('express').Router();
+// const sprintsRoutes = require('./sprints');
 
-router.use('/sprints', sprintsRoutes);
+// router.use('/sprints', sprintsRoutes);
 
-module.exports = router;
+// module.exports = router;
