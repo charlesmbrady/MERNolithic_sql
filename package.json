@@ -1,0 +1,28 @@
+{
+  "name": "charles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node backend/server.js",
+    "start-dev": "NODE_ENV=development node backend/server.js",
+    "start-frontend": "cd frontend && start-dev",
+    "start-backend": "cd backend && node server.js",
+    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesmbrady/charles.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlesmbrady/charles/issues"
+  },
+  "homepage": "https://github.com/charlesmbrady/charles#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
