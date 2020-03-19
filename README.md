@@ -6,6 +6,7 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
 
 Starting with React/Webpack/Babel from scratch - https://www.valentinog.com/blog/babel/
 Using CSS Grids - https://css-tricks.com/snippets/css/complete-guide-grid/
+Help with SQL associations and file seperation - https://github.com/sequelize/sequelize/issues/4578
 
 ## Getting started
 
