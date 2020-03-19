@@ -1,8 +1,10 @@
+require('dotenv').config();
+
 module.exports = {
   development: {
     username: process.env.SEQUELIZE_USER,
     password: process.env.SEQUELIZE_PASSWORD,
-    database: 'project2_dev',
+    database: 'mernolithic_dev',
     details: {
       host: process.env.SEQUELIZE_HOST,
       port: 3306,
@@ -12,7 +14,7 @@ module.exports = {
   test: {
     username: process.env.SEQUELIZE_USER,
     password: process.env.SEQUELIZE_PASSWORD,
-    database: 'project2_test',
+    database: 'mernolithic_test',
     details: {
       host: process.env.SEQUELIZE_HOST,
       port: 3306,
