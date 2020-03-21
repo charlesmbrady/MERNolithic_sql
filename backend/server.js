@@ -13,9 +13,13 @@ app.use(express.urlencoded({ limit: '100mb', extended: true }));
 app.use(express.json({ limit: '100mb' }));
 app.use(cookieParser());
 
-app.get('/api/healthcheck', (req, res) => {
+app.get('/healthcheck', (req, res) => {
   res.send('App is running!');
 });
+
+// app.get('/api/healthcheck', (req, res) => {
+//   res.send('App is running!');
+// });
 
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test') {
   // Serve any static files

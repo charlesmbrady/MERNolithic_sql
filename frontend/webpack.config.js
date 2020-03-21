@@ -2,19 +2,20 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 require('css-loader');
 require('style-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+require('dotenv').config();
 
 module.exports = {
+  mode: process.env.NODE_ENV,
+  devtool: 'inline-source-map',
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        pathRewrite: { '^/api': '' }
+      }
+    }
+  },
   module: {
-    mode: 'development',
-    devtool: 'inline-source-map',
-    // devServer: {
-    //   proxy: [
-    //     {
-    //       context: ['/auth', '/api'],
-    //       target: 'http://localhost:8080'
-    //     }
-    //   ]
-    // },
     rules: [
       {
         test: /\.(js|jsx)$/,
