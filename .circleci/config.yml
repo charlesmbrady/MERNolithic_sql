@@ -49,8 +49,8 @@ jobs:
           key: v1-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
 
       - run:
-          name: Run frontend
-          command: cd frontend && yarn start-dev
+          name: Build frontend
+          command: cd frontend && yarn build
 
       - persist_to_workspace:
           root: ~/
