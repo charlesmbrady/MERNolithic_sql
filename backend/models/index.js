@@ -23,7 +23,7 @@ if (config.use_env_variable) {
     // process.env[config.use_env_variable],
     config.details.database,
     config.details.username,
-    congit.details.password,
+    config.details.password,
     config.details
   );
 } else {
