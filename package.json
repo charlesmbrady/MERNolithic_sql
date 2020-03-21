@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/charlesmbrady/MERNolithic_sql#readme",
   "devDependencies": {
-    "concurrently": "^5.1.0",
     "cypress": "^4.2.0",
     "nodemon": "^2.0.2"
   },
