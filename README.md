@@ -28,7 +28,9 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
 
 6. You can run the application locally by running command `yarn start-dev` from the project root to start the server on localhost:8080, and then `cd frontend` in another terminal and run `yarn start-dev` to start the Webpack dev server for the React frontend which you can view at localhost:8081
 
-7. To setup circleci, first go to your dashboard on circleci.com. Click "Add Project" and choose the repo for your project.
+7. To setup circleci, first go to your dashboard on circleci.com. Click "Add Project" and choose the repo for your project. Then select "Build Now" to start building the project.
+
+8. to rename your Heroku staging and production apps, use command `heroku apps:rename --remote staging newname`. Insert the desired name of the app instead of "newname" and you can select the "production" remote instead of staging to rename produciton as well
 
 ## Deploying to Heroku
 
