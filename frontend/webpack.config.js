@@ -1,16 +1,26 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-require("css-loader");
-require("style-loader");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+require('css-loader');
+require('style-loader');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   module: {
+    mode: 'development',
+    devtool: 'inline-source-map',
+    // devServer: {
+    //   proxy: [
+    //     {
+    //       context: ['/auth', '/api'],
+    //       target: 'http://localhost:8080'
+    //     }
+    //   ]
+    // },
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       },
       {
@@ -18,7 +28,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
             options: {
               attributes: true
             }
@@ -27,36 +37,36 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style-loader"
+        loader: 'style-loader'
       },
       {
         test: /\.css$/,
-        loader: "css-loader"
+        loader: 'css-loader'
       },
 
       {
         test: /\.(png|jpe?g|gif)$/i,
-        loader: "file-loader",
+        loader: 'file-loader',
         options: {
-          outputPath: "images"
+          outputPath: 'images'
         }
       },
       {
         test: /\.(mp4|webm)$/i,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            outputPath: "videos"
+            outputPath: 'videos'
           }
         }
       },
       {
         test: /\.pdf$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
             // name: "[name].[contenthash].[ext]",
-            outputPath: "assets/docs/"
+            outputPath: 'assets/docs/'
             // publicPath: "assets/docs/"
           }
         }
@@ -65,11 +75,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: './src/index.html',
+      filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css"
+      filename: 'style.css'
     })
   ]
 };

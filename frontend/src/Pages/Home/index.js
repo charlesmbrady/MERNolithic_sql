@@ -1,5 +1,6 @@
 import './style.css';
 import React from 'react';
+import API from '../../Utilities/API';
 
 export default function Home() {
   const healthcheck = () => {
@@ -12,8 +13,8 @@ export default function Home() {
 
   return (
     <div>
-      <div>Put Content Here</div>
-      <div>Put Content Here</div>
+      Healthcheck (see console).
+      <button onClick={() => healthcheck()}>Get server response...</button>
     </div>
   );
 }

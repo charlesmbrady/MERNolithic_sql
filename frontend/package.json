@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --mode production",
     "start-dev": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production --display-modules"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
