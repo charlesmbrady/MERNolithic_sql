@@ -8,6 +8,7 @@ module.exports = {
   mode: process.env.NODE_ENV,
   devtool: 'inline-source-map',
   devServer: {
+    port: 8081,
     proxy: {
       '/api': {
         target: 'http://localhost:8080',
