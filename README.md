@@ -28,6 +28,8 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
 
 6. You can run the application locally by running command `yarn start-dev` from the project root to start the server on localhost:8080, and then `cd frontend` in another terminal and run `yarn start-dev` to start the Webpack dev server for the React frontend which you can view at localhost:8081
 
+7. To setup circleci, first go to your dashboard on circleci.com. Click "Add Project" and choose the repo for your project.
+
 ## Deploying to Heroku
 
 - After running the `initialize.sh` script, you will have a Staging and a Production environment already deployed to Heroku.

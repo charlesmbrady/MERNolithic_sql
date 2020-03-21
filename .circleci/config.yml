@@ -2,8 +2,8 @@
 # testing ci
 defaults: &defaults
   docker:
-    - image: circleci/openjdk:8u171-jdk-node-browsers
-    - image: circleci/mongo:4.2
+    - image: circleci/node:latest
+    - image: circleci/mysql:8.0.4
 
   working_directory: ~/MERNolithic_sql
 
@@ -121,3 +121,21 @@ workflows:
       # - ui_tests:
       #     requires:
       #       - build
+      # RECOMMENDED NODE config
+      # version: 2.1
+      # orbs:
+      #   node: circleci/node@1.1.6
+      # jobs:
+      #   build-and-test:
+      #     executor:
+      #       name: node/default
+      #     steps:
+      #       - checkout
+      #       - node/with-cache:
+      #           steps:
+      #             - run: npm install
+      #             - run: npm test
+      # workflows:
+      #     build-and-test:
+      #       jobs:
+      #         - build-and-test
