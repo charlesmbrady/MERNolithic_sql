@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div>
-      Healthcheck (see console).
+      Healthcheck asdf(see console).
       <button onClick={() => healthcheck()}>Get server response...</button>
     </div>
   );
