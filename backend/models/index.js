@@ -20,7 +20,7 @@ config.details.operatorsAliases = {
 
 if (process.env[config.use_env_variable]) {
   sequelize = new Sequelize(
-    process.env[cofig.use_env_variable],
+    process.env[config.use_env_variable],
     {
       port: 3306,
       dialect: 'mysql',
