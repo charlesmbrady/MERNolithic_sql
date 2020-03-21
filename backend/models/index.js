@@ -18,13 +18,18 @@ config.details.operatorsAliases = {
   $like: Sequelize.Op.like
 };
 
-if (config.use_env_variable) {
+if (process.env[config.use_env_variable]) {
   sequelize = new Sequelize(
+    process.env[cofig.use_env_variable],
+    {
+      port: 3306,
+      dialect: 'mysql',
+      database: config.details.database,
+      username: config.details.username,
+      password: config.details.password,
+      host: config.details.host
+    }
     // process.env[config.use_env_variable],
-    config.details.database,
-    config.details.username,
-    config.details.password,
-    config.details
   );
 } else {
   sequelize = new Sequelize(
