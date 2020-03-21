@@ -42,14 +42,14 @@ echo "...completed"
 #staging
 echo "Provisioning database for staging environment..."
 # heroku addons:create mongolab --remote staging
-heroku addons:create jawsdb-maria:kitefin --remote staging
+heroku addons:create jawsdb-mysql:kitefin --remote staging
 
 echo "...completed"
 
 # # #production
 # echo "Provisioning database for production environment..."
 # heroku addons:create mongolab --remote production
-heroku addons:create jawsdb-maria:kitefin --remote production
+heroku addons:create jawsdb-mysql:kitefin --remote production
 # echo "...completed"
 
 # #initial deploys ########################################
