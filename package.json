@@ -5,10 +5,8 @@
   "main": "backend/server.js",
   "scripts": {
     "start": "NODE_ENV=production node backend/server.js",
-    "start-dev": "NODE_ENV=development node backend/server.js",
+    "start-dev": "NODE_ENV=development nodemon backend/server.js",
     "start-test": "NODE_ENV=test node backend/server.js",
-    "start-frontend": "cd frontend && start-dev",
-    "start-backend": "cd backend && node server.js",
     "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "repository": {
@@ -22,7 +20,10 @@
     "url": "https://github.com/charlesmbrady/MERNolithic_sql/issues"
   },
   "homepage": "https://github.com/charlesmbrady/MERNolithic_sql#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  },
   "dependencies": {
     "bcrypt": "^4.0.1",
     "bcryptjs": "^2.4.3",
