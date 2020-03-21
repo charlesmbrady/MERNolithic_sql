@@ -22,16 +22,15 @@ module.exports = {
     }
   },
   production: {
-    use_env_variable:
-      'mysql://oku92haxwe074gx6:pt7uvw59en726iba@u3r5w4ayhxzdrw87.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/pg69vfez19z9ktej',
-    url:
-      'mysql://oku92haxwe074gx6:pt7uvw59en726iba@u3r5w4ayhxzdrw87.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/pg69vfez19z9ktej',
+    use_env_variable: 'JAWSDB_MARIA_URL',
+    // url:
+    //   'mysql://oku92haxwe074gx6:pt7uvw59en726iba@u3r5w4ayhxzdrw87.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/pg69vfez19z9ktej',
     details: {
-      host: 'u3r5w4ayhxzdrw87.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-      username: 'oku92haxwe074gx6',
-      password: 'pt7uvw59en726iba',
-      database: 'pg69vfez19z9ktej',
-      port: 3306,
+      // host: 'u3r5w4ayhxzdrw87.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+      // username: 'oku92haxwe074gx6',
+      // password: 'pt7uvw59en726iba',
+      // database: 'pg69vfez19z9ktej',
+      // port: 3306,
       dialect: 'mysql'
     }
   }
