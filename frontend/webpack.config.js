@@ -9,6 +9,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     port: 8081,
+    hot: true,
     historyApiFallback: true,
     proxy: {
       '/api': {
