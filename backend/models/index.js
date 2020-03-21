@@ -20,16 +20,16 @@ config.details.operatorsAliases = {
 
 if (process.env[config.use_env_variable]) {
   sequelize = new Sequelize(
-    process.env[config.use_env_variable],
-    {
-      port: 3306,
-      dialect: 'mysql',
-      database: config.details.database,
-      username: config.details.username,
-      password: config.details.password,
-      host: config.details.host
-    }
-    // process.env[config.use_env_variable],
+    process.env[config.use_env_variable]
+    // {
+    //   port: 3306,
+    //   dialect: 'mysql',
+    //   database: config.details.database,
+    //   username: config.details.username,
+    //   password: config.details.password,
+    //   host: config.details.host
+    // }
+    // // process.env[config.use_env_variable],
   );
 } else {
   sequelize = new Sequelize(
