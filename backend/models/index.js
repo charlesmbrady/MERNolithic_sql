@@ -29,7 +29,6 @@ if (process.env[config.use_env_variable]) {
     //   password: config.details.password,
     //   host: config.details.host
     // }
-    // // process.env[config.use_env_variable],
   );
 } else {
   sequelize = new Sequelize(
