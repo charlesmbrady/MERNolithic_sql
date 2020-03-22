@@ -3,7 +3,7 @@
   "reporter": "./node_modules/mochawesome/src/mochawesome.js",
   "video": false,
   "reporterOptions": {
-    "reportDir": "cypress/reports/*",
+    "reportDir": "cypress/reports/",
     "overwrite": false,
     "html": false,
     "json": true
