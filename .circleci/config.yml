@@ -24,7 +24,7 @@ jobs:
 
       - run:
           name: Install general dependencies
-          command: yarn install
+          command: npm install
 
       - save_cache:
           name: Save general packages cache
@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: Install frontend packages
-          command: cd frontend && yarn install
+          command: cd frontend && npm install
 
       - save_cache:
           paths:
@@ -57,7 +57,7 @@ jobs:
 
       - run:
           name: Install backend packages
-          command: cd backend && yarn install
+          command: cd backend && npm install
 
       - save_cache:
           paths:
