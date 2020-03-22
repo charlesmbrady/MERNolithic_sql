@@ -4,6 +4,11 @@ defaults: &defaults
   docker:
     - image: circleci/node:latest
     - image: circleci/mysql:8.0.4
+      environment:
+        MYSQL_ROOT_PASSWORD: 12345678
+        MYSQL_DATABASE: mernolithic_test
+        MYSQL_USER: root
+        MYSQL_PASSWORD: 12345678
     - image: cypress/base:8
 
   working_directory: ~/MERNolithic_sql
@@ -19,9 +24,9 @@ jobs:
       - restore_cache:
           name: Restore backend/general packages
           keys:
-            - v5-dependencies-{{.Branch}}-{{ checksum "package.json" }}
-            - v5-dependencies-{{.Branch}}-
-            - v5-dependencies-
+            - v5-general-dependencies-{{.Branch}}-{{ checksum "package.json" }}
+            - v5-general-dependencies-{{.Branch}}-
+            - v5-general-dependencies-
 
       - run:
           name: Install general dependencies
@@ -31,14 +36,14 @@ jobs:
           name: Save general packages cache
           paths:
             - ~/node_modules
-          key: v5-dependencies-{{.Branch}}-{{ checksum "package.json" }}
+          key: v5-general-dependencies-{{.Branch}}-{{ checksum "package.json" }}
 
       - restore_cache:
           name: Restore frontend packages
           keys:
-            - v5-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
-            - v5-dependencies-{{.Branch}}-
-            - v5-dependencies-
+            - v5-frontend-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
+            - v5-frontend-dependencies-{{.Branch}}-
+            - v5-frontend-dependencies-
 
       - run:
           name: Install frontend packages
@@ -47,14 +52,14 @@ jobs:
       - save_cache:
           paths:
             - ~/frontend/node_modules
-          key: v5-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
+          key: v5-frontend-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
 
       - restore_cache:
           name: Restore backend packages
           keys:
-            - v5-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
-            - v5-dependencies-{{.Branch}}-
-            - v5-dependencies-
+            - v5-backend-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
+            - v5-backend-dependencies-{{.Branch}}-
+            - v5-backend-dependencies-
 
       - run:
           name: Install backend packages
@@ -63,7 +68,7 @@ jobs:
       - save_cache:
           paths:
             - ~/backend/node_modules
-          key: v5-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
+          key: v5--backend-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
 
       - run:
           name: Build frontend
