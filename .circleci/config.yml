@@ -48,12 +48,12 @@ jobs:
             - ~/frontend/.cache/node_modules
           key: v1-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
 
-          - restore_cache:
-            name: Restore backend packages
-            keys:
-              - v1-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
-              - v1-dependencies-{{.Branch}}-
-              - v1-dependencies-
+      - restore_cache:
+          name: Restore backend packages
+          keys:
+            - v1-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
+            - v1-dependencies-{{.Branch}}-
+            - v1-dependencies-
   
         - run:
             name: Install backend packages
