@@ -107,9 +107,9 @@ jobs:
       - store_artifacts:
           path: cypress/reports/integration/public
       - store_artifacts:
-          path: cypress/videos
+          path: cypress/reports/integration/public/videos
       - store_artifacts:
-          path: cypress/screenshots
+          path: cypress/reports/integration/public/screenshots
       # - run:
       #     name: Run backend
       #     command: npm run backend
