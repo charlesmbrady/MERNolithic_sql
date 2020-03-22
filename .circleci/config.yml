@@ -93,6 +93,8 @@ jobs:
   #         command: npm run backend-unit-tests
   cypress_tests:
     <<: *defaults
+    docker:
+      - image: cypress/base:8
     steps:
       - attach_workspace:
           at: ~/
