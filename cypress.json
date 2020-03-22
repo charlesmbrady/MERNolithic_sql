@@ -1,6 +1,12 @@
 {
   "baseUrl": "http://localhost:8081",
   "reporter": "./node_modules/mochawesome/src/mochawesome.js",
+  "env": {
+    "apiUrl": "http://localhost:8081",
+    "codeCoverage": {
+      "url": "http://localhost:8080/__coverage__"
+    }
+  },
   "reporterOptions": {
     "reportDir": "cypress/reports/integration/reports/mocha",
     "quiet": true,

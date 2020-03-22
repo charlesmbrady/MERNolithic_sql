@@ -11,4 +11,8 @@ describe('coverage2', function() {
   it('should pass', function() {
     expect(1).to.equal(1);
   });
+
+  it('has text about healthcheck', () => {
+    cy.get('button').should('have.text', 'Healthcheck asdf(see console).');
+  });
 });
