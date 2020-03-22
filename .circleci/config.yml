@@ -22,64 +22,64 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          name: Restore backend/general packages
-          keys:
-            - v5-general-dependencies-{{.Branch}}-{{ checksum "package.json" }}
-            - v5-general-dependencies-{{.Branch}}-
-            - v5-general-dependencies-
+      # - restore_cache:
+      #     name: Restore backend/general packages
+      #     keys:
+      #       - v5-general-dependencies-{{.Branch}}-{{ checksum "package.json" }}
+      #       - v5-general-dependencies-{{.Branch}}-
+      #       - v5-general-dependencies-
 
       - run:
           name: Install general dependencies
           command: npm install
 
-      - save_cache:
-          name: Save general packages cache
-          paths:
-            - ~/node_modules
-          key: v5-general-dependencies-{{.Branch}}-{{ checksum "package.json" }}
+      # - save_cache:
+      #     name: Save general packages cache
+      #     paths:
+      #       - ~/node_modules
+      #     key: v5-general-dependencies-{{.Branch}}-{{ checksum "package.json" }}
 
-      - restore_cache:
-          name: Restore frontend packages
-          keys:
-            - v5-frontend-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
-            - v5-frontend-dependencies-{{.Branch}}-
-            - v5-frontend-dependencies-
+      # - restore_cache:
+      #     name: Restore frontend packages
+      #     keys:
+      #       - v5-frontend-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
+      #       - v5-frontend-dependencies-{{.Branch}}-
+      #       - v5-frontend-dependencies-
 
       - run:
           name: Install frontend packages
           command: cd frontend && npm install
 
-      - save_cache:
-          paths:
-            - ~/frontend/node_modules
-          key: v5-frontend-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
+      # - save_cache:
+      #     paths:
+      #       - ~/frontend/node_modules
+      #     key: v5-frontend-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
 
-      - restore_cache:
-          name: Restore backend packages
-          keys:
-            - v5-backend-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
-            - v5-backend-dependencies-{{.Branch}}-
-            - v5-backend-dependencies-
+      # - restore_cache:
+      #     name: Restore backend packages
+      #     keys:
+      #       - v5-backend-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
+      #       - v5-backend-dependencies-{{.Branch}}-
+      #       - v5-backend-dependencies-
 
       - run:
           name: Install backend packages
           command: cd backend && npm install
 
-      - save_cache:
-          paths:
-            - ~/backend/node_modules
-          key: v5--backend-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
+      # - save_cache:
+      #     paths:
+      #       - ~/backend/node_modules
+      #     key: v5--backend-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
 
       - run:
           name: Build frontend
           command: cd frontend && yarn build
 
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - MERNolithic_sql
-            - .cache
+      # - persist_to_workspace:
+      #     root: ~/
+      #     paths:
+      #       - MERNolithic_sql
+      #       - .cache
   # js_unit_tests:
   #   <<: *defaults
   #   steps:
@@ -102,14 +102,21 @@ jobs:
     <<: *defaults
 
     steps:
-      - attach_workspace:
-          at: ~/
+      # - attach_workspace:
+      #     at: ~/
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            yarn install
+            cd frontend && yarn install
+            cd backend && yarn install
+
+          # sudo apt-get update
+          # sudo apt-get install libxtst6
       - run:
           name: Run cypress tests
-          command: |
-            sudo apt-get update
-            sudo apt-get install libxtst6
-            yarn test:coverage
+          command: yarn test:coverage
       - store_artifacts:
           path: coverage/lcov-report
 
@@ -165,9 +172,9 @@ workflows:
       - coverage_test:
           requires:
             - build
-      - cypress_tests:
-          requires:
-            - build
+      # - cypress_tests:
+      #     requires:
+      #       - build
       # - js_unit_tests:
       #     requires:
       #       - build
