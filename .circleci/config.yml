@@ -18,9 +18,9 @@ jobs:
       - restore_cache:
           name: Restore backend/general packages
           keys:
-            - v1-dependencies-{{.Branch}}-{{ checksum "package.json" }}
-            - v1-dependencies-{{.Branch}}-
-            - v1-dependencies-
+            - v2-dependencies-{{.Branch}}-{{ checksum "package.json" }}
+            - v2-dependencies-{{.Branch}}-
+            - v2-dependencies-
 
       - run:
           name: Install general dependencies
@@ -30,14 +30,14 @@ jobs:
           name: Save general packages cache
           paths:
             - ~/.cache/node_modules
-          key: v1-dependencies-{{.Branch}}-{{ checksum "package.json" }}
+          key: v2-dependencies-{{.Branch}}-{{ checksum "package.json" }}
 
       - restore_cache:
           name: Restore frontend packages
           keys:
-            - v1-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
-            - v1-dependencies-{{.Branch}}-
-            - v1-dependencies-
+            - v2-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
+            - v2-dependencies-{{.Branch}}-
+            - v2-dependencies-
 
       - run:
           name: Install frontend packages
@@ -46,14 +46,14 @@ jobs:
       - save_cache:
           paths:
             - ~/frontend/.cache/node_modules
-          key: v1-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
+          key: v2-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
 
       - restore_cache:
           name: Restore backend packages
           keys:
-            - v1-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
-            - v1-dependencies-{{.Branch}}-
-            - v1-dependencies-
+            - v2-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
+            - v2-dependencies-{{.Branch}}-
+            - v2-dependencies-
 
       - run:
           name: Install backend packages
@@ -62,7 +62,7 @@ jobs:
       - save_cache:
           paths:
             - ~/backend/.cache/node_modules
-          key: v1-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
+          key: v2-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
 
       - run:
           name: Build frontend
@@ -100,6 +100,14 @@ jobs:
           name: Run cypress tests
           command: yarn test:coverage
           # background: true
+      - store_artifacts:
+          path: coverage/lcov-report
+      - store_artifacts:
+          path: cypress/reports/integration/public
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
       # - run:
       #     name: Run backend
       #     command: npm run backend
