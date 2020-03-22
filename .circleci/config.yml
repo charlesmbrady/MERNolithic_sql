@@ -7,8 +7,9 @@ defaults: &defaults
       environment:
         MYSQL_ROOT_PASSWORD: rootpw
         MYSQL_DATABASE: mernolithic_test
-        MYSQL_USER: root
-        MYSQL_PASSWORD: rootpw
+        MYSQL_USER: user
+        MYSQL_PASSWORD: passw0rd
+        TEST_DATABASE_URL: mysql://root@localhost/circle_test
     - image: cypress/base:8
 
   working_directory: ~/MERNolithic_sql
