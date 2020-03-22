@@ -4,6 +4,7 @@ defaults: &defaults
   docker:
     - image: circleci/node:latest
     - image: circleci/mysql:8.0.4
+    - image: cypress/base:8
 
   working_directory: ~/MERNolithic_sql
 
@@ -93,8 +94,7 @@ jobs:
   #         command: npm run backend-unit-tests
   coverage_test:
     <<: *defaults
-    docker:
-      - image: cypress/base:8
+
     steps:
       - attach_workspace:
           at: ~/
@@ -103,12 +103,10 @@ jobs:
           command: yarn test:coverage
       - store_artifacts:
           path: coverage/lcov-report
-      - store_artifacts:
-          path: cypress/reports/integration/public/
+
   cypress_tests:
     <<: *defaults
-    docker:
-      - image: cypress/base:8
+
     steps:
       - attach_workspace:
           at: ~/
