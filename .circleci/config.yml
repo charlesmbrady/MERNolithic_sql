@@ -101,11 +101,10 @@ jobs:
       - run:
           name: Run cypress tests
           command: yarn test:create-reports
-          # background: true
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
-          path: cypress/reports/integration/public
+          path: cypress/reports/integration/public/*.html
       - store_artifacts:
           path: cypress/reports/integration/public/videos
       - store_artifacts:
