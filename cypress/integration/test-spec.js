@@ -11,8 +11,20 @@ describe('coverage2', function() {
   it('should pass', function() {
     expect(1).to.equal(1);
   });
+});
 
-  it('has text about healthcheck', () => {
-    cy.get('button').should('have.text', 'Healthcheck asdf(see console).');
+describe('Users', function() {
+  it('Can create user', function() {
+    // cy.visit('/');
+
+    cy.request('POST', `${Cypress.config('apiUrl')}/auth/register`, {
+      firstName: 'charles',
+      lastName: 'brady',
+      email: 'ranom',
+      password: 'myPassword1!'
+    }).then(response => {
+      // response.body is automatically serialized into JSON
+      expect(response.body).to.have.property('firstName', 'charles'); // true
+    });
   });
 });
