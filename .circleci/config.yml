@@ -18,9 +18,9 @@ jobs:
       - restore_cache:
           name: Restore backend/general packages
           keys:
-            - v2-dependencies-{{.Branch}}-{{ checksum "package.json" }}
-            - v2-dependencies-{{.Branch}}-
-            - v2-dependencies-
+            - v5-dependencies-{{.Branch}}-{{ checksum "package.json" }}
+            - v5-dependencies-{{.Branch}}-
+            - v5-dependencies-
 
       - run:
           name: Install general dependencies
@@ -30,14 +30,14 @@ jobs:
           name: Save general packages cache
           paths:
             - ~/node_modules
-          key: v4-dependencies-{{.Branch}}-{{ checksum "package.json" }}
+          key: v5-dependencies-{{.Branch}}-{{ checksum "package.json" }}
 
       - restore_cache:
           name: Restore frontend packages
           keys:
-            - v4-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
-            - v4-dependencies-{{.Branch}}-
-            - v4-dependencies-
+            - v5-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
+            - v5-dependencies-{{.Branch}}-
+            - v5-dependencies-
 
       - run:
           name: Install frontend packages
@@ -46,14 +46,14 @@ jobs:
       - save_cache:
           paths:
             - ~/frontend/node_modules
-          key: v4-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
+          key: v5-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
 
       - restore_cache:
           name: Restore backend packages
           keys:
-            - v4-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
-            - v4-dependencies-{{.Branch}}-
-            - v4-dependencies-
+            - v5-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
+            - v5-dependencies-{{.Branch}}-
+            - v5-dependencies-
 
       - run:
           name: Install backend packages
@@ -62,7 +62,7 @@ jobs:
       - save_cache:
           paths:
             - ~/backend/node_modules
-          key: v4-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
+          key: v5-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
 
       - run:
           name: Build frontend
