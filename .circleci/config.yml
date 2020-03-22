@@ -29,7 +29,7 @@ jobs:
       - save_cache:
           name: Save general packages cache
           paths:
-            - ~/.cache/node_modules
+            - ~/node_modules
           key: v3-dependencies-{{.Branch}}-{{ checksum "package.json" }}
 
       - restore_cache:
@@ -45,7 +45,7 @@ jobs:
 
       - save_cache:
           paths:
-            - ~/frontend/.cache/node_modules
+            - ~/frontend/node_modules
           key: v3-dependencies-{{.Branch}}-{{ checksum "frontend/package.json" }}
 
       - restore_cache:
@@ -61,7 +61,7 @@ jobs:
 
       - save_cache:
           paths:
-            - ~/backend/.cache/node_modules
+            - ~/backend/node_modules
           key: v3-dependencies-{{.Branch}}-{{ checksum "backend/package.json" }}
 
       - run:
@@ -104,11 +104,11 @@ jobs:
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
-          path: cypress/reports/integration/public/*.html
-      - store_artifacts:
-          path: cypress/reports/integration/public/videos
-      - store_artifacts:
-          path: cypress/reports/integration/public/screenshots
+          path: cypress/reports/integration/public/
+      # - store_artifacts:
+      #     path: cypress/reports/integration/public/videos
+      # - store_artifacts:
+      #     path: cypress/reports/integration/public/screenshots
       # - run:
       #     name: Run backend
       #     command: npm run backend
