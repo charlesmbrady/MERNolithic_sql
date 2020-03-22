@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-03-22T00:05:41.618Z",
+    "end": "2020-03-22T00:05:42.272Z",
+    "duration": 654,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a041196c-3aee-434f-81af-5b9b62eb868a",
+      "title": "",
+      "fullFile": "cypress/integration/test.js",
+      "file": "cypress/integration/test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2277bdb5-8f54-4076-976f-99fd1facbb25",
+          "title": "coverage",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "cover the tested code",
+              "fullTitle": "coverage cover the tested code",
+              "timedOut": null,
+              "duration": 625,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('button').click();",
+              "err": {},
+              "uuid": "f0ecf7e0-9a24-4c86-82a9-c13e9423a8a7",
+              "parentUUID": "2277bdb5-8f54-4076-976f-99fd1facbb25",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f0ecf7e0-9a24-4c86-82a9-c13e9423a8a7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 625,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2a9aa2aa-83ae-43ae-8aa7-a0ef3890bd18",
+          "title": "coverage2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should pass",
+              "fullTitle": "coverage2 should pass",
+              "timedOut": null,
+              "duration": 14,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(1).to.equal(1);",
+              "err": {},
+              "uuid": "434d194d-e073-4245-b837-b1e394454edb",
+              "parentUUID": "2a9aa2aa-83ae-43ae-8aa7-a0ef3890bd18",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "434d194d-e073-4245-b837-b1e394454edb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/*",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -6,3 +6,9 @@ describe('coverage', function() {
     cy.get('button').click();
   });
 });
+
+describe('coverage2', function() {
+  it('should pass', function() {
+    expect(1).to.equal(1);
+  });
+});

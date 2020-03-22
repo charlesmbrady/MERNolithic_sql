@@ -4,10 +4,26 @@
   "description": "",
   "main": "backend/server.js",
   "scripts": {
-    "start": "NODE_ENV=production node backend/server.js",
+    "start": "NODE_ENV=test node backend/server.js",
     "start-dev": "NODE_ENV=development node backend/server.js",
     "start-test": "NODE_ENV=test node backend/server.js",
-    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "clean-reports": "rm -rf cypress/results",
+    "test": "cypress run --reporter mochawesome",
+    "merge-report": "npx mochawesome-merge cypress/results/* > mochawesome.json",
+    "generate-report": "npx marge mochawesome.json",
+    "after:tests": "yarn run merge-report; yarn run generate-report",
+    "cypress-test": "yarn run clean-reports; yarn run test; yarn run after:tests",
+    "cleanup:all": "run-p cleanup:reports cleanup:evidence",
+    "cleanup:reports": "rm -fr cypress/integration/public/reports/* && rm -fr cypress/integration/reports/*",
+    "cleanup:evidence": "rm -fr cypress/integration/public/videos* && rm -fr cypress/integration/public/screenshots*",
+    "merge_reports": "mochawesome-merge 'cypress/reports/*.json' > mochawesome.json",
+    "generate_html_report": "marge mochawesome.json",
+    "test:cy": "run-p --race --silent start test-no-exit",
+    "cy:run": "cypress run",
+    "test-no-exit": "npm run cy:run --force",
+    "test:create-reports": "run-s cleanup:all test:cy merge_reports generate_html_report create-tree",
+    "create-tree": "node cypress/integration/cy-report-tree-generator.js --path=cypress/"
   },
   "repository": {
     "type": "git",
@@ -22,9 +38,15 @@
   "homepage": "https://github.com/charlesmbrady/MERNolithic_sql#readme",
   "devDependencies": {
     "cypress": "^4.2.0",
+    "mocha": "^7.1.1",
     "mochawesome": "^5.0.0",
+    "mochawesome-merge": "^4.0.3",
     "mochawesome-report-generator": "^4.1.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "directory-tree": "^2.2.4",
+    "yargs": "^15.1.0",
+    "json-beautify": "^1.1.1"
   },
   "dependencies": {
     "bcrypt": "^4.0.1",
