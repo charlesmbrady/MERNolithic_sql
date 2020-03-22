@@ -31,10 +31,7 @@ jobs:
 
       - run:
           name: Install general dependencies
-          command: |
-            npm install
-            sudo apt-get update
-            sudo apt-get install libxtst6
+          command: npm install
 
       - save_cache:
           name: Save general packages cache
@@ -109,7 +106,10 @@ jobs:
           at: ~/
       - run:
           name: Run cypress tests
-          command: yarn test:coverage
+          command: |
+            sudo apt-get update
+            sudo apt-get install libxtst6
+            yarn test:coverage
       - store_artifacts:
           path: coverage/lcov-report
 
@@ -121,7 +121,10 @@ jobs:
           at: ~/
       - run:
           name: Run cypress tests
-          command: yarn test:create-reports
+          command: |
+            sudo apt-get update
+            sudo apt-get install libxtst6
+            yarn test:create-reports
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
