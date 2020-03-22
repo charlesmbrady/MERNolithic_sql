@@ -25,7 +25,7 @@
     "after:tests": "yarn run merge-report; yarn run generate-report",
     "cypress-test": "yarn run clean-reports; yarn run test; yarn run after:tests",
     "cleanup:all": "run-p cleanup:reports cleanup:evidence",
-    "cleanup:reports": "rm -fr cypress/reports/integration/public/report* && rm -fr cypress/reports/integration/report*",
+    "cleanup:reports": "rm -fr cypress/reports/integration/public/reports* && rm -fr cypress/reports/integration/reports*",
     "cleanup:evidence": "rm -fr cypress/reports/integration/public/videos* && rm -fr cypress/reports/integration/public/screenshots*",
     "merge_reports": "mochawesome-merge --reportDir=cypress/reports/integration/reports/mocha > cypress/reports/integration/public/report.json",
     "generate_html_report": "marge cypress/reports/integration/public/report.json -f report -o cypress/reports/integration/public/",
