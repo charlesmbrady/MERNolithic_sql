@@ -103,7 +103,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-mochawesome-report/mochawesome.html
-mochawesome.json
-cypress/reports

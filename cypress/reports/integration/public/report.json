@@ -1,0 +1,293 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 3,
+    "pending": 0,
+    "failures": 3,
+    "start": "2020-03-22T06:24:57.785Z",
+    "end": "2020-03-22T06:24:57.785Z",
+    "duration": 10282,
+    "testsRegistered": 6,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f7dbd79b-674e-4c9c-9e18-ffe54955b257",
+      "title": "",
+      "fullFile": "cypress/integration/anotherTest-spec.js",
+      "file": "cypress/integration/anotherTest-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d3cc55f3-f6f0-4a32-8795-58fa4b36bcdc",
+          "title": "Test to see if element click fails",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "can click a button that is not there",
+              "fullTitle": "Test to see if element click fails can click a button that is not there",
+              "timedOut": null,
+              "duration": 4877,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.callmemaybe').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.callmemaybe', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.callmemaybe', but never found it.\n    at cypressErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:8081/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:8081/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:8081/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "1a94844d-8476-4291-86b0-70b5e9e5ea34",
+              "parentUUID": "d3cc55f3-f6f0-4a32-8795-58fa4b36bcdc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Can visit homepage",
+              "fullTitle": "Test to see if element click fails Can visit homepage",
+              "timedOut": null,
+              "duration": 128,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');",
+              "err": {},
+              "uuid": "8c621abd-ac11-4290-ab25-f4dfc59f9f63",
+              "parentUUID": "d3cc55f3-f6f0-4a32-8795-58fa4b36bcdc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8c621abd-ac11-4290-ab25-f4dfc59f9f63"
+          ],
+          "failures": [
+            "1a94844d-8476-4291-86b0-70b5e9e5ea34"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5005,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "591a5a52-09c8-449d-b015-9668b84ad8b6",
+          "title": "Test to see if 2 equals 1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should pass",
+              "fullTitle": "Test to see if 2 equals 1 should pass",
+              "timedOut": null,
+              "duration": 296,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "expect(2).to.equal(1);",
+              "err": {
+                "message": "AssertionError: expected 2 to equal 1",
+                "estack": "AssertionError: expected 2 to equal 1\n    at Context.runnable.fn (http://localhost:8081/__cypress/runner/cypress_runner.js:137870:24)\n    at callFn (http://localhost:8081/__cypress/runner/cypress_runner.js:80975:21)\n    at http://localhost:8081/__cypress/runner/cypress_runner.js:141210:28\n    at PassThroughHandlerContext.finallyHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:162020:23)\n    at PassThroughHandlerContext.tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:163582:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": "- 2\n+ 1\n"
+              },
+              "uuid": "f072aa76-f463-4d2b-837d-2974fd2980b3",
+              "parentUUID": "591a5a52-09c8-449d-b015-9668b84ad8b6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f072aa76-f463-4d2b-837d-2974fd2980b3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 296,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "688a799c-4102-4552-a14c-e812d972f70f",
+      "title": "",
+      "fullFile": "cypress/integration/test-spec.js",
+      "file": "cypress/integration/test-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1635734d-726c-4c6b-9c01-b264018f9f92",
+          "title": "coverage",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "cover the tested code",
+              "fullTitle": "coverage cover the tested code",
+              "timedOut": null,
+              "duration": 654,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('button').click();",
+              "err": {},
+              "uuid": "93b09e72-49ff-44ad-86aa-b8c303f2d26b",
+              "parentUUID": "1635734d-726c-4c6b-9c01-b264018f9f92",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "93b09e72-49ff-44ad-86aa-b8c303f2d26b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 654,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "fb090338-f056-4a84-8fd4-5c7cadc7191f",
+          "title": "coverage2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should pass",
+              "fullTitle": "coverage2 should pass",
+              "timedOut": null,
+              "duration": 21,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(1).to.equal(1);",
+              "err": {},
+              "uuid": "02488c47-3199-48f2-8e46-3cc5f938c349",
+              "parentUUID": "fb090338-f056-4a84-8fd4-5c7cadc7191f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "has text about healthcheck",
+              "fullTitle": "coverage2 has text about healthcheck",
+              "timedOut": null,
+              "duration": 4306,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button').should('have.text', 'Healthcheck asdf(see console).');",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected '<button>' to have text 'Healthcheck asdf(see console).', but the text was 'Get server response...'",
+                "estack": "CypressError: Timed out retrying: expected '<button>' to have text 'Healthcheck asdf(see console).', but the text was 'Get server response...'\n    at cypressErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:8081/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:8081/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:8081/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "4b25337e-5325-426c-808f-ada51dc46e6f",
+              "parentUUID": "fb090338-f056-4a84-8fd4-5c7cadc7191f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "02488c47-3199-48f2-8e46-3cc5f938c349"
+          ],
+          "failures": [
+            "4b25337e-5325-426c-808f-ada51dc46e6f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4327,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

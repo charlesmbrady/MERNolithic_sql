@@ -1,0 +1,167 @@
+{
+  "path": "cypress/reports/integration/public",
+  "name": "public",
+  "children": [
+    {
+      "path": "cypress/reports/integration/public/assets",
+      "name": "assets",
+      "children": [
+        {
+          "path": "cypress/reports/integration/public/assets/MaterialIcons-Regular.woff",
+          "name": "MaterialIcons-Regular.woff",
+          "size": 57620,
+          "extension": ".woff",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/MaterialIcons-Regular.woff2",
+          "name": "MaterialIcons-Regular.woff2",
+          "size": 44300,
+          "extension": ".woff2",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/app.css",
+          "name": "app.css",
+          "size": 82777,
+          "extension": ".css",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/app.js",
+          "name": "app.js",
+          "size": 369518,
+          "extension": ".js",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-light-webfont.woff",
+          "name": "roboto-light-webfont.woff",
+          "size": 25772,
+          "extension": ".woff",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-light-webfont.woff2",
+          "name": "roboto-light-webfont.woff2",
+          "size": 19508,
+          "extension": ".woff2",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-medium-webfont.woff",
+          "name": "roboto-medium-webfont.woff",
+          "size": 26292,
+          "extension": ".woff",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-medium-webfont.woff2",
+          "name": "roboto-medium-webfont.woff2",
+          "size": 19944,
+          "extension": ".woff2",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-regular-webfont.woff",
+          "name": "roboto-regular-webfont.woff",
+          "size": 26280,
+          "extension": ".woff",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/assets/roboto-regular-webfont.woff2",
+          "name": "roboto-regular-webfont.woff2",
+          "size": 19868,
+          "extension": ".woff2",
+          "type": "file"
+        }
+      ],
+      "size": 691879,
+      "type": "directory"
+    },
+    {
+      "path": "cypress/reports/integration/public/report.html",
+      "name": "report.html",
+      "size": 14292,
+      "extension": ".html",
+      "type": "file"
+    },
+    {
+      "path": "cypress/reports/integration/public/report.json",
+      "name": "report.json",
+      "size": 13074,
+      "extension": ".json",
+      "type": "file"
+    },
+    {
+      "path": "cypress/reports/integration/public/screenshots",
+      "name": "screenshots",
+      "children": [
+        {
+          "path": "cypress/reports/integration/public/screenshots/anotherTest-spec.js",
+          "name": "anotherTest-spec.js",
+          "children": [
+            {
+              "path": "cypress/reports/integration/public/screenshots/anotherTest-spec.js/Test to see if 2 equals 1 -- should pass (failed).png",
+              "name": "Test to see if 2 equals 1 -- should pass (failed).png",
+              "size": 80715,
+              "extension": ".png",
+              "type": "file"
+            },
+            {
+              "path": "cypress/reports/integration/public/screenshots/anotherTest-spec.js/Test to see if element click fails -- can click a button that is not there (failed).png",
+              "name": "Test to see if element click fails -- can click a button that is not there (failed).png",
+              "size": 56221,
+              "extension": ".png",
+              "type": "file"
+            }
+          ],
+          "size": 136936,
+          "type": "directory"
+        },
+        {
+          "path": "cypress/reports/integration/public/screenshots/test-spec.js",
+          "name": "test-spec.js",
+          "children": [
+            {
+              "path": "cypress/reports/integration/public/screenshots/test-spec.js/coverage2 -- has text about healthcheck (failed).png",
+              "name": "coverage2 -- has text about healthcheck (failed).png",
+              "size": 50508,
+              "extension": ".png",
+              "type": "file"
+            }
+          ],
+          "size": 50508,
+          "type": "directory"
+        }
+      ],
+      "size": 187444,
+      "type": "directory"
+    },
+    {
+      "path": "cypress/reports/integration/public/videos",
+      "name": "videos",
+      "children": [
+        {
+          "path": "cypress/reports/integration/public/videos/anotherTest-spec.js.mp4",
+          "name": "anotherTest-spec.js.mp4",
+          "size": 268607,
+          "extension": ".mp4",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
+          "name": "test-spec.js.mp4",
+          "size": 170644,
+          "extension": ".mp4",
+          "type": "file"
+        }
+      ],
+      "size": 439251,
+      "type": "directory"
+    }
+  ],
+  "size": 1345940,
+  "type": "directory"
+}
