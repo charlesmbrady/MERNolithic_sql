@@ -98,7 +98,7 @@ jobs:
           at: ~/
       - run:
           name: Run cypress tests
-          command: yarn test:coverage
+          command: yarn test:create-reports
           # background: true
       - store_artifacts:
           path: coverage/lcov-report
