@@ -152,9 +152,9 @@ workflows:
   starter-workflow:
     jobs:
       - build
-      - coverage_test:
-          requires:
-            - build
+      # - coverage_test:
+      #     requires:
+      #       - build
       - cypress_tests:
           requires:
             - build
