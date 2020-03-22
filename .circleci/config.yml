@@ -5,10 +5,10 @@ defaults: &defaults
     - image: circleci/node:latest
     - image: circleci/mysql:8.0.4
       environment:
-        MYSQL_ROOT_PASSWORD: 12345678
-        MYSQL_DATABASE: mernolithic_test
-        MYSQL_USER: root
-        MYSQL_PASSWORD: 12345678
+        MYSQL_ROOT_PASSWORD: rootpw
+        MYSQL_DATABASE: test_db
+        MYSQL_USER: user
+        MYSQL_PASSWORD: passw0rd
     - image: cypress/base:8
 
   working_directory: ~/MERNolithic_sql

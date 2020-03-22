@@ -12,9 +12,9 @@ module.exports = {
     }
   },
   test: {
-    username: 'root',
-    password: '12345678',
-    database: 'mernolithic_test',
+    username: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
     details: {
       host: '127.0.0.1',
       port: 3306,
