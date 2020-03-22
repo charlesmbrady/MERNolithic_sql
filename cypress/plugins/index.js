@@ -19,17 +19,18 @@ let coverageMap;
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-  if (config.env.coverage) {
-    const istanbul = require('istanbul-lib-coverage');
-    coverageMap = istanbul.createCoverageMap({});
+  // if (config.env.coverage) {
+  //   const istanbul = require('istanbul-lib-coverage');
+  //   coverageMap = istanbul.createCoverageMap({});
 
-    on('task', {
-      coverage(coverage) {
-        coverageMap.merge(coverage);
-        return JSON.stringify(coverageMap);
-      }
-    });
-  }
+  //   on('task', {
+  //     coverage(coverage) {
+  //       coverageMap.merge(coverage);
+  //       return JSON.stringify(coverageMap);
+  //     }
+  //   });
+  // }
+  on('task', require('@cypress/code-coverage/task'));
 
   return config;
 };
