@@ -12,7 +12,7 @@
     "start:server:coverage": "cd backend && yarn start:coverage",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "cypress:test": "cypress run 'cypress/integration/**/*-spec.js'",
+    "cypress:test": "cypress run --config env.codeCoverage.url=http://localhost:8080/__coverage__ 'cypress/integration/**/*-spec.js'",
     "test-cypress": "start-test start-dev 8081 cypress:test",
     "test:coverage": "start-test start:coverage 8081 cypress:test",
     "dev": "start-test start-dev 8081 cypress:open",
