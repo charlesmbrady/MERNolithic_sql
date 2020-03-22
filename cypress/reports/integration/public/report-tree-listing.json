@@ -105,19 +105,19 @@
             {
               "path": "cypress/reports/integration/public/screenshots/anotherTest-spec.js/Test to see if 2 equals 1 -- should pass (failed).png",
               "name": "Test to see if 2 equals 1 -- should pass (failed).png",
-              "size": 80715,
+              "size": 80936,
               "extension": ".png",
               "type": "file"
             },
             {
               "path": "cypress/reports/integration/public/screenshots/anotherTest-spec.js/Test to see if element click fails -- can click a button that is not there (failed).png",
               "name": "Test to see if element click fails -- can click a button that is not there (failed).png",
-              "size": 56221,
+              "size": 56029,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 136936,
+          "size": 136965,
           "type": "directory"
         },
         {
@@ -127,16 +127,16 @@
             {
               "path": "cypress/reports/integration/public/screenshots/test-spec.js/coverage2 -- has text about healthcheck (failed).png",
               "name": "coverage2 -- has text about healthcheck (failed).png",
-              "size": 50508,
+              "size": 50464,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 50508,
+          "size": 50464,
           "type": "directory"
         }
       ],
-      "size": 187444,
+      "size": 187429,
       "type": "directory"
     },
     {
@@ -146,22 +146,22 @@
         {
           "path": "cypress/reports/integration/public/videos/anotherTest-spec.js.mp4",
           "name": "anotherTest-spec.js.mp4",
-          "size": 268607,
+          "size": 248627,
           "extension": ".mp4",
           "type": "file"
         },
         {
           "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
           "name": "test-spec.js.mp4",
-          "size": 170644,
+          "size": 170064,
           "extension": ".mp4",
           "type": "file"
         }
       ],
-      "size": 439251,
+      "size": 418691,
       "type": "directory"
     }
   ],
-  "size": 1345940,
+  "size": 1325365,
   "type": "directory"
 }

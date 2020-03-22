@@ -47,8 +47,13 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
 
 ## Testing
 
+### Results
+
 - Run tests and generate a test report using mochawesome. From the root, use command `test:create-reports` which will run all `cypress/integration/*-spec.js` files. Then you can open the `cypress/reports/integration/public/report.html` file to view the test report in the browser
-- run tests using cypress.io. From the root, use command `yarn dev:coverage` which will run all `cypress/integration/*-spec.js` files. Then you can open the `coverage/lcov-report/index.html` file to view the fullstack code coverage report in the browser
+
+### Code Coverage
+
+- run tests using cypress.io. From the root, use command `yarn dev:coverage` which will open the test runner. Then select "run all specs" to run all the tests. Then you can open the `coverage/lcov-report/index.html` file to view the fullstack code coverage report in the browser
 
 #### Helpful Links
 
