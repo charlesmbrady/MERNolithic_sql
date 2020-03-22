@@ -130,6 +130,9 @@ workflows:
   starter-workflow:
     jobs:
       - build
+      - cypress_tests:
+          requires:
+            - build
       # - js_unit_tests:
       #     requires:
       #       - build
