@@ -17,7 +17,7 @@ module.exports = {
     database: 'mernolithic_test',
     details: {
       host: process.env.SEQUELIZE_HOST,
-      port: 3306,
+      // port: 3306,
       dialect: 'mysql'
     }
   },

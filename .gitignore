@@ -103,3 +103,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+cypress/reports/integration/reports
+cypress/reports/integration/public/screenshots
+cypress/reports/integration/public/videos
