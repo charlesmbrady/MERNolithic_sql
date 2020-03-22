@@ -12,6 +12,7 @@ module.exports = {
     }
   },
   test: {
+    use_env_variable: 'TEST_DATABASE_URL',
     username: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
     database: 'mernolithic_test',
