@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-03-22T15:42:23.283Z",
+    "end": "2020-03-22T15:42:28.698Z",
+    "duration": 5415,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8d7a7375-4a27-4772-a646-0e49d2ab2e8e",
+      "title": "",
+      "fullFile": "cypress/integration/test-spec.js",
+      "file": "cypress/integration/test-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "29903a80-86a5-4c79-a78f-2b0e2be1e18a",
+          "title": "coverage",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "cover the tested code",
+              "fullTitle": "coverage cover the tested code",
+              "timedOut": null,
+              "duration": 638,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('button').click();",
+              "err": {},
+              "uuid": "5157b99d-9915-4525-bfb2-586236385350",
+              "parentUUID": "29903a80-86a5-4c79-a78f-2b0e2be1e18a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5157b99d-9915-4525-bfb2-586236385350"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 638,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "3d4ded36-bf33-4868-a1a3-31c523eaa4c2",
+          "title": "coverage2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should pass",
+              "fullTitle": "coverage2 should pass",
+              "timedOut": null,
+              "duration": 21,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(1).to.equal(1);",
+              "err": {},
+              "uuid": "93f7c031-72a8-440f-b7d2-20340fcc26b8",
+              "parentUUID": "3d4ded36-bf33-4868-a1a3-31c523eaa4c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "has text about healthcheck",
+              "fullTitle": "coverage2 has text about healthcheck",
+              "timedOut": null,
+              "duration": 4308,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button').should('have.text', 'Healthcheck asdf(see console).');",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected '<button>' to have text 'Healthcheck asdf(see console).', but the text was 'Get server response...'",
+                "estack": "CypressError: Timed out retrying: expected '<button>' to have text 'Healthcheck asdf(see console).', but the text was 'Get server response...'\n    at cypressErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:8081/__cypress/runner/cypress_runner.js:138625:3)\n    at retry (http://localhost:8081/__cypress/runner/cypress_runner.js:132905:19)\n    at onFailFn (http://localhost:8081/__cypress/runner/cypress_runner.js:121122:16)\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "98c3e40c-20ad-44a5-80e0-c6775aaaaff1",
+              "parentUUID": "3d4ded36-bf33-4868-a1a3-31c523eaa4c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "93f7c031-72a8-440f-b7d2-20340fcc26b8"
+          ],
+          "failures": [
+            "98c3e40c-20ad-44a5-80e0-c6775aaaaff1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4329,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

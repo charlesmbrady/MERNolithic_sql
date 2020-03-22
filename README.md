@@ -54,6 +54,7 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
 ### Code Coverage
 
 - run tests using cypress.io. From the root, use command `yarn dev:coverage` which will open the test runner. Then select "run all specs" to run all the tests. Then you can open the `coverage/lcov-report/index.html` file to view the fullstack code coverage report in the browser
+- `npx nyc report --reporter=text-summary` will print out a coverage summary in the console
 
 #### Helpful Links
 
