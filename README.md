@@ -66,3 +66,7 @@ Help with SQL associations and file seperation - https://github.com/sequelize/se
 - [Sequelize Association Part 2](http://docs.sequelizejs.com/en/latest/api/associations/)
 - [Sequelize Migrations](http://docs.sequelizejs.com/en/latest/docs/migrations/)
 - [bcrypt (NPM)](https://www.npmjs.com/package/bcrypt)
+
+# notes
+
+- have to remove codeCoverage url from cypress.json for tests to run in cI
