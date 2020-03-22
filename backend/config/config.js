@@ -12,12 +12,12 @@ module.exports = {
     }
   },
   test: {
-    username: process.env.SEQUELIZE_USER,
-    password: process.env.SEQUELIZE_PASSWORD,
+    username: 'root',
+    password: '12345678',
     database: 'mernolithic_test',
     details: {
-      host: process.env.SEQUELIZE_HOST,
-      // port: 3306,
+      host: '127.0.0.1',
+      port: 3306,
       dialect: 'mysql'
     }
   },
