@@ -91,6 +91,20 @@ jobs:
   #     - run:
   #         name: Backend Unit Tests
   #         command: npm run backend-unit-tests
+  coverage_test:
+    <<: *defaults
+    docker:
+      - image: cypress/base:8
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Run cypress tests
+          command: yarn test:coverage
+      - store_artifacts:
+          path: coverage/lcov-report
+      - store_artifacts:
+          path: cypress/reports/integration/public/
   cypress_tests:
     <<: *defaults
     docker:
