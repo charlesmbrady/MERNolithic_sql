@@ -10,10 +10,10 @@ export default function Home() {
       }
     });
     API.checkDatabase(res => {
-      if(res) {
+      if (res) {
         console.log('database is connected ' + res);
       }
-    })};
+    });
   };
 
   return (
