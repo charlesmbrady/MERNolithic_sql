@@ -100,11 +100,17 @@ jobs:
   #         command: npm run backend-unit-tests
   coverage_test:
     <<: *defaults
+    macos:
+      xcode: 11.3.0
 
     steps:
       # - attach_workspace:
       #     at: ~/
       - checkout
+
+      # Commands will execute in macOS container
+      # with Xcode 11.3 installed
+      - run: xcodebuild -version
       - run:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
