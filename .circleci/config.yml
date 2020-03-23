@@ -28,9 +28,7 @@ jobs:
       #       - v5-general-dependencies-{{.Branch}}-{{ checksum "package.json" }}
       #       - v5-general-dependencies-{{.Branch}}-
       #       - v5-general-dependencies-
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
+
       - run:
           name: Install general dependencies
           command: yarn install
@@ -108,6 +106,9 @@ jobs:
       #     at: ~/
       - checkout
       - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - run:
           name: Install dependencies
           command: |
             yarn install
@@ -116,6 +117,7 @@ jobs:
             cd ../
             sudo apt-get update
             sudo apt-get install libxtst6
+            sudo apt-get install libnss3
       - run:
           name: Run cypress tests
           command: yarn test:coverage
