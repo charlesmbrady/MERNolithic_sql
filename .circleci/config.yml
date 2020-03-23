@@ -31,7 +31,7 @@ jobs:
 
       - run:
           name: Install general dependencies
-          command: npm install
+          command: yarn install
 
       # - save_cache:
       #     name: Save general packages cache
@@ -48,7 +48,7 @@ jobs:
 
       - run:
           name: Install frontend packages
-          command: cd frontend && npm install
+          command: cd frontend && yarn install
 
       # - save_cache:
       #     paths:
@@ -64,7 +64,7 @@ jobs:
 
       - run:
           name: Install backend packages
-          command: cd backend && npm install
+          command: cd backend && yarn install
 
       # - save_cache:
       #     paths:
@@ -111,9 +111,9 @@ jobs:
             yarn install
             cd frontend && yarn install
             cd ../backend && yarn install
-
-          # sudo apt-get update
-          # sudo apt-get install libxtst6
+            cd ../
+            sudo apt-get update
+            sudo apt-get install libxtst6
       - run:
           name: Run cypress tests
           command: yarn test:coverage
