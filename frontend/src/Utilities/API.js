@@ -5,5 +5,10 @@ export default {
     return axios.get('/api/healthcheck').catch(err => {
       throw err;
     });
+  },
+  checkDatabase: function() {
+    return axios.get('/auth/users').catch(err => {
+      throw err;
+    });
   }
 };
