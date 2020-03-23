@@ -112,16 +112,16 @@
             {
               "path": "cypress/reports/integration/public/screenshots/test-spec.js/Users -- Can create user (failed).png",
               "name": "Users -- Can create user (failed).png",
-              "size": 53217,
+              "size": 53310,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 53217,
+          "size": 53310,
           "type": "directory"
         }
       ],
-      "size": 53217,
+      "size": 53310,
       "type": "directory"
     },
     {
@@ -131,22 +131,22 @@
         {
           "path": "cypress/reports/integration/public/videos/anotherTest-spec.js.mp4",
           "name": "anotherTest-spec.js.mp4",
-          "size": 179710,
+          "size": 159796,
           "extension": ".mp4",
           "type": "file"
         },
         {
           "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
           "name": "test-spec.js.mp4",
-          "size": 121508,
+          "size": 112380,
           "extension": ".mp4",
           "type": "file"
         }
       ],
-      "size": 301218,
+      "size": 272176,
       "type": "directory"
     }
   ],
-  "size": 1069656,
+  "size": 1040707,
   "type": "directory"
 }
