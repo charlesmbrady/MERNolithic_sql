@@ -13,14 +13,13 @@ module.exports = {
     // hotOnly: true,
     historyApiFallback: true,
     proxy: {
-      // '*'
-      // '/api': {
-      //   target: 'http://localhost:8080',
-      //   pathRewrite: { '^/api': '' }
-      // },
-      // '/auth': {
-      //   target: 'http://localhost:8080',
-      //   pathRewrite: { '^/auth': '' }
+      '/api': {
+        target: 'http://localhost:8080'
+        //   pathRewrite: { '^/api': '' }
+      },
+      '/auth': {
+        target: 'http://localhost:8080'
+        //   pathRewrite: { '^/auth': '' }
       }
     }
   },
