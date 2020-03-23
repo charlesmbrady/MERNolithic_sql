@@ -80,6 +80,7 @@ Help with SQL associations and file seperation - https://github.com/sequelize/se
 - [Sequelize Association Part 2](http://docs.sequelizejs.com/en/latest/api/associations/)
 - [Sequelize Migrations](http://docs.sequelizejs.com/en/latest/docs/migrations/)
 - [bcrypt (NPM)](https://www.npmjs.com/package/bcrypt)
+- [Awesome video on cypress fullstack code coverage](https://www.youtube.com/watch?v=C8g5X4vCZJA)
 
 # notes
 
