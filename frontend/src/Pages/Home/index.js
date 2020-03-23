@@ -9,6 +9,11 @@ export default function Home() {
         console.log('app is healthy');
       }
     });
+    API.checkDatabase(res => {
+      if(res) {
+        console.log('database is connected ' + res);
+      }
+    })};
   };
 
   return (
