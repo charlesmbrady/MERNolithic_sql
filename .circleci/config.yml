@@ -100,17 +100,12 @@ jobs:
   #         command: npm run backend-unit-tests
   coverage_test:
     <<: *defaults
-    macos:
-      xcode: 11.3.0
 
     steps:
       # - attach_workspace:
       #     at: ~/
       - checkout
 
-      # Commands will execute in macOS container
-      # with Xcode 11.3 installed
-      - run: xcodebuild -version
       - run:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
@@ -124,6 +119,7 @@ jobs:
             sudo apt-get update
             sudo apt-get install libxtst6
             sudo apt-get install libnss3
+            sudo apt-get install libgtk-3
       - run:
           name: Run cypress tests
           command: yarn test:coverage
