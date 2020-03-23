@@ -11,6 +11,10 @@ export default function Home() {
     });
   };
 
+  // const aTestFunctionForCoverage = () => {
+  //   console.log('testsingggggg yaa');
+  // };
+
   return (
     <div>
       Healthcheck asdf(see console).

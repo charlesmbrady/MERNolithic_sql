@@ -6,12 +6,17 @@ const routes = require('./routes'); // Require the routes to use for api endpoin
 const path = require('path'); // Lets us use __dirname as the relative filepath from this file
 const cookieParser = require('cookie-parser'); // for the auth token
 const withAuth = require('./middleware');
-require('dotenv').config();
+require('dotenv');
 
 // Middlewares
 app.use(express.urlencoded({ limit: '100mb', extended: true }));
 app.use(express.json({ limit: '100mb' }));
 app.use(cookieParser());
+
+if (global.__coverage__) {
+  console.log('registering coverage middleware');
+  require('@cypress/code-coverage/middleware/express')(app);
+}
 
 app.get('/healthcheck', (req, res) => {
   res.send('App is running!');
@@ -21,7 +26,7 @@ app.get('/healthcheck', (req, res) => {
 //   res.send('App is running!');
 // });
 
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test') {
+if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, '../frontend/dist')));
 

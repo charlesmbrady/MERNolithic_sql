@@ -1,12 +1,8 @@
 {
-  "baseUrl": "http://localhost:8081",
+  "baseUrl": "https://mernolithic-sql-staging.herokuapp.com",
   "reporter": "./node_modules/mochawesome/src/mochawesome.js",
-  "apiUrl": "http://localhost:8080",
-  "env": {
-    "codeCoverage": {
-      "url": "http://localhost:8080/__coverage__"
-    }
-  },
+  "apiUrl": "https://mernolithic-sql-staging.herokuapp.com",
+  "env": {},
   "reporterOptions": {
     "reportDir": "cypress/reports/integration/reports/mocha",
     "quiet": true,
