@@ -20,7 +20,7 @@
     "open:test-coverage-report": "node open_coverage_report.js",
     "open:test-results-report": "node open_test_results_report.js",
     "open:all-test-reports": "run-p open:test-coverage-report open:test-results-report",
-    "test-and-report": "run -s test:coverage test:create-reports",
+    "test-and-report": "run-s test:coverage test:create-reports",
     "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "clean-reports": "rm -rf cypress/reports",
     "test": "cypress run --reporter mochawesome",
