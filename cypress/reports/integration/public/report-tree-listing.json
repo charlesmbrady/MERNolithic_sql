@@ -90,14 +90,14 @@
     {
       "path": "cypress/reports/integration/public/report.html",
       "name": "report.html",
-      "size": 10096,
+      "size": 10697,
       "extension": ".html",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.json",
       "name": "report.json",
-      "size": 8704,
+      "size": 9331,
       "extension": ".json",
       "type": "file"
     },
@@ -112,41 +112,19 @@
             {
               "path": "cypress/reports/integration/public/screenshots/test-spec.js/Users -- Can create user (failed).png",
               "name": "Users -- Can create user (failed).png",
-              "size": 53310,
+              "size": 45747,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 53310,
+          "size": 45747,
           "type": "directory"
         }
       ],
-      "size": 53310,
-      "type": "directory"
-    },
-    {
-      "path": "cypress/reports/integration/public/videos",
-      "name": "videos",
-      "children": [
-        {
-          "path": "cypress/reports/integration/public/videos/anotherTest-spec.js.mp4",
-          "name": "anotherTest-spec.js.mp4",
-          "size": 159796,
-          "extension": ".mp4",
-          "type": "file"
-        },
-        {
-          "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
-          "name": "test-spec.js.mp4",
-          "size": 112380,
-          "extension": ".mp4",
-          "type": "file"
-        }
-      ],
-      "size": 272176,
+      "size": 45747,
       "type": "directory"
     }
   ],
-  "size": 1040707,
+  "size": 762196,
   "type": "directory"
 }
