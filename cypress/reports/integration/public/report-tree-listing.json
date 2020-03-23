@@ -83,21 +83,21 @@
     {
       "path": "cypress/reports/integration/public/report-tree-listing.json",
       "name": "report-tree-listing.json",
-      "size": 4542,
+      "size": 3913,
       "extension": ".json",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.html",
       "name": "report.html",
-      "size": 10697,
+      "size": 10096,
       "extension": ".html",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.json",
       "name": "report.json",
-      "size": 9331,
+      "size": 8704,
       "extension": ".json",
       "type": "file"
     },
@@ -112,19 +112,41 @@
             {
               "path": "cypress/reports/integration/public/screenshots/test-spec.js/Users -- Can create user (failed).png",
               "name": "Users -- Can create user (failed).png",
-              "size": 45747,
+              "size": 53187,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 45747,
+          "size": 53187,
           "type": "directory"
         }
       ],
-      "size": 45747,
+      "size": 53187,
+      "type": "directory"
+    },
+    {
+      "path": "cypress/reports/integration/public/videos",
+      "name": "videos",
+      "children": [
+        {
+          "path": "cypress/reports/integration/public/videos/anotherTest-spec.js.mp4",
+          "name": "anotherTest-spec.js.mp4",
+          "size": 177391,
+          "extension": ".mp4",
+          "type": "file"
+        },
+        {
+          "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
+          "name": "test-spec.js.mp4",
+          "size": 126935,
+          "extension": ".mp4",
+          "type": "file"
+        }
+      ],
+      "size": 304326,
       "type": "directory"
     }
   ],
-  "size": 762196,
+  "size": 1072105,
   "type": "directory"
 }

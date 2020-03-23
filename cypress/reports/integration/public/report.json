@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 1,
-    "start": "2020-03-23T04:16:53.137Z",
-    "end": "2020-03-23T04:16:53.138Z",
-    "duration": 31575,
+    "start": "2020-03-23T04:28:56.466Z",
+    "end": "2020-03-23T04:28:56.466Z",
+    "duration": 1859,
     "testsRegistered": 4,
     "passPercent": 75,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "071c82e9-6918-4126-9f54-c346a263f3df",
+      "uuid": "364d4d73-6e76-4355-92a8-0d540a862dc6",
       "title": "",
       "fullFile": "cypress/integration/anotherTest-spec.js",
       "file": "cypress/integration/anotherTest-spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "09c2f66a-3215-477c-85b5-64516e4fb1f0",
+          "uuid": "9aac0a55-d490-4249-b798-d845e2d3ca61",
           "title": "Test to see if element click fails",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Can visit homepage",
               "fullTitle": "Test to see if element click fails Can visit homepage",
               "timedOut": null,
-              "duration": 667,
+              "duration": 662,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('/');",
               "err": {},
-              "uuid": "43d5d6ba-8448-45ec-b6a3-c1a40efc8ae8",
-              "parentUUID": "09c2f66a-3215-477c-85b5-64516e4fb1f0",
+              "uuid": "4cddfd57-da99-448c-bf79-38093faaf5a7",
+              "parentUUID": "9aac0a55-d490-4249-b798-d845e2d3ca61",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "43d5d6ba-8448-45ec-b6a3-c1a40efc8ae8"
+            "4cddfd57-da99-448c-bf79-38093faaf5a7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 667,
+          "duration": 662,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -76,7 +76,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "1474782c-5af1-421f-925a-dfb5b38a0b4f",
+      "uuid": "44bbed01-2854-4111-8bdd-4ad75545943d",
       "title": "",
       "fullFile": "cypress/integration/test-spec.js",
       "file": "cypress/integration/test-spec.js",
@@ -85,7 +85,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "45ab41f9-60a8-49e2-a3d0-3ebae5cd1b57",
+          "uuid": "961001e5-fff2-4a63-8294-0709f41fd08f",
           "title": "coverage",
           "fullFile": "",
           "file": "",
@@ -96,7 +96,7 @@
               "title": "cover the tested code",
               "fullTitle": "coverage cover the tested code",
               "timedOut": null,
-              "duration": 479,
+              "duration": 713,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -105,26 +105,26 @@
               "context": null,
               "code": "cy.visit('/');\ncy.get('button').click();",
               "err": {},
-              "uuid": "32924393-5937-4904-a81b-887a1d7c7f64",
-              "parentUUID": "45ab41f9-60a8-49e2-a3d0-3ebae5cd1b57",
+              "uuid": "06cd109d-a9cc-4828-8374-71fde1fb8cdc",
+              "parentUUID": "961001e5-fff2-4a63-8294-0709f41fd08f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "32924393-5937-4904-a81b-887a1d7c7f64"
+            "06cd109d-a9cc-4828-8374-71fde1fb8cdc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 479,
+          "duration": 713,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "d49f1766-3ba6-4bed-9a3a-eba14e561880",
+          "uuid": "1ac98acf-f4df-4509-a72c-ac253170f242",
           "title": "coverage2",
           "fullFile": "",
           "file": "",
@@ -135,7 +135,7 @@
               "title": "should pass",
               "fullTitle": "coverage2 should pass",
               "timedOut": null,
-              "duration": 20,
+              "duration": 16,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -144,26 +144,26 @@
               "context": null,
               "code": "expect(1).to.equal(1);",
               "err": {},
-              "uuid": "6ea84fe3-cfb2-43db-9ef3-4e928dc81352",
-              "parentUUID": "d49f1766-3ba6-4bed-9a3a-eba14e561880",
+              "uuid": "c5b071dc-3a8f-456b-a168-259f7363eaf4",
+              "parentUUID": "1ac98acf-f4df-4509-a72c-ac253170f242",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6ea84fe3-cfb2-43db-9ef3-4e928dc81352"
+            "c5b071dc-3a8f-456b-a168-259f7363eaf4"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 20,
+          "duration": 16,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "42c33733-1359-43e9-8a93-3f90e3b23a79",
+          "uuid": "e48fac3b-1bab-456c-9193-e825270e8ebe",
           "title": "Users",
           "fullFile": "",
           "file": "",
@@ -174,7 +174,7 @@
               "title": "Can create user",
               "fullTitle": "Users Can create user",
               "timedOut": null,
-              "duration": 30409,
+              "duration": 468,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -183,12 +183,12 @@
               "context": null,
               "code": "// cy.visit('/');\ncy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/register\"), {\n  firstName: 'charles',\n  lastName: 'brady',\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  // response.body is automatically serialized into JSON\n  expect(response.body).to.have.property('firstName', 'charles'); // true\n});",
               "err": {
-                "message": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: https://mernolithic-sql-staging.herokuapp.com/auth/register\n\nNo response was received within the timeout.",
-                "estack": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: https://mernolithic-sql-staging.herokuapp.com/auth/register\n\nNo response was received within the timeout.\n    at cypressErr (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:138625:3)\n    at https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:128515:26\n    at tryCatcher (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:165465:23)\n    at https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:160606:41\n    at tryCatcher (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (https://mernolithic-sql-staging.herokuapp.com/__cypress/runner/cypress_runner.js:160074:14)",
+                "message": "AssertionError: expected { Object (name, errors, ...) } to have property 'firstName'",
+                "estack": "AssertionError: expected { Object (name, errors, ...) } to have property 'firstName'\n    at getRet (http://localhost:8081/__cypress/runner/cypress_runner.js:125261:16)\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:8081/__cypress/runner/cypress_runner.js:162740:29)\n    at Context.thenFn (http://localhost:8081/__cypress/runner/cypress_runner.js:125275:23)\n    at Context.then (http://localhost:8081/__cypress/runner/cypress_runner.js:125647:21)\n    at Context.<anonymous> (http://localhost:8081/__cypress/runner/cypress_runner.js:137585:21)\n    at http://localhost:8081/__cypress/runner/cypress_runner.js:137061:33\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromiseCtx (http://localhost:8081/__cypress/runner/cypress_runner.js:163495:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:160195:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160074:14)",
                 "diff": null
               },
-              "uuid": "936a58b7-2cd0-4426-8a94-f3cba2421ccf",
-              "parentUUID": "42c33733-1359-43e9-8a93-3f90e3b23a79",
+              "uuid": "afdc0e51-4c59-43b8-a005-5b8c97e052af",
+              "parentUUID": "e48fac3b-1bab-456c-9193-e825270e8ebe",
               "isHook": false,
               "skipped": false
             }
@@ -196,11 +196,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "936a58b7-2cd0-4426-8a94-f3cba2421ccf"
+            "afdc0e51-4c59-43b8-a005-5b8c97e052af"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 30409,
+          "duration": 468,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

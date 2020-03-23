@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-03-23T04:16:17.873Z",
-    "end": "2020-03-23T04:16:19.638Z",
-    "duration": 1765,
+    "start": "2020-03-23T04:28:49.021Z",
+    "end": "2020-03-23T04:28:50.385Z",
+    "duration": 1364,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "071c82e9-6918-4126-9f54-c346a263f3df",
+      "uuid": "364d4d73-6e76-4355-92a8-0d540a862dc6",
       "title": "",
       "fullFile": "cypress/integration/anotherTest-spec.js",
       "file": "cypress/integration/anotherTest-spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "09c2f66a-3215-477c-85b5-64516e4fb1f0",
+          "uuid": "9aac0a55-d490-4249-b798-d845e2d3ca61",
           "title": "Test to see if element click fails",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Can visit homepage",
               "fullTitle": "Test to see if element click fails Can visit homepage",
               "timedOut": null,
-              "duration": 667,
+              "duration": 662,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('/');",
               "err": {},
-              "uuid": "43d5d6ba-8448-45ec-b6a3-c1a40efc8ae8",
-              "parentUUID": "09c2f66a-3215-477c-85b5-64516e4fb1f0",
+              "uuid": "4cddfd57-da99-448c-bf79-38093faaf5a7",
+              "parentUUID": "9aac0a55-d490-4249-b798-d845e2d3ca61",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "43d5d6ba-8448-45ec-b6a3-c1a40efc8ae8"
+            "4cddfd57-da99-448c-bf79-38093faaf5a7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 667,
+          "duration": 662,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

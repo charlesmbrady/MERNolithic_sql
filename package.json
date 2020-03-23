@@ -41,7 +41,7 @@
     "test:create-reports-local": "run-s cleanup:all test:cy:local merge_reports generate_html_report create-tree",
     "test:create-reports-staging": "run-s cleanup:all test:cy:staging merge_reports generate_html_report create-tree",
     "test:create-reports-production": "run-s cleanup:all test:cy:production merge_reports generate_html_report create-tree",
-    "test:local:test-and-report": "run-s test:create-reports-local open:test-results-report",
+    "test:local:test-and-report": "run-s test:create-reports-local open:test-results-report open:test-coverage-report",
     "test:staging:test-and-report": "run-s test:create-reports-staging open:test-results-report",
     "test:production:test-and-report": "run-s test:create-reports-production open:test-results-report",
     "create-tree": "node cypress/reports/integration/cy-report-tree-generator.js --path=cypress/reports/",
