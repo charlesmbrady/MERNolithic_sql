@@ -28,7 +28,9 @@ jobs:
       #       - v5-general-dependencies-{{.Branch}}-{{ checksum "package.json" }}
       #       - v5-general-dependencies-{{.Branch}}-
       #       - v5-general-dependencies-
-
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
       - run:
           name: Install general dependencies
           command: yarn install
