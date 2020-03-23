@@ -14,8 +14,6 @@
     "overwrite": false,
     "json": true
   },
-  "videosFolder": "cypress/reports/integration/public/videos",
-  "screenshotsFolder": "cypress/reports/integration/public/screenshots",
   "videoCompression": false,
   "browser": "electron",
   "chromeWebSecurity": false

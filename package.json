@@ -17,6 +17,10 @@
     "test:coverage": "start-test start:coverage 8080 cypress:test",
     "dev": "start-test start-dev 8080 cypress:open",
     "dev:coverage": "start-test start:coverage 8080 cypress:open",
+    "open:test-coverage-report": "node open_coverage_report.js",
+    "open:test-results-report": "node open_test_results_report.js",
+    "open:all-test-reports": "run-p open:test-coverage-report open:test-results-report",
+    "test-and-report": "run -s test:coverage test:create-reports",
     "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "clean-reports": "rm -rf cypress/reports",
     "test": "cypress run --reporter mochawesome",
@@ -60,6 +64,7 @@
     "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
     "nyc": "^15.0.0",
+    "open": "^7.0.3",
     "start-server-and-test": "^1.10.11",
     "yargs": "^15.1.0"
   }
