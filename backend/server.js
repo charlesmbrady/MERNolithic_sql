@@ -5,7 +5,6 @@ const app = express(); // Make app with express
 const PORT = process.env.PORT || 8080; // Set port to .env or default
 const db = require('./models/index.js'); // Require the database connection for server to access
 const routes = require('./routes'); // Require the routes to use for api endpoints
-const path = require('path'); // Lets us use __dirname as the relative filepath from this file
 const cookieParser = require('cookie-parser'); // for the auth token
 const withAuth = require('./middleware');
 

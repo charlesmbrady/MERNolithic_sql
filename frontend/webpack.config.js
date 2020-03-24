@@ -5,8 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 require('dotenv').config();
 
 module.exports = {
-  // mode: process.env.NODE_ENV,
-  devtool: 'inline-source-map',
+  mode: 'development',
+  devtool: 'source-map',
   devServer: {
     port: 8081,
     hot: true,

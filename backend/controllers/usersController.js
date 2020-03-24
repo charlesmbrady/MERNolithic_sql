@@ -24,43 +24,6 @@ module.exports = {
         res.json(err);
         console.log('ERROR: ' + err.errors[0].message);
       });
-
-    // ADD VALIDATION
-    // db.User.findOne({ username: username }, (err, userMatch) => {
-    //   if (userMatch) {
-    //     return res.status(500).send({
-    //       message: `Error: username already exists: ${username}`
-    //     });
-    //   }
-    //   const newUser = new db.User({
-    //     username: username,
-    //     password: password,
-    //     firstName: firstName,
-    //     lastName: lastName
-    //   });
-    //   newUser.save((err, savedUser) => {
-    //     if (err) {
-    //       return res
-    //         .status(500)
-    //         .send({ message: `Error registering new user: ${err}` });
-    //     } else {
-    //       // console.log(`User created: ${savedUser}`);
-    //       // return res.status(200).send(savedUser);
-    //       const payload = {
-    //         username: savedUser.username,
-    //         firstName: savedUser.firstName,
-    //         lastName: savedUser.lastName,
-    //         _id: savedUser._id
-    //       };
-    //       const signOptions = {
-    //         expiresIn: '1h'
-    //       };
-    //       const token = jwt.sign(payload, 'secret', signOptions);
-    //       res.cookie('token', token, { httpOnly: true }).sendStatus(200);
-    //       // return res.status(200).send("logged in");
-    //     }
-    //   });
-    // });
   },
   authenticate: function(req, res) {
     const { username, password } = req.body;

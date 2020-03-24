@@ -83,46 +83,23 @@
     {
       "path": "cypress/reports/integration/public/report-tree-listing.json",
       "name": "report-tree-listing.json",
-      "size": 5214,
+      "size": 3589,
       "extension": ".json",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.html",
       "name": "report.html",
-      "size": 9278,
+      "size": 6249,
       "extension": ".html",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.json",
       "name": "report.json",
-      "size": 7802,
+      "size": 4800,
       "extension": ".json",
       "type": "file"
-    },
-    {
-      "path": "cypress/reports/integration/public/screenshots",
-      "name": "screenshots",
-      "children": [
-        {
-          "path": "cypress/reports/integration/public/screenshots/test-spec.js",
-          "name": "test-spec.js",
-          "children": [
-            {
-              "path": "cypress/reports/integration/public/screenshots/test-spec.js/can click ping button -- after all hook generateReport (failed).png",
-              "name": "can click ping button -- after all hook generateReport (failed).png",
-              "size": 71957,
-              "extension": ".png",
-              "type": "file"
-            }
-          ],
-          "size": 71957,
-          "type": "directory"
-        }
-      ],
-      "size": 71957,
-      "type": "directory"
     },
     {
       "path": "cypress/reports/integration/public/videos",
@@ -131,15 +108,15 @@
         {
           "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
           "name": "test-spec.js.mp4",
-          "size": 179058,
+          "size": 133701,
           "extension": ".mp4",
           "type": "file"
         }
       ],
-      "size": 179058,
+      "size": 133701,
       "type": "directory"
     }
   ],
-  "size": 965188,
+  "size": 840218,
   "type": "directory"
 }
