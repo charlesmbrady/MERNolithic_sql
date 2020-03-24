@@ -21,13 +21,15 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
 
 3. Create `.env` file in project root with following properties (note: open mysql workbench and put in credentials for you local connection)
 
-   ```MYSQL_USER= "root"
-   MYSQL_PASSWORD= "12345678"
-   MYSQL_HOST= "localhost"
+   ```MYSQL_USER=root
+   MYSQL_PASSWORD=12345678
+   MYSQL_HOST=localhost
    AUTH_SECRET=your_auth_secret_key
    ADMIN_USER_PWD=admin_password
-   USER_PWD="12345678"
-   FORCE_SYNC= false
+   USER_PWD=12345678
+   FORCE_SYNC=false
+   NODE_ENV=test
+   PORT=8080
    ```
 
 4. Run `yarn install` from the project root to install project dependencies
