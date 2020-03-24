@@ -1,19 +1,17 @@
 /// <reference types="cypress" />
 
-describe('coverage', function() {
-  it('cover the tested code', function() {
+describe('home', function() {
+  it('can click ping button', function() {
     cy.visit('/');
     cy.get('button').click();
   });
 });
 
-describe('coverage2', function() {
-  it('should pass', function() {
+describe('Users', function() {
+  it('Canary test', function() {
     expect(1).to.equal(1);
   });
-});
 
-describe('Users', function() {
   it('Can create user', function() {
     // cy.visit('/');
 
