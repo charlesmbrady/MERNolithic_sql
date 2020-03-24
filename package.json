@@ -1,7 +1,7 @@
 {
   "name": "MERNolithic_sql",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project is a fullstack javascript application built with Charles' MERN template",
   "main": "/backend/server.js",
   "scripts": {
     "start": "NODE_ENV=production node backend/server.js",
@@ -53,7 +53,20 @@
     "type": "git",
     "url": "git+https://github.com/charlesmbrady/MERNolithic_sql.git"
   },
-  "keywords": [],
+  "keywords": [
+    "MERN",
+    "Starter",
+    "Express",
+    "react",
+    "node",
+    "cypress",
+    "ci",
+    "mysql",
+    "authentication",
+    "webpack",
+    "custom-react",
+    "monorepo"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
