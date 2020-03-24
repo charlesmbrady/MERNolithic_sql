@@ -6,12 +6,14 @@ const routes = require('./routes'); // Require the routes to use for api endpoin
 const path = require('path'); // Lets us use __dirname as the relative filepath from this file
 const cookieParser = require('cookie-parser'); // for the auth token
 const withAuth = require('./middleware');
-require('dotenv');
+require('dotenv').config();
 
 // Middlewares
 app.use(express.urlencoded({ limit: '100mb', extended: true }));
 app.use(express.json({ limit: '100mb' }));
+
 app.use(cookieParser());
+app.use(routes); // Link routesx
 
 if (global.__coverage__) {
   console.log('registering coverage middleware');
@@ -26,23 +28,21 @@ app.get('/healthcheck', (req, res) => {
 //   res.send('App is running!');
 // });
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
   // Handle React routing, return all requests to React app
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+    res.sendFile(path.join(__dirname, '../frontend/dist'));
   });
 }
 
-if (process.env.NODE_ENV !== 'production') {
-  app.get('/', (req, res) => {
-    res.sendStatus(200);
-  });
-}
-
-app.use(routes); // Link routes
+// if (process.env.NODE_ENV !== 'production') {
+//   app.get('/', (req, res) => {
+//     res.sendStatus(200);
+//   });
+// }
 
 // Error handler
 app.use(function(err, req, res, next) {
