@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
 require('css-loader');
 require('style-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -6,6 +7,11 @@ require('dotenv').config();
 
 module.exports = {
   mode: 'development',
+  entry: path.join(__dirname, 'src/index.js'),
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: '[name].bundle.js'
+  },
   devtool: 'source-map',
   devServer: {
     port: 8081,
