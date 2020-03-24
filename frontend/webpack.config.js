@@ -3,7 +3,6 @@ const path = require('path');
 require('css-loader');
 require('style-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-require('dotenv').config();
 
 module.exports = {
   mode: 'development',
