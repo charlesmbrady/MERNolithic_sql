@@ -8,11 +8,18 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
 ## Getting started
 
 1. Update project name and urls for github in package.json
+
    - Name
    - repository: url
    - bugs: url
    - homepage: url
-2. Create `.env` file in project root with following properties
+
+2. Update app name/urls in:
+
+   - ~/cypress.staging.json and ~/cypress.production.json
+   - App title in ~/frontend/src/index.html
+
+3. Create `.env` file in project root with following properties
 
    ```MYSQL_USER= "root"
    MYSQL_PASSWORD= "12345678"
@@ -23,20 +30,20 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
    FORCE_SYNC= false
    ```
 
-3. Run `yarn install` from the project root to install project dependencies
+4. Run `yarn install` from the project root to install project dependencies
 
-4. `cd backend` and run `yarn install` to install backend server dependencies
+5. `cd backend` and run `yarn install` to install backend server dependencies
 
-5. `cd frontend` and run `yarn install` to install frontend React dependencies
+6. `cd frontend` and run `yarn install` to install frontend React dependencies
 
-6. Run `initialize.sh` command from the project root to automatically create staging and production Heroku remotes with MySql databases provisioned and deployed
+7. Run `initialize.sh` command from the project root to automatically create staging and production Heroku remotes with MySql databases provisioned and deployed
 
-7. You can run the application locally by running command `yarn start-dev` from the project root to start the server on localhost:8080, and then `cd frontend` in another terminal and run `yarn start-dev` to start the Webpack dev server for the React frontend which you can view at localhost:8081
+8. You can run the application locally by running command `yarn start-dev` from the project root to start the server on localhost:8080, and then `cd frontend` in another terminal and run `yarn start-dev` to start the Webpack dev server for the React frontend which you can view at localhost:8081
    this has hot reloading for easier development
 
-8. To setup circleci, first go to your dashboard on circleci.com. Click "Add Project" and choose the repo for your project. Then select "Build Now" to start building the project. Update the "working_directory" variable at the top of ~/.circleci/config.yml to match your repo name as well
+9. To setup circleci, first go to your dashboard on circleci.com. Click "Add Project" and choose the repo for your project. Then select "Build Now" to start building the project. Update the "working_directory" variable at the top of ~/.circleci/config.yml to match your repo name as well
 
-9. to rename your Heroku staging and production apps, use command `heroku apps:rename --remote staging newname`. Insert the desired name of the app instead of "newname" and you can select the "production" remote instead of staging to rename produciton as well
+10. to rename your Heroku staging and production apps, use command `heroku apps:rename --remote staging newname`. Insert the desired name of the app instead of "newname" and you can select the "production" remote instead of staging to rename produciton as well. Be sure to update the database names in mysql ~/backend/config/config.js to match your app name too
 
 ## Deploying to Heroku
 
