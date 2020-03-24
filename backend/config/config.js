@@ -1,4 +1,5 @@
-require('dotenv').config();
+const path = require('path'); // Lets us use __dirname as the relative filepath from this file
+require('dotenv').config(path.join(__dirname, '../.env'));
 
 module.exports = {
   development: {

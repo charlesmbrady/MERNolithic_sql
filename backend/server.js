@@ -1,3 +1,5 @@
+const path = require('path'); // Lets us use __dirname as the relative filepath from this file
+require('dotenv').config(path.join(__dirname, '../.env'));
 const express = require('express'); // Require express
 const app = express(); // Make app with express
 const PORT = process.env.PORT || 8080; // Set port to .env or default
@@ -6,7 +8,6 @@ const routes = require('./routes'); // Require the routes to use for api endpoin
 const path = require('path'); // Lets us use __dirname as the relative filepath from this file
 const cookieParser = require('cookie-parser'); // for the auth token
 const withAuth = require('./middleware');
-require('dotenv').config();
 
 // Middlewares
 app.use(express.urlencoded({ limit: '100mb', extended: true }));
