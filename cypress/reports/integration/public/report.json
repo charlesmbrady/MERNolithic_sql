@@ -2,14 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 4,
-    "passes": 3,
+    "passes": 2,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-03-23T04:28:56.466Z",
-    "end": "2020-03-23T04:28:56.466Z",
-    "duration": 1859,
+    "failures": 2,
+    "start": "2020-03-24T03:15:44.886Z",
+    "end": "2020-03-24T03:15:44.886Z",
+    "duration": 5202,
     "testsRegistered": 4,
-    "passPercent": 75,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "364d4d73-6e76-4355-92a8-0d540a862dc6",
+      "uuid": "655115ef-6429-4f68-90fa-5989de910211",
       "title": "",
       "fullFile": "cypress/integration/anotherTest-spec.js",
       "file": "cypress/integration/anotherTest-spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9aac0a55-d490-4249-b798-d845e2d3ca61",
+          "uuid": "c7f41474-1c04-4b65-a3a5-504336c2b93f",
           "title": "Test to see if element click fails",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Can visit homepage",
               "fullTitle": "Test to see if element click fails Can visit homepage",
               "timedOut": null,
-              "duration": 662,
-              "state": "passed",
+              "duration": 528,
+              "state": "failed",
               "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.visit('/');",
-              "err": {},
-              "uuid": "4cddfd57-da99-448c-bf79-38093faaf5a7",
-              "parentUUID": "9aac0a55-d490-4249-b798-d845e2d3ca61",
+              "err": {
+                "message": "CypressError: cy.task('coverageReport') failed with the following error:\n\n> Error: Command failed with exit code 1: /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/.bin/nyc report --report-dir ./coverage --temp-dir /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/.nyc_output --reporter=lcov --reporter=clover --reporter=json\n    at makeError (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/lib/error.js:58:11)\n    at handlePromise (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/index.js:114:26)\n\nBecause this error occurred during a 'after all' hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: cy.task('coverageReport') failed with the following error:\n\n> Error: Command failed with exit code 1: /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/.bin/nyc report --report-dir ./coverage --temp-dir /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/.nyc_output --reporter=lcov --reporter=clover --reporter=json\n    at makeError (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/lib/error.js:58:11)\n    at handlePromise (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/index.js:114:26)\n\nBecause this error occurred during a 'after all' hook we are skipping all of the remaining tests.\n    at cypressErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:8081/__cypress/runner/cypress_runner.js:138625:3)\n    at http://localhost:8081/__cypress/runner/cypress_runner.js:129053:26\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "6d8453de-ea81-4634-ba54-9d64be700cdc",
+              "parentUUID": "c7f41474-1c04-4b65-a3a5-504336c2b93f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "4cddfd57-da99-448c-bf79-38093faaf5a7"
+          "passes": [],
+          "failures": [
+            "6d8453de-ea81-4634-ba54-9d64be700cdc"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 662,
+          "duration": 528,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -76,7 +80,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "44bbed01-2854-4111-8bdd-4ad75545943d",
+      "uuid": "62f2d3f9-2d00-4057-9d74-e6fd6a3ae24b",
       "title": "",
       "fullFile": "cypress/integration/test-spec.js",
       "file": "cypress/integration/test-spec.js",
@@ -85,7 +89,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "961001e5-fff2-4a63-8294-0709f41fd08f",
+          "uuid": "af745e77-d11e-4107-86fd-53b4fdf38a0e",
           "title": "coverage",
           "fullFile": "",
           "file": "",
@@ -96,35 +100,39 @@
               "title": "cover the tested code",
               "fullTitle": "coverage cover the tested code",
               "timedOut": null,
-              "duration": 713,
-              "state": "passed",
+              "duration": 4512,
+              "state": "failed",
               "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.visit('/');\ncy.get('button').click();",
-              "err": {},
-              "uuid": "06cd109d-a9cc-4828-8374-71fde1fb8cdc",
-              "parentUUID": "961001e5-fff2-4a63-8294-0709f41fd08f",
+              "err": {
+                "message": "CypressError: cy.task('coverageReport') failed with the following error:\n\n> Error: Command failed with exit code 1: /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/.bin/nyc report --report-dir ./coverage --temp-dir /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/.nyc_output --reporter=lcov --reporter=clover --reporter=json\n    at makeError (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/lib/error.js:58:11)\n    at handlePromise (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/index.js:114:26)\n\nBecause this error occurred during a 'after all' hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: cy.task('coverageReport') failed with the following error:\n\n> Error: Command failed with exit code 1: /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/.bin/nyc report --report-dir ./coverage --temp-dir /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/.nyc_output --reporter=lcov --reporter=clover --reporter=json\n    at makeError (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/lib/error.js:58:11)\n    at handlePromise (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/index.js:114:26)\n\nBecause this error occurred during a 'after all' hook we are skipping all of the remaining tests.\n    at cypressErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138644:9)\n    at throwErr (http://localhost:8081/__cypress/runner/cypress_runner.js:138577:11)\n    at Object.throwErrByPath (http://localhost:8081/__cypress/runner/cypress_runner.js:138625:3)\n    at http://localhost:8081/__cypress/runner/cypress_runner.js:129053:26\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:163503:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:163578:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:160190:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160074:14)",
+                "diff": null
+              },
+              "uuid": "e2773ffd-5dff-4317-9784-e0e0c66c8a85",
+              "parentUUID": "af745e77-d11e-4107-86fd-53b4fdf38a0e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "06cd109d-a9cc-4828-8374-71fde1fb8cdc"
+          "passes": [],
+          "failures": [
+            "e2773ffd-5dff-4317-9784-e0e0c66c8a85"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 713,
+          "duration": 4512,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "1ac98acf-f4df-4509-a72c-ac253170f242",
+          "uuid": "40599597-bef8-4153-98ba-195994a4da85",
           "title": "coverage2",
           "fullFile": "",
           "file": "",
@@ -135,7 +143,7 @@
               "title": "should pass",
               "fullTitle": "coverage2 should pass",
               "timedOut": null,
-              "duration": 16,
+              "duration": 29,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -144,26 +152,26 @@
               "context": null,
               "code": "expect(1).to.equal(1);",
               "err": {},
-              "uuid": "c5b071dc-3a8f-456b-a168-259f7363eaf4",
-              "parentUUID": "1ac98acf-f4df-4509-a72c-ac253170f242",
+              "uuid": "316f1c50-5ac0-4925-9a29-8d44044db213",
+              "parentUUID": "40599597-bef8-4153-98ba-195994a4da85",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c5b071dc-3a8f-456b-a168-259f7363eaf4"
+            "316f1c50-5ac0-4925-9a29-8d44044db213"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 16,
+          "duration": 29,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "e48fac3b-1bab-456c-9193-e825270e8ebe",
+          "uuid": "1bc56e7d-21fa-4a30-b30b-a154e7327fa3",
           "title": "Users",
           "fullFile": "",
           "file": "",
@@ -174,33 +182,29 @@
               "title": "Can create user",
               "fullTitle": "Users Can create user",
               "timedOut": null,
-              "duration": 468,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 133,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "// cy.visit('/');\ncy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/register\"), {\n  firstName: 'charles',\n  lastName: 'brady',\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  // response.body is automatically serialized into JSON\n  expect(response.body).to.have.property('firstName', 'charles'); // true\n});",
-              "err": {
-                "message": "AssertionError: expected { Object (name, errors, ...) } to have property 'firstName'",
-                "estack": "AssertionError: expected { Object (name, errors, ...) } to have property 'firstName'\n    at getRet (http://localhost:8081/__cypress/runner/cypress_runner.js:125261:16)\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:8081/__cypress/runner/cypress_runner.js:162740:29)\n    at Context.thenFn (http://localhost:8081/__cypress/runner/cypress_runner.js:125275:23)\n    at Context.then (http://localhost:8081/__cypress/runner/cypress_runner.js:125647:21)\n    at Context.<anonymous> (http://localhost:8081/__cypress/runner/cypress_runner.js:137585:21)\n    at http://localhost:8081/__cypress/runner/cypress_runner.js:137061:33\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromiseCtx (http://localhost:8081/__cypress/runner/cypress_runner.js:163495:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:160195:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160074:14)",
-                "diff": null
-              },
-              "uuid": "afdc0e51-4c59-43b8-a005-5b8c97e052af",
-              "parentUUID": "e48fac3b-1bab-456c-9193-e825270e8ebe",
+              "err": {},
+              "uuid": "b0f9fda4-6efe-42f0-abe2-22bbe665baa2",
+              "parentUUID": "1bc56e7d-21fa-4a30-b30b-a154e7327fa3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "afdc0e51-4c59-43b8-a005-5b8c97e052af"
+          "passes": [
+            "b0f9fda4-6efe-42f0-abe2-22bbe665baa2"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 468,
+          "duration": 133,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

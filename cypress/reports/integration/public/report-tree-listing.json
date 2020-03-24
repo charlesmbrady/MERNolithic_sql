@@ -83,21 +83,21 @@
     {
       "path": "cypress/reports/integration/public/report-tree-listing.json",
       "name": "report-tree-listing.json",
-      "size": 3913,
+      "size": 5214,
       "extension": ".json",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.html",
       "name": "report.html",
-      "size": 10096,
+      "size": 14432,
       "extension": ".html",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.json",
       "name": "report.json",
-      "size": 8704,
+      "size": 12983,
       "extension": ".json",
       "type": "file"
     },
@@ -106,22 +106,37 @@
       "name": "screenshots",
       "children": [
         {
-          "path": "cypress/reports/integration/public/screenshots/test-spec.js",
-          "name": "test-spec.js",
+          "path": "cypress/reports/integration/public/screenshots/anotherTest-spec.js",
+          "name": "anotherTest-spec.js",
           "children": [
             {
-              "path": "cypress/reports/integration/public/screenshots/test-spec.js/Users -- Can create user (failed).png",
-              "name": "Users -- Can create user (failed).png",
-              "size": 53187,
+              "path": "cypress/reports/integration/public/screenshots/anotherTest-spec.js/Can visit homepage -- after all hook generateReport (failed).png",
+              "name": "Can visit homepage -- after all hook generateReport (failed).png",
+              "size": 59123,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 53187,
+          "size": 59123,
+          "type": "directory"
+        },
+        {
+          "path": "cypress/reports/integration/public/screenshots/test-spec.js",
+          "name": "test-spec.js",
+          "children": [
+            {
+              "path": "cypress/reports/integration/public/screenshots/test-spec.js/cover the tested code -- after all hook generateReport (failed).png",
+              "name": "cover the tested code -- after all hook generateReport (failed).png",
+              "size": 74828,
+              "extension": ".png",
+              "type": "file"
+            }
+          ],
+          "size": 74828,
           "type": "directory"
         }
       ],
-      "size": 53187,
+      "size": 133951,
       "type": "directory"
     },
     {
@@ -131,22 +146,22 @@
         {
           "path": "cypress/reports/integration/public/videos/anotherTest-spec.js.mp4",
           "name": "anotherTest-spec.js.mp4",
-          "size": 177391,
+          "size": 163357,
           "extension": ".mp4",
           "type": "file"
         },
         {
           "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
           "name": "test-spec.js.mp4",
-          "size": 126935,
+          "size": 196922,
           "extension": ".mp4",
           "type": "file"
         }
       ],
-      "size": 304326,
+      "size": 360279,
       "type": "directory"
     }
   ],
-  "size": 1072105,
+  "size": 1218738,
   "type": "directory"
 }

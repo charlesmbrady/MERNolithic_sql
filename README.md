@@ -89,6 +89,7 @@ Help with SQL associations and file seperation - https://github.com/sequelize/se
 - [bcrypt (NPM)](https://www.npmjs.com/package/bcrypt)
 - [Awesome video on cypress fullstack code coverage](https://www.youtube.com/watch?v=C8g5X4vCZJA)
 - https://webpack.js.org/guides/production/ use this to split webpack config
+- https://github.com/cypress-io/code-coverage
 
 # notes
 

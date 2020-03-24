@@ -5,7 +5,7 @@
   "main": "/backend/server.js",
   "scripts": {
     "start": "NODE_ENV=production node backend/server.js",
-    "start-dev": "run-p start:client start:server",
+    "start-dev": "NODE_ENV=test run-p start:client start:server",
     "start:coverage": "run-p start:client start:server:coverage",
     "start:client": "cd frontend && yarn start-dev",
     "start:server": "NODE_ENV=test cd backend && node server.js",

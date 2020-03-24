@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 require('dotenv').config();
 
 module.exports = {
-  mode: process.env.NODE_ENV,
+  // mode: process.env.NODE_ENV,
   devtool: 'inline-source-map',
   devServer: {
     port: 8081,
@@ -17,7 +17,7 @@ module.exports = {
         target: 'http://localhost:8080'
       },
       '/api': {
-        target: 'http://localhost:8080'
+        target: 'http://localhost:8080/'
         //   pathRewrite: { '^/api': '' }
       },
       '/auth': {
