@@ -6,9 +6,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode production",
-    "start-dev": "NODE_ENV=test webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "start": "webpack --mode development",
+    "start-dev": "webpack-dev-server --open --mode development",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
