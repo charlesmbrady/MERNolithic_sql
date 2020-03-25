@@ -5,9 +5,9 @@ require('style-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/index.js'),
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'
   },
   module: {
@@ -35,10 +35,10 @@ module.exports = {
         test: /\.css$/,
         loader: 'style-loader'
       },
-      {
-        test: /\.css$/,
-        loader: 'css-loader'
-      },
+      // {
+      //   test: /\.css$/,
+      //   loader: 'css-loader'
+      // },
 
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -75,7 +75,7 @@ module.exports = {
       filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: '[name].css'
     })
   ]
 };
