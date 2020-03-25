@@ -108,15 +108,15 @@
         {
           "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
           "name": "test-spec.js.mp4",
-          "size": 133701,
+          "size": 126341,
           "extension": ".mp4",
           "type": "file"
         }
       ],
-      "size": 133701,
+      "size": 126341,
       "type": "directory"
     }
   ],
-  "size": 840218,
+  "size": 832858,
   "type": "directory"
 }

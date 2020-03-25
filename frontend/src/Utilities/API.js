@@ -10,5 +10,10 @@ export default {
     return axios.get('/auth/users').catch(err => {
       throw err;
     });
+  },
+  createUser: function() {
+    return axios.post('/auth/users').catch(err => {
+      throw err;
+    });
   }
 };
