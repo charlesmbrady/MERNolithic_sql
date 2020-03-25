@@ -1,13 +1,10 @@
 {
   "name": "MERNolithic_sql",
   "version": "1.0.0",
-  "engines": {
-    "node": "12.16.x"
-  },
   "description": "This project is a fullstack javascript application built with Charles' MERN template",
-  "main": "/backend/server.js",
+  "main": "backend/server.js",
   "scripts": {
-    "start": "NODE_ENV=production node backend/server.js",
+    "start": "node backend/server.js",
     "start-dev": "NODE_ENV=test run-p start:client start:server",
     "start:coverage": "run-p start:client start:server:coverage",
     "start:client": "cd frontend && yarn start-dev",
@@ -24,7 +21,7 @@
     "open:test-results-report": "node open_test_results_report.js",
     "open:all-test-reports": "run-p open:test-coverage-report open:test-results-report",
     "test-and-report": "run-s test:coverage test:create-reports",
-    "heroku-prebuild": "yarn && cd frontend && yarn && yarn build && cd ../backend && yarn",
+    "heroku-postbuild": "cd frontend && yarn && yarn build",
     "clean-reports": "rm -rf cypress/reports",
     "test": "cypress run --reporter mochawesome",
     "merge-report": "npx mochawesome-merge cypress/reports/*.json > mochawesome.json",
