@@ -21,7 +21,8 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
 
 3. Create `.env` file in project root with following properties (note: open mysql workbench and put in credentials for you local connection)
 
-   ```MYSQL_USER=root
+   ```
+   MYSQL_USER=root
    MYSQL_PASSWORD=12345678
    MYSQL_HOST=localhost
    AUTH_SECRET=your_auth_secret_key
