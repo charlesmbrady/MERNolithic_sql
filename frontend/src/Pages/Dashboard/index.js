@@ -2,7 +2,7 @@ import style from './style.css';
 import React from 'react';
 import API from '../../Utilities/API';
 
-export default function Home() {
+export default function Dashboard() {
   const healthcheck = () => {
     API.healthcheck((res) => {
       if (res) {

@@ -6,7 +6,7 @@ import PrivateRoute from './PrivateRoute';
 import { AuthContext } from './Contexts/authContext';
 
 //********** Pages/Components **********//
-import Home from './Pages/Home';
+import Dashboard from './Pages/Dashboard';
 import NavTrack from './Components/NavTrack';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
@@ -20,9 +20,7 @@ export default function App() {
           <Switch>
             <Route exact path='/login' component={Login} />
             <Route exact path='/register' component={Register} />
-            <PrivateRoute exact path='/home'>
-              <Home />
-            </PrivateRoute>
+            <PrivateRoute exact path='/dashboard' component={Dashboard} />
 
             <Route path='/' component={Login} />
           </Switch>

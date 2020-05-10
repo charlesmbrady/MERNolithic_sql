@@ -26,7 +26,6 @@
 .trackItemContainer {
   display: grid;
   margin: auto;
-  /* padding: 0px 0.5rem; */
 }
 
 .trackItemContainer:hover {
