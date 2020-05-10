@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import style from './style.css';
+import './style.css';
 import PrivateRoute from './PrivateRoute';
 import { AuthContext } from './Contexts/authContext';
 
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <AuthContext.Provider value={false}>
       <Router>
-        <div className={style.app}>
+        <div className='app'>
           <NavTrack />
           <Switch>
             <Route exact path='/login' component={Login} />
