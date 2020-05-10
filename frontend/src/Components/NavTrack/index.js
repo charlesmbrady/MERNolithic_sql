@@ -26,7 +26,7 @@ export default function NavTrack() {
 
   return (
     <div className={style.track}>
-      <h2>{title}</h2>
+      <h2 className={style.trackTitle}>{title}</h2>
 
       {items &&
         items.length > 0 &&

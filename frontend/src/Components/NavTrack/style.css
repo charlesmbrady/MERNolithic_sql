@@ -18,6 +18,11 @@
   border-bottom: 2px solid var(--fourth-color);
 }
 
+.trackTitle {
+  text-align: left;
+  margin: auto 0;
+}
+
 .trackItemContainer {
   display: grid;
   margin: auto;
