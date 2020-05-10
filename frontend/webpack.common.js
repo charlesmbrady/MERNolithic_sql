@@ -65,9 +65,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            // name: "[name].[contenthash].[ext]",
             outputPath: 'assets/docs/',
-            // publicPath: "assets/docs/"
           },
         },
       },
