@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import style from './style.css';
 import PrivateRoute from './PrivateRoute';
 import { AuthContext } from './Contexts/authContext';
 
 //********** Pages/Components **********//
-import Dashboard from './Pages/Dashboard';
 import NavTrack from './Components/NavTrack';
+import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 
