@@ -4,7 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import API from '../../Utilities/API';
 
 export default function Register() {
-  const [redirect, setRedirect] = useState(false);
+  const [userCreated, setUserCreated] = useState(false);
   const [user, setUser] = useState({
     firstName: null,
     lastName: null,
@@ -23,22 +23,18 @@ export default function Register() {
   const submitNewUser = (user) => {
     API.createUser(user).then((res) => {
       if (res.status === 200) {
-        console.log(res.data);
-        setRedirect(true);
+        setUserCreated(true);
       }
     });
   };
 
-  const renderRedirect = () => {
-    if (redirect) {
-      return <Redirect to='/' />;
-    }
-  };
+  if (userCreated) {
+    return <Redirect to='/login' />;
+  }
 
   return (
     <div className={style.gridContainer}>
       <div className={style.container}>
-        {renderRedirect()}
         <form
           id='form'
           className={style.form}

@@ -4,7 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import API from '../../Utilities/API';
 
 export default function Login() {
-  const [redirect, setRedirect] = useState(false);
+  const [userAuthenticated, setUserAuthenticated] = useState(false);
   const [user, setUser] = useState({
     email: null,
     password: null,
@@ -19,21 +19,19 @@ export default function Login() {
 
   const authenticateUser = (user) => {
     API.authenticate(user).then((res) => {
-      if ((res.status = 200)) {
-        setRedirect(true);
+      if (res.status === 200) {
+        setUserAuthenticated(true);
       }
     });
   };
-  const renderRedirect = () => {
-    if (redirect) {
-      return <Redirect to='/dashboard' />;
-    }
-  };
+
+  if (userAuthenticated) {
+    return <Redirect to='/dashboard' />;
+  }
 
   return (
     <div className={style.gridContainer}>
       <div className={style.container}>
-        {renderRedirect()}
         <form
           id='form'
           className={style.form}

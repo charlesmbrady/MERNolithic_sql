@@ -6,8 +6,13 @@ export default {
       throw err;
     });
   },
-  createUser: function () {
-    return axios.post('/auth/users').catch((err) => {
+  createUser: function (user) {
+    return axios.post('/auth/user', user).catch((err) => {
+      throw err;
+    });
+  },
+  authenticate: function (user) {
+    return axios.post(`/auth/authenticate`, user).catch((err) => {
       throw err;
     });
   },

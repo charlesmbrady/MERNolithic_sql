@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './style.css';
@@ -13,7 +13,7 @@ import Register from './Pages/Register';
 
 export default function App() {
   return (
-    <AuthContext.Provider value={false}>
+    <AuthContext.Provider value={true}>
       <Router>
         <div className='app'>
           <NavTrack />
