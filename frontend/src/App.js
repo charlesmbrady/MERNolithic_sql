@@ -7,18 +7,24 @@ import { AuthContext } from './Contexts/authContext';
 
 //********** Pages/Components **********//
 import Home from './Pages/Home';
+import NavTrack from './Components/NavTrack';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 export default function App() {
   return (
     <AuthContext.Provider value={false}>
       <Router>
         <div className='App'>
+          <NavTrack />
           <Switch>
-            <Route exact path='/home'>
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/register' component={Register} />
+            <PrivateRoute exact path='/home'>
               <Home />
-            </Route>
+            </PrivateRoute>
 
-            <Route path='/' component={Home} />
+            <Route path='/' component={Login} />
           </Switch>
         </div>
       </Router>

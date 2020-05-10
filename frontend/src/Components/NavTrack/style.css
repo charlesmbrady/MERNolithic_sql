@@ -1,0 +1,38 @@
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --first-color: #231c07;
+  --second-color: #392a16;
+  --third-color: #87f1ff;
+  --fourth-color: #c0f5fa;
+  --fifth-color: #bd8b9c;
+}
+
+.track {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  grid-gap: 0.8rem;
+  padding: 0px 15px;
+  border-bottom: 2px solid var(--fourth-color);
+}
+
+.trackItemContainer {
+  display: grid;
+  margin: auto;
+  /* padding: 0px 0.5rem; */
+}
+
+.trackItemContainer:hover {
+  cursor: pointer;
+}
+
+.trackItem {
+  text-decoration: none;
+  list-style: none;
+}
+
+.navLink {
+  text-decoration: none;
+}

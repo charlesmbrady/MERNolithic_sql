@@ -1,7 +1,6 @@
 import style from './style.css';
 import React from 'react';
 import API from '../../Utilities/API';
-import OneComponent from '../../Components/OneComponent/index';
 
 export default function Home() {
   const healthcheck = () => {
@@ -20,7 +19,6 @@ export default function Home() {
   return (
     <div>
       <h1>Healthcheck</h1>
-      <OneComponent />
       <button onClick={() => healthcheck()}>ping</button>
     </div>
   );

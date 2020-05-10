@@ -2,14 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 3,
-    "passes": 3,
+    "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2020-05-10T07:55:15.937Z",
-    "end": "2020-05-10T07:55:17.760Z",
-    "duration": 1823,
+    "failures": 1,
+    "start": "2020-05-10T18:01:12.495Z",
+    "end": "2020-05-10T18:01:15.037Z",
+    "duration": 2542,
     "testsRegistered": 3,
-    "passPercent": 100,
+    "passPercent": 66.66666666666666,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "252bfe85-21a1-472b-ae61-fafecdc513d6",
+      "uuid": "fe99cfd9-ceff-440a-9b55-2472684e609d",
       "title": "",
       "fullFile": "cypress/integration/test-spec.js",
       "file": "cypress/integration/test-spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dcfe81c8-b8f0-4dd2-859e-4c4bfbd27ab7",
+          "uuid": "2cdcb9d3-659e-4b50-ae77-939123ae2a4e",
           "title": "home",
           "fullFile": "",
           "file": "",
@@ -38,35 +38,39 @@
               "title": "can click ping button",
               "fullTitle": "home can click ping button",
               "timedOut": null,
-              "duration": 1010,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 1495,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.visit('/');\ncy.get('button').click();",
-              "err": {},
-              "uuid": "5817c135-1db0-4984-9f3c-e2d69b1b1179",
-              "parentUUID": "dcfe81c8-b8f0-4dd2-859e-4c4bfbd27ab7",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: _Utilities_API__WEBPACK_IMPORTED_MODULE_3__.default.authenticate is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Uncaught TypeError: _Utilities_API__WEBPACK_IMPORTED_MODULE_3__.default.authenticate is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at authenticateUser (http://localhost:8081/main.bundle.js:47380:60)\n    at onClick (http://localhost:8081/main.bundle.js:47470:14)\n    at HTMLUnknownElement.callCallback (http://localhost:8081/main.bundle.js:7621:14)\n    at Object.invokeGuardedCallbackDev (http://localhost:8081/main.bundle.js:7670:16)\n    at invokeGuardedCallback (http://localhost:8081/main.bundle.js:7725:31)\n    at invokeGuardedCallbackAndCatchFirstError (http://localhost:8081/main.bundle.js:7739:25)\n    at executeDispatch (http://localhost:8081/main.bundle.js:7822:3)\n    at executeDispatchesInOrder (http://localhost:8081/main.bundle.js:7847:5)\n    at executeDispatchesAndRelease (http://localhost:8081/main.bundle.js:10711:5)\n    at executeDispatchesAndReleaseTopLevel (http://localhost:8081/main.bundle.js:10720:10)",
+                "diff": null
+              },
+              "uuid": "05b3064e-5958-4686-9a6d-aca2f222bb9c",
+              "parentUUID": "2cdcb9d3-659e-4b50-ae77-939123ae2a4e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "5817c135-1db0-4984-9f3c-e2d69b1b1179"
+          "passes": [],
+          "failures": [
+            "05b3064e-5958-4686-9a6d-aca2f222bb9c"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1010,
+          "duration": 1495,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "5b45ce1e-6dca-427e-a459-243adaee9718",
+          "uuid": "00cec454-944c-4ef1-9a82-47023f6c5bb0",
           "title": "Users",
           "fullFile": "",
           "file": "",
@@ -77,7 +81,7 @@
               "title": "Canary test",
               "fullTitle": "Users Canary test",
               "timedOut": null,
-              "duration": 23,
+              "duration": 30,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -86,8 +90,8 @@
               "context": null,
               "code": "expect(1).to.equal(1);",
               "err": {},
-              "uuid": "b4007b9a-d640-4040-a8f3-a24459f2de1d",
-              "parentUUID": "5b45ce1e-6dca-427e-a459-243adaee9718",
+              "uuid": "55613e1f-8b8d-41fc-a9ec-17a7105341bf",
+              "parentUUID": "00cec454-944c-4ef1-9a82-47023f6c5bb0",
               "isHook": false,
               "skipped": false
             },
@@ -95,7 +99,7 @@
               "title": "Can create user",
               "fullTitle": "Users Can create user",
               "timedOut": null,
-              "duration": 193,
+              "duration": 211,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -104,21 +108,21 @@
               "context": null,
               "code": "// cy.visit('/');\ncy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/register\"), {\n  firstName: 'charles',\n  lastName: 'brady',\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  // response.body is automatically serialized into JSON\n  expect(response.body).to.have.property('firstName', 'charles'); // true\n});",
               "err": {},
-              "uuid": "83e33b3c-92e3-46a0-b26a-917a2abb19a3",
-              "parentUUID": "5b45ce1e-6dca-427e-a459-243adaee9718",
+              "uuid": "12d8061f-b4d4-4afb-bdba-ca24311873dd",
+              "parentUUID": "00cec454-944c-4ef1-9a82-47023f6c5bb0",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b4007b9a-d640-4040-a8f3-a24459f2de1d",
-            "83e33b3c-92e3-46a0-b26a-917a2abb19a3"
+            "55613e1f-8b8d-41fc-a9ec-17a7105341bf",
+            "12d8061f-b4d4-4afb-bdba-ca24311873dd"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 216,
+          "duration": 241,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
