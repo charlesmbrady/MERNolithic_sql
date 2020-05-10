@@ -8,21 +8,17 @@ module.exports = merge(common, {
   devServer: {
     port: 8081,
     hot: true,
-    // contentBase: './dist',
-    // hotOnly: true,
     historyApiFallback: true,
     proxy: {
       '/': {
-        target: 'http://localhost:8080'
+        target: 'http://localhost:8080',
       },
       '/api': {
-        target: 'http://localhost:8080/'
-        //   pathRewrite: { '^/api': '' }
+        target: 'http://localhost:8080',
       },
       '/auth': {
-        target: 'http://localhost:8080'
-        //   pathRewrite: { '^/auth': '' }
-      }
-    }
-  }
+        target: 'http://localhost:8080',
+      },
+    },
+  },
 });
