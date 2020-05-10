@@ -11,14 +11,11 @@ export default function App() {
     <Router>
       <div className='App'>
         <Switch>
-          <Route exact path='/Home'>
-            {/* component here */}
+          <Route exact path='/home'>
             <Home />
           </Route>
 
-          <Route path='/'>
-            <Home />
-          </Route>
+          <Route path='/' component={Home} />
         </Switch>
       </div>
     </Router>
