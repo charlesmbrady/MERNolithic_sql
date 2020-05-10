@@ -15,13 +15,15 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-let coverageMap;
+
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   on('task', require('@cypress/code-coverage/task'));
+  // on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'));
 
   if (config.env.coverage) {
+    let coverageMap;
     const istanbul = require('istanbul-lib-coverage');
     coverageMap = istanbul.createCoverageMap({});
 
@@ -29,7 +31,7 @@ module.exports = (on, config) => {
       coverage(coverage) {
         coverageMap.merge(coverage);
         return JSON.stringify(coverageMap);
-      }
+      },
     });
   }
 

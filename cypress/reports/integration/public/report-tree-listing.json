@@ -83,46 +83,23 @@
     {
       "path": "cypress/reports/integration/public/report-tree-listing.json",
       "name": "report-tree-listing.json",
-      "size": 3799,
+      "size": 4516,
       "extension": ".json",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.html",
       "name": "report.html",
-      "size": 10677,
+      "size": 8985,
       "extension": ".html",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.json",
       "name": "report.json",
-      "size": 9341,
+      "size": 7635,
       "extension": ".json",
       "type": "file"
-    },
-    {
-      "path": "cypress/reports/integration/public/screenshots",
-      "name": "screenshots",
-      "children": [
-        {
-          "path": "cypress/reports/integration/public/screenshots/test-spec.js",
-          "name": "test-spec.js",
-          "children": [
-            {
-              "path": "cypress/reports/integration/public/screenshots/test-spec.js/Users -- Can create user (failed).png",
-              "name": "Users -- Can create user (failed).png",
-              "size": 50299,
-              "extension": ".png",
-              "type": "file"
-            }
-          ],
-          "size": 50299,
-          "type": "directory"
-        }
-      ],
-      "size": 50299,
-      "type": "directory"
     },
     {
       "path": "cypress/reports/integration/public/videos",
@@ -131,22 +108,22 @@
         {
           "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
           "name": "test-spec.js.mp4",
-          "size": 155744,
+          "size": 142111,
           "extension": ".mp4",
           "type": "file"
         },
         {
           "path": "cypress/reports/integration/public/videos/test.js.mp4",
           "name": "test.js.mp4",
-          "size": 78250,
+          "size": 90958,
           "extension": ".mp4",
           "type": "file"
         }
       ],
-      "size": 233994,
+      "size": 233069,
       "type": "directory"
     }
   ],
-  "size": 999989,
+  "size": 946084,
   "type": "directory"
 }

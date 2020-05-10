@@ -2,14 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 3,
-    "passes": 2,
+    "passes": 3,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-05-09T05:03:38.067Z",
-    "end": "2020-05-09T05:03:39.463Z",
-    "duration": 1396,
+    "failures": 0,
+    "start": "2020-05-10T07:55:15.937Z",
+    "end": "2020-05-10T07:55:17.760Z",
+    "duration": 1823,
     "testsRegistered": 3,
-    "passPercent": 66.66666666666666,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0c86e7fa-0efb-4dd9-bc92-305c15729801",
+      "uuid": "252bfe85-21a1-472b-ae61-fafecdc513d6",
       "title": "",
       "fullFile": "cypress/integration/test-spec.js",
       "file": "cypress/integration/test-spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3e01650f-8024-449d-a16e-6f405cf0c0c8",
+          "uuid": "dcfe81c8-b8f0-4dd2-859e-4c4bfbd27ab7",
           "title": "home",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "can click ping button",
               "fullTitle": "home can click ping button",
               "timedOut": null,
-              "duration": 712,
+              "duration": 1010,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "cy.visit('/');\ncy.get('button').click();",
               "err": {},
-              "uuid": "d17b70c5-036f-49f4-9b2f-85123b4e0077",
-              "parentUUID": "3e01650f-8024-449d-a16e-6f405cf0c0c8",
+              "uuid": "5817c135-1db0-4984-9f3c-e2d69b1b1179",
+              "parentUUID": "dcfe81c8-b8f0-4dd2-859e-4c4bfbd27ab7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d17b70c5-036f-49f4-9b2f-85123b4e0077"
+            "5817c135-1db0-4984-9f3c-e2d69b1b1179"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 712,
+          "duration": 1010,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "df782935-0e5b-4ba3-87a4-a01bb40e2609",
+          "uuid": "5b45ce1e-6dca-427e-a459-243adaee9718",
           "title": "Users",
           "fullFile": "",
           "file": "",
@@ -77,7 +77,7 @@
               "title": "Canary test",
               "fullTitle": "Users Canary test",
               "timedOut": null,
-              "duration": 22,
+              "duration": 23,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -86,8 +86,8 @@
               "context": null,
               "code": "expect(1).to.equal(1);",
               "err": {},
-              "uuid": "74d812d2-e511-44a9-af92-472cc9160451",
-              "parentUUID": "df782935-0e5b-4ba3-87a4-a01bb40e2609",
+              "uuid": "b4007b9a-d640-4040-a8f3-a24459f2de1d",
+              "parentUUID": "5b45ce1e-6dca-427e-a459-243adaee9718",
               "isHook": false,
               "skipped": false
             },
@@ -95,35 +95,30 @@
               "title": "Can create user",
               "fullTitle": "Users Can create user",
               "timedOut": null,
-              "duration": 564,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 193,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "// cy.visit('/');\ncy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/register\"), {\n  firstName: 'charles',\n  lastName: 'brady',\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  // response.body is automatically serialized into JSON\n  expect(response.body).to.have.property('firstName', 'charles'); // true\n});",
-              "err": {
-                "message": "AssertionError: expected { Object (name, errors, ...) } to have property 'firstName'",
-                "estack": "AssertionError: expected { Object (name, errors, ...) } to have property 'firstName'\n    at getRet (http://localhost:8081/__cypress/runner/cypress_runner.js:125261:16)\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:8081/__cypress/runner/cypress_runner.js:162740:29)\n    at Context.thenFn (http://localhost:8081/__cypress/runner/cypress_runner.js:125275:23)\n    at Context.then (http://localhost:8081/__cypress/runner/cypress_runner.js:125647:21)\n    at Context.<anonymous> (http://localhost:8081/__cypress/runner/cypress_runner.js:137585:21)\n    at http://localhost:8081/__cypress/runner/cypress_runner.js:137061:33\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:165465:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:163401:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:163458:18)\n    at Promise._settlePromiseCtx (http://localhost:8081/__cypress/runner/cypress_runner.js:163495:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:160195:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160200:10)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:160074:14)",
-                "diff": null
-              },
-              "uuid": "cae3b193-16ed-44d3-b028-fd18fa953fea",
-              "parentUUID": "df782935-0e5b-4ba3-87a4-a01bb40e2609",
+              "err": {},
+              "uuid": "83e33b3c-92e3-46a0-b26a-917a2abb19a3",
+              "parentUUID": "5b45ce1e-6dca-427e-a459-243adaee9718",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "74d812d2-e511-44a9-af92-472cc9160451"
+            "b4007b9a-d640-4040-a8f3-a24459f2de1d",
+            "83e33b3c-92e3-46a0-b26a-917a2abb19a3"
           ],
-          "failures": [
-            "cae3b193-16ed-44d3-b028-fd18fa953fea"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 586,
+          "duration": 216,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -141,7 +136,7 @@
   ],
   "meta": {
     "mocha": {
-      "version": "5.2.0"
+      "version": "7.0.1"
     },
     "mochawesome": {
       "options": {

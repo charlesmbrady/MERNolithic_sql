@@ -33,7 +33,7 @@
     "cleanup:evidence": "rm -fr cypress/reports/integration/public/videos* && rm -fr cypress/reports/integration/public/screenshots*",
     "merge_reports": "mochawesome-merge --reportDir=cypress/reports/integration/reports/mocha > cypress/reports/integration/public/report.json",
     "generate_html_report": "marge cypress/reports/integration/public/report.json -f report -o cypress/reports/integration/public/",
-    "test:cy:local": "run-p --race start-dev test-no-exit",
+    "test:cy:local": "run-p --race start:coverage test-no-exit",
     "test:cy:staging": "npm run cy:run-ci-staging --force",
     "test:cy:production": "npm run cy:run-ci-production --force",
     "cy:run": "cypress run",

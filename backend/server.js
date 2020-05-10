@@ -12,7 +12,7 @@ const withAuth = require('./middleware');
 app.use(express.urlencoded({ limit: '100mb', extended: true }));
 app.use(express.json({ limit: '100mb' }));
 if (global.__coverage__) {
-  console.log('registering coverage middleware');
+  // console.log('registering coverage middleware');
   require('@cypress/code-coverage/middleware/express')(app);
 }
 
@@ -23,28 +23,18 @@ app.get('/healthcheck', (req, res) => {
   res.send('App is running!');
 });
 
-// app.get('/api/healthcheck', (req, res) => {
-//   res.send('App is running!');
-// });
-
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
   // Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
+  app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, '../frontend/dist'));
   });
 }
 
-// if (process.env.NODE_ENV !== 'production') {
-//   app.get('/', (req, res) => {
-//     res.sendStatus(200);
-//   });
-// }
-
 // Error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   console.log('====== ERROR =======');
   console.error(err.stack);
   res
@@ -55,7 +45,7 @@ app.use(function(err, req, res, next) {
 });
 
 const syncOptions = {
-  force: process.env.FORCE_SYNC === 'true'
+  force: process.env.FORCE_SYNC === 'true',
 };
 
 if (app.get('env') === 'test') {
