@@ -8,7 +8,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [
@@ -16,8 +16,8 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.html$/,
@@ -26,35 +26,39 @@ module.exports = {
           {
             loader: 'html-loader',
             options: {
-              attributes: true
-            }
-          }
-        ]
+              attributes: true,
+            },
+          },
+        ],
       },
       {
-        test: /\.css$/,
-        loader: 'style-loader'
+        test: /\.css$/i,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+        ],
       },
-      // {
-      //   test: /\.css$/,
-      //   loader: 'css-loader'
-      // },
-
       {
         test: /\.(png|jpe?g|gif)$/i,
         loader: 'file-loader',
         options: {
-          outputPath: 'images'
-        }
+          outputPath: 'images',
+        },
       },
       {
         test: /\.(mp4|webm)$/i,
         use: {
           loader: 'file-loader',
           options: {
-            outputPath: 'videos'
-          }
-        }
+            outputPath: 'videos',
+          },
+        },
       },
       {
         test: /\.pdf$/,
@@ -62,20 +66,20 @@ module.exports = {
           loader: 'file-loader',
           options: {
             // name: "[name].[contenthash].[ext]",
-            outputPath: 'assets/docs/'
+            outputPath: 'assets/docs/',
             // publicPath: "assets/docs/"
-          }
-        }
-      }
-    ]
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
-    })
-  ]
+      filename: '[name].css',
+    }),
+  ],
 };

@@ -47,10 +47,16 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style-loader',
+        options: {
+          modules: true,
+        },
       },
       {
         test: /\.css$/,
         loader: 'css-loader',
+        options: {
+          modules: true,
+        },
       },
 
       {
