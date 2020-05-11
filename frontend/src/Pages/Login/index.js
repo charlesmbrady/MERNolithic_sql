@@ -1,25 +1,28 @@
 import style from './style.css';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import { UserContext } from '../../Contexts/UserContext';
 import API from '../../Utilities/API';
 
 export default function Login() {
   const [userAuthenticated, setUserAuthenticated] = useState(false);
-  const [user, setUser] = useState({
+  const [newUser, setNewUser] = useState({
     email: null,
     password: null,
   });
+  const { user, setUser } = useContext(UserContext);
 
   const formUpdate = (fieldName, value) => {
-    let tempUser = { ...user };
+    let tempUser = { ...newUser };
     tempUser[fieldName] = value;
 
-    setUser(tempUser);
+    setNewUser(tempUser);
   };
 
-  const authenticateUser = (user) => {
-    API.authenticate(user).then((res) => {
+  const authenticateUser = (newUser) => {
+    API.authenticate(newUser).then((res) => {
       if (res.status === 200) {
+        setUser({ ...user, isAuthenticated: true });
         setUserAuthenticated(true);
       }
     });
@@ -51,7 +54,7 @@ export default function Login() {
               data-test='login-input-email'
               placeholder='Enter email'
               name='email'
-              value={user.email}
+              value={newUser.email}
               onChange={(e) => formUpdate(e.target.name, e.target.value)}
             />
             <small className={style.error} data-test='error-email'>
@@ -73,7 +76,7 @@ export default function Login() {
               data-test='login-input-password'
               placeholder='Enter password'
               name='password'
-              value={user.password}
+              value={newUser.password}
               onChange={(e) => formUpdate(e.target.name, e.target.value)}
             />
             <small className={style.error} data-test='error-password'>
@@ -83,7 +86,7 @@ export default function Login() {
           <button
             type='submit'
             data-test='login-submit-button'
-            onClick={() => authenticateUser(user)}
+            onClick={() => authenticateUser(newUser)}
           >
             Submit
           </button>

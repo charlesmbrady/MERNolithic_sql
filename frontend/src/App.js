@@ -14,9 +14,9 @@ import Register from './Pages/Register';
 export default function App() {
   const [user, setUser] = useState({
     isAuthenticated: false,
-    name: null,
-    password: null,
-    securityToken: null,
+    firstName: null,
+    lastName: null,
+    email: null,
   });
   const userValue = useMemo(() => ({ user, setUser }), [user, setUser]);
 

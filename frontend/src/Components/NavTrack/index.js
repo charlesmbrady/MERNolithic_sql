@@ -1,9 +1,19 @@
 import style from './style.css';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../Contexts/UserContext';
 import API from '../../Utilities/API';
 
 export default function NavTrack() {
+  const { user, setUser } = useContext(UserContext);
+  const logout = () => {
+    API.logout().then((res) => {
+      if (res.status == 200) {
+        console.log('Successfully logged out');
+        setUser({ ...user, isAuthenticated: false });
+      }
+    });
+  };
   const title = 'MERN Starter';
 
   const login = (
@@ -21,8 +31,13 @@ export default function NavTrack() {
       Dashboard
     </Link>
   );
+  const logoutButton = (
+    <button className={style.navLink} onClick={() => logout()}>
+      Logout
+    </button>
+  );
 
-  const items = [login, register, dashboard];
+  const items = [login, register, dashboard, logoutButton];
 
   return (
     <div className={style.track}>

@@ -16,10 +16,14 @@ export default {
       throw err;
     });
   },
-  checkToken: async function () {
-    const response = await axios.get('/auth/checkToken').catch((err) => {
+  checkToken: function () {
+    return axios.get('/auth/checkToken').catch((err) => {
       throw err;
     });
-    return response;
+  },
+  logout: function () {
+    return axios.get('/auth/logout').catch((err) => {
+      throw err;
+    });
   },
 };
