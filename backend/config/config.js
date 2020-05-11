@@ -9,19 +9,19 @@ module.exports = {
     details: {
       host: 'localhost',
       port: 3306,
-      dialect: 'mysql'
-    }
+      dialect: 'mysql',
+    },
   },
   test: {
-    // use_env_variable: 'TEST_DATABASE_URL', //add this back if I try to use the coverage tests in CI again
+    use_env_variable: 'TEST_DATABASE_URL', //add this back if I try to use the coverage tests in CI again
     username: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
     database: 'mernolithic_test',
     details: {
       host: '127.0.0.1', // use 'localhost' if go back to using this step in CI
       port: 3306,
-      dialect: 'mysql'
-    }
+      dialect: 'mysql',
+    },
   },
   production: {
     use_env_variable: 'JAWSDB_URL',
@@ -32,7 +32,7 @@ module.exports = {
       password: 'jzmpiwgyslmbh41g',
       database: 'g1xlb2hedlnspfme',
       port: 3306,
-      dialect: 'mysql'
-    }
-  }
+      dialect: 'mysql',
+    },
+  },
 };
