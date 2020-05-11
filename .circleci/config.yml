@@ -70,14 +70,18 @@ jobs:
     <<: *defaults
 
     steps:
-      - attach_workspace:
-          at: ~/
+      # - attach_workspace:
+      #     at: ~/
+      - checkout
+      - run:
+          name: install general dependencies
+          command: yarn install
+      - run:
+          name: install frontend dependencies
+          command: cd frontend && yarn install
       - run:
           name: Run cypress tests
-          command: |
-            sudo apt-get update
-            sudo apt-get install libxtst6
-            yarn test:create-reports
+          command: yarn test:create-reports-local
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
@@ -118,9 +122,9 @@ workflows:
       # - coverage_test:
       #     requires:
       #       - build
-      # - cypress_tests:
-      #     requires:
-      #       - build
+      - cypress_tests:
+          requires:
+            - build
       # - js_unit_tests:
       #     requires:
       #       - build
