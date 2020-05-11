@@ -89,6 +89,9 @@ jobs:
       - run:
           name: Run cypress tests
           command: yarn test:create-reports-local
+      - run:
+          name: Test coverage threshold
+          command: npx nyc report --check-coverage --lines 80
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
@@ -132,33 +135,3 @@ workflows:
       - cypress_tests:
           requires:
             - build
-      # - js_unit_tests:
-      #     requires:
-      #       - build
-      # - backend_unit_tests:
-      #     requires:
-      #       - build
-      # - api_tests:
-      #     requires:
-      #       - build
-      # - ui_tests:
-      #     requires:
-      #       - build
-      # RECOMMENDED NODE config
-      # version: 2.1
-      # orbs:
-      #   node: circleci/node@1.1.6
-      # jobs:
-      #   build-and-test:
-      #     executor:
-      #       name: node/default
-      #     steps:
-      #       - checkout
-      #       - node/with-cache:
-      #           steps:
-      #             - run: npm install
-      #             - run: npm test
-      # workflows:
-      #     build-and-test:
-      #       jobs:
-      #         - build-and-test
