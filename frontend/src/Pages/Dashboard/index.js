@@ -1,18 +1,12 @@
 import style from './style.css';
 import React from 'react';
 import API from '../../Utilities/API';
-import OneComponent from '../../Components/OneComponent/index';
 
-export default function Home() {
+export default function Dashboard() {
   const healthcheck = () => {
     API.healthcheck((res) => {
       if (res) {
         console.log('app is healthy');
-      }
-    });
-    API.checkDatabase((res) => {
-      if (res) {
-        console.log('database is connected ' + res);
       }
     });
   };
@@ -20,7 +14,6 @@ export default function Home() {
   return (
     <div>
       <h1>Healthcheck</h1>
-      <OneComponent />
       <button onClick={() => healthcheck()}>ping</button>
     </div>
   );

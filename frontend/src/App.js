@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { useState, useMemo, useContext } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './style.css';
+import PrivateRoute from './PrivateRoute';
+import { UserContext } from './Contexts/UserContext';
 
 //********** Pages/Components **********//
-import Home from './Pages/Home';
+import NavTrack from './Components/NavTrack';
+import Dashboard from './Pages/Dashboard';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 export default function App() {
-  return (
-    <Router>
-      <div className='App'>
-        <Switch>
-          <Route exact path='/home'>
-            <Home />
-          </Route>
+  const [user, setUser] = useState({
+    isAuthenticated: false,
+    firstName: null,
+    lastName: null,
+    email: null,
+  });
+  const userValue = useMemo(() => ({ user, setUser }), [user, setUser]);
 
-          <Route path='/' component={Home} />
-        </Switch>
-      </div>
-    </Router>
+  return (
+    <UserContext.Provider value={userValue}>
+      <Router>
+        <div className='app'>
+          <NavTrack />
+          <Switch>
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/register' component={Register} />
+            <PrivateRoute exact path='/dashboard' component={Dashboard} />
+
+            <Route path='/' component={Login} />
+          </Switch>
+        </div>
+      </Router>
+    </UserContext.Provider>
   );
 }
