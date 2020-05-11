@@ -2,7 +2,7 @@
 # testing ci
 defaults: &defaults
   docker:
-    - image: circleci/node:12.16.3
+    - image: circleci/node:12.16.3-browsers
     - image: circleci/mysql:8.0.4
       environment:
         # MYSQL_ROOT_PASSWORD: rootpw
@@ -79,13 +79,13 @@ jobs:
       - run:
           name: install frontend dependencies
           command: cd frontend && yarn install
-      - run:
-          name: extra install
-          command: |
-            sudo apt-get update
-            sudo apt-get install libxtst6
-            sudo apt-get install libnss3
-            sudo apt-get install libgtk-3
+      # - run:
+      #     name: extra install
+      #     command: |
+      #       sudo apt-get update
+      #       sudo apt-get install libxtst6
+      #       sudo apt-get install libnss3
+      #       sudo apt-get install libgtk-3
       - run:
           name: Run cypress tests
           command: yarn test:create-reports-local
