@@ -16,4 +16,10 @@ export default {
       throw err;
     });
   },
+  checkToken: async function () {
+    const response = await axios.get('/auth/checkToken').catch((err) => {
+      throw err;
+    });
+    return response;
+  },
 };
