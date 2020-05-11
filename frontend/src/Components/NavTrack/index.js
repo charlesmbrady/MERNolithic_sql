@@ -9,7 +9,6 @@ export default function NavTrack() {
   const logout = () => {
     API.logout().then((res) => {
       if (res.status == 200) {
-        console.log('Successfully logged out');
         setUser({ ...user, isAuthenticated: false });
       }
     });
@@ -37,7 +36,12 @@ export default function NavTrack() {
     </button>
   );
 
-  const items = [login, register, dashboard, logoutButton];
+  const authenticatedItems = [dashboard, logoutButton];
+  const notAuthenticatedItems = [login, register];
+
+  const items = user.isAuthenticated
+    ? authenticatedItems
+    : notAuthenticatedItems;
 
   return (
     <div className={style.track}>
