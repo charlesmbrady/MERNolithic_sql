@@ -91,7 +91,7 @@ jobs:
           command: yarn test:create-reports-local
       - run:
           name: Test coverage threshold
-          command: npx nyc report --check-coverage --lines 80
+          command: yarn get-coverage
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
