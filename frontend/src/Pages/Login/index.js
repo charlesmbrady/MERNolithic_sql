@@ -22,11 +22,38 @@ export default function Login() {
     password: form.password.input,
   };
 
+  const clearForm = () => {
+    setForm({
+      // All field names go here
+      firstName: {
+        input: null,
+        error: null,
+      },
+      lastName: {
+        input: null,
+        error: null,
+      },
+      email: {
+        input: null,
+        error: null,
+      },
+      password: {
+        input: null,
+        error: null,
+      },
+      confirmPassword: {
+        input: null,
+        error: null,
+      },
+    });
+  };
+
   const authenticateUser = () => {
     API.authenticate(newUser).then((res) => {
       if (res.status === 200) {
         setUser({ ...user, isAuthenticated: true });
         setUserAuthenticated(true);
+        clearForm();
       }
     });
   };
