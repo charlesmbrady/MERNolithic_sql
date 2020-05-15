@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './style.css';
 import PrivateRoute from './PrivateRoute';
 import { UserContext } from './Contexts/UserContext';
+import { GlobalContext } from './Contexts/GlobalContext';
 
 //********** Pages/Components **********//
 import NavTrack from './Components/NavTrack';
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import Home from './Pages/Home';
 
 export default function App() {
   const [user, setUser] = useState({
@@ -20,20 +22,30 @@ export default function App() {
   });
   const userValue = useMemo(() => ({ user, setUser }), [user, setUser]);
 
+  const [global, setGlobal] = useState({
+    sideDrawer: false,
+  });
+  const globalValue = useMemo(() => ({ global, setGlobal }), [
+    global,
+    setGlobal,
+  ]);
+
   return (
     <UserContext.Provider value={userValue}>
-      <Router>
-        <div className='app'>
-          <NavTrack />
-          <Switch>
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/register' component={Register} />
-            <PrivateRoute exact path='/dashboard' component={Dashboard} />
+      <GlobalContext.Provider value={globalValue}>
+        <Router>
+          <div className='app'>
+            <NavTrack />
+            <Switch>
+              <Route exact path='/login' component={Login} />
+              <Route exact path='/register' component={Register} />
+              <PrivateRoute exact path='/dashboard' component={Dashboard} />
 
-            <Route path='/' component={Login} />
-          </Switch>
-        </div>
-      </Router>
+              <Route path='/' component={Home} />
+            </Switch>
+          </div>
+        </Router>
+      </GlobalContext.Provider>
     </UserContext.Provider>
   );
 }
