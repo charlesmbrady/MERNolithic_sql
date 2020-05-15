@@ -11,6 +11,7 @@ import NavTrack from './Components/NavTrack';
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import Home from './Pages/Home';
 
 export default function App() {
   const [user, setUser] = useState({
@@ -40,7 +41,7 @@ export default function App() {
               <Route exact path='/register' component={Register} />
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
 
-              <Route path='/' component={Login} />
+              <Route path='/' component={Home} />
             </Switch>
           </div>
         </Router>
