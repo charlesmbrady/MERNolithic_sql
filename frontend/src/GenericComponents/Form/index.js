@@ -4,7 +4,7 @@ import FormHeader from '../FormHeader';
 
 export default function Form({ title, fieldGroups, footer }) {
   return (
-    <form className={style.form}>
+    <form className={style.form} onSubmit={(e) => e.preventDefault()}>
       <FormHeader title={title} />
 
       {/* Form Fields will be inserted here by passing an array of <FieldGroup /> components to the fieldGroups prop*/}
