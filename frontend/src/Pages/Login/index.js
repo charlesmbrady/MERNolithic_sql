@@ -2,7 +2,15 @@ import style from './style.css';
 import React, { useState, useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { UserContext } from '../../Contexts/UserContext';
+import { FormContext } from '../../Contexts/FormContext';
 import API from '../../Utilities/API';
+
+//Form Components
+import Form from '../../GenericComponents/Form';
+import FormHeader from '../../GenericComponents/FormHeader';
+import FormFooter from '../../GenericComponents/FormFooter';
+import SubmitButton from '../../GenericComponents/SubmitButton';
+import FieldGroup from '../../GenericComponents/FieldGroup';
 
 export default function Login() {
   const [userAuthenticated, setUserAuthenticated] = useState(false);
@@ -35,6 +43,7 @@ export default function Login() {
   return (
     <div className={style.gridContainer}>
       <div className={style.container}>
+        <Form title='Login' />
         <form
           id='form'
           className={style.form}

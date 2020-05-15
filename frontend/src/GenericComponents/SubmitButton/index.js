@@ -3,7 +3,11 @@ import React from 'react';
 
 export default function SubmitButton({ text, submitFunction }) {
   return (
-    <button className={style.submitButton} onClick={submitFunction}>
+    <button
+      type='submit'
+      className={style.submitButton}
+      onClick={submitFunction}
+    >
       {text}
     </button>
   );
