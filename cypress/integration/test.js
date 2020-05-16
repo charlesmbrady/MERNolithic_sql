@@ -18,5 +18,16 @@ describe('Users', function () {
     cy.get('[data-test="email-input"]').type('charlesmbrady@gmail.com');
     cy.get('[data-test="password-input"]').type('Password1!');
     cy.get('[data-test="submit-button"]').click();
+    cy.visit('/dashboard');
+  });
+
+  it('Can logout', () => {
+    cy.visit('/');
+    cy.get('[data-test="login-navlink"]').click();
+    cy.get('[data-test="email-input"]').type('charlesmbrady@gmail.com');
+    cy.get('[data-test="password-input"]').type('Password1!');
+    cy.get('[data-test="submit-button"]').click();
+    cy.visit('/dashboard');
+    cy.get('[data-test="logout-button"]').click();
   });
 });
