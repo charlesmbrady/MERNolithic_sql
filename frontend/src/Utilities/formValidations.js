@@ -10,15 +10,30 @@ export default function validateForm(values) {
   if (!values.firstName) {
     errors.firstName = 'First Name is required';
   }
+  if (values.firstName && values.firstName.length < 2) {
+    errors.firstName = 'First Name must be at least 2 characters';
+  }
+  if (values.firstName && values.firstName.length > 100) {
+    errors.firstName = 'First Name must be less than 100 characters';
+  }
 
   // Last Name
   if (!values.lastName) {
     errors.lastName = 'Last Name is required';
   }
+  if (values.firstName && values.firstName.length < 2) {
+    errors.firstName = 'First Name must be at least 2 characters';
+  }
+  if (values.firstName && values.firstName.length > 100) {
+    errors.firstName = 'First Name must be less than 100 characters';
+  }
 
   // Password
   if (!values.password) {
     errors.password = 'Password is required';
+  }
+  if (values.password && values.password.length < 7) {
+    errors.password = 'Password must be at least 7 characters';
   }
 
   if (!values.passwordConfirmation) {
