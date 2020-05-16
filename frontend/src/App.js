@@ -6,6 +6,7 @@ import PrivateRoute from './PrivateRoute';
 import { UserContext } from './Contexts/UserContext';
 import { GlobalContext } from './Contexts/GlobalContext';
 import { FormContext } from './Contexts/FormContext';
+import validations from './Utilities/formValidations';
 
 //********** Pages/Components **********//
 import NavTrack from './Components/NavTrack';
