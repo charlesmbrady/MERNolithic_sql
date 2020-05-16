@@ -18,6 +18,10 @@
 .input {
 }
 
+.invalidInput {
+  border: 3px solid red;
+}
+
 .error {
   font-style: italic;
   color: rgb(255, 49, 49);
