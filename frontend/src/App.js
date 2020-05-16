@@ -52,7 +52,7 @@ export default function App() {
       input: null,
       error: null,
     },
-    confirmPassword: {
+    passwordConfirmation: {
       input: null,
       error: null,
     },

@@ -41,7 +41,7 @@ export default function Login() {
         input: null,
         error: null,
       },
-      confirmPassword: {
+      passwordConfirmation: {
         input: null,
         error: null,
       },
