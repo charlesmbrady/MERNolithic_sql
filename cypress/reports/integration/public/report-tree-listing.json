@@ -83,21 +83,21 @@
     {
       "path": "cypress/reports/integration/public/report-tree-listing.json",
       "name": "report-tree-listing.json",
-      "size": 3799,
+      "size": 3801,
       "extension": ".json",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.html",
       "name": "report.html",
-      "size": 13902,
+      "size": 12375,
       "extension": ".html",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.json",
       "name": "report.json",
-      "size": 12610,
+      "size": 10578,
       "extension": ".json",
       "type": "file"
     },
@@ -106,37 +106,22 @@
       "name": "screenshots",
       "children": [
         {
-          "path": "cypress/reports/integration/public/screenshots/test-spec.js",
-          "name": "test-spec.js",
-          "children": [
-            {
-              "path": "cypress/reports/integration/public/screenshots/test-spec.js/home -- can click ping button (failed).png",
-              "name": "home -- can click ping button (failed).png",
-              "size": 62869,
-              "extension": ".png",
-              "type": "file"
-            }
-          ],
-          "size": 62869,
-          "type": "directory"
-        },
-        {
           "path": "cypress/reports/integration/public/screenshots/test.js",
           "name": "test.js",
           "children": [
             {
-              "path": "cypress/reports/integration/public/screenshots/test.js/coverage -- cover the tested code (failed).png",
-              "name": "coverage -- cover the tested code (failed).png",
-              "size": 62946,
+              "path": "cypress/reports/integration/public/screenshots/test.js/Users -- Can logout (failed).png",
+              "name": "Users -- Can logout (failed).png",
+              "size": 100407,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 62946,
+          "size": 100407,
           "type": "directory"
         }
       ],
-      "size": 125815,
+      "size": 100407,
       "type": "directory"
     },
     {
@@ -146,22 +131,22 @@
         {
           "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
           "name": "test-spec.js.mp4",
-          "size": 266852,
+          "size": 128830,
           "extension": ".mp4",
           "type": "file"
         },
         {
           "path": "cypress/reports/integration/public/videos/test.js.mp4",
           "name": "test.js.mp4",
-          "size": 252077,
+          "size": 555447,
           "extension": ".mp4",
           "type": "file"
         }
       ],
-      "size": 518929,
+      "size": 684277,
       "type": "directory"
     }
   ],
-  "size": 1366934,
+  "size": 1503317,
   "type": "directory"
 }

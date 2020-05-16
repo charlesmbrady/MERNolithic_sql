@@ -94,8 +94,6 @@ const useForm = (callback) => {
   };
 
   useEffect(() => {
-    // check to see if there are errors
-    // if not, call our callback
     if (global.isSubmitting) {
       executeCallback(callback);
     }
