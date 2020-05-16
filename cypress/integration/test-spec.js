@@ -1,20 +1,13 @@
 /// <reference types="cypress" />
 
 describe('home', function () {
-  it('can click ping button', function () {
+  it('can visit homepage', function () {
     cy.visit('/');
-    cy.get('button').click();
   });
 });
 
 describe('Users', function () {
-  it('Canary test', function () {
-    expect(1).to.equal(1);
-  });
-
   it('Can create user', function () {
-    // cy.visit('/');
-
     cy.request('POST', `${Cypress.config('apiUrl')}/auth/user`, {
       firstName: 'charles',
       lastName: 'brady',
@@ -23,6 +16,15 @@ describe('Users', function () {
     }).then((response) => {
       // response.body is automatically serialized into JSON
       expect(response.body).to.have.property('firstName', 'charles'); // true
+    });
+  });
+
+  it('Can authenticate user', function () {
+    cy.request('POST', `${Cypress.config('apiUrl')}/auth/authenticate`, {
+      email: 'ranom',
+      password: 'myPassword1!',
+    }).then((response) => {
+      expect(response.body).to.equal('OK');
     });
   });
 });
