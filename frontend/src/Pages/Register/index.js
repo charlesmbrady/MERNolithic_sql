@@ -12,13 +12,12 @@ import FieldGroup from '../../GenericComponents/FieldGroup';
 
 export default function Register() {
   const { user } = useContext(UserContext);
-  const { registerUser } = useForm();
 
   if (user.isCreated) {
     return <Redirect to='/login' />;
   }
 
-  const fields = [
+  const fieldGroups = [
     <FieldGroup
       type='text'
       label='First Name'
@@ -52,7 +51,7 @@ export default function Register() {
   ];
 
   const formFooterItems = [
-    <SubmitButton text='Submit' submitFunction={() => registerUser()} />,
+    <SubmitButton text='Submit' />,
     <small className={style.option}>
       <Link to='/login' data-test='register-to-login'>
         Already have an account?
@@ -60,12 +59,17 @@ export default function Register() {
     </small>,
   ];
 
+  const footer = <FormFooter formFooterItems={formFooterItems} />;
+
   return (
     <div className={style.gridContainer}>
       <div className={style.container}>
-        <Form title='Register With Us' />
-        {fields}
-        <FormFooter formFooterItems={formFooterItems} />
+        <Form
+          title='Register With Us'
+          submitFunction='registerUser'
+          fieldGroups={fieldGroups}
+          footer={footer}
+        />
       </div>
     </div>
   );

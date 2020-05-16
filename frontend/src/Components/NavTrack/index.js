@@ -9,7 +9,7 @@ export default function NavTrack() {
   const logout = () => {
     API.logout().then((res) => {
       if (res.status == 200) {
-        setUser({ ...user, isAuthenticated: false });
+        setUser({ ...user, isAuthenticated: false, isCreated: false });
       }
     });
   };

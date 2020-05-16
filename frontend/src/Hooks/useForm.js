@@ -1,16 +1,21 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { FormValuesContext } from '../Contexts/FormValuesContext';
 import { UserContext } from '../Contexts/UserContext';
 import { FormErrorsContext } from '../Contexts/FormErrorsContext';
+import { GlobalContext } from '../Contexts/GlobalContext';
 import API from '../Utilities/API';
+import validate from '../Utilities/formValidations';
 
-const useForm = () => {
+const useForm = (callback) => {
   const { formValues, setFormValues } = useContext(FormValuesContext);
   const { formErrors, setFormErrors } = useContext(FormErrorsContext);
   const { user, setUser } = useContext(UserContext);
+  const { global, setGlobal } = useContext(GlobalContext);
 
   const handleSubmit = (e) => {
-    e.target.preventDefault();
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setGlobal({ ...global, isSubmitting: true });
   };
 
   const handleChange = (e) => {
@@ -22,23 +27,37 @@ const useForm = () => {
   };
 
   const clearForm = () => {
+    setGlobal({ ...global, isSubmitting: false });
     let tempValues = { ...formValues };
-    let tempErrors = { ...formErrors };
+    // let tempErrors = { ...formErrors };
 
     // for each key in the form values array, set the value to null
     for (let [key, value] of Object.entries(tempValues)) {
       tempValues[key] = null;
     }
-    setFormValues(tempValues);
+    setFormValues({});
 
     // for each key in the form errors array, set the value to null
-    for (let [key, value] of Object.entries(tempErrors)) {
-      tempErrors[key] = null;
-    }
-    setFormErrors(tempErrors);
+    // for (let [key, value] of Object.entries(tempErrors)) {
+    //   tempErrors[key] = null;
+    // }
+    setFormErrors({});
   };
 
+  const executeCallback = (callbackName) => {
+    switch (callbackName) {
+      case 'authenticateUser':
+        authenticateUser();
+        break;
+      case 'registerUser':
+        registerUser();
+        break;
+    }
+  };
   const authenticateUser = () => {
+    if (formErrors.email || formErrors.password) {
+      return 0;
+    }
     API.authenticate({
       email: formValues.email,
       password: formValues.password,
@@ -51,6 +70,15 @@ const useForm = () => {
   };
 
   const registerUser = () => {
+    if (
+      formErrors.firstName ||
+      formErrors.lastName ||
+      formErrors.email ||
+      formErrors.password ||
+      formErrors.passwordConfirmation
+    ) {
+      return 0;
+    }
     API.createUser({
       firstName: formValues.firstName,
       lastName: formValues.lastName,
@@ -59,15 +87,24 @@ const useForm = () => {
       passwordConfirmation: formValues.passwordConfirmation,
     }).then((res) => {
       if (res.status === 200) {
-        setUser({ ...user, isCreated: true });
         clearForm();
+        setUser({ ...user, isCreated: true });
       }
     });
   };
 
+  useEffect(() => {
+    // check to see if there are errors
+    // if not, call our callback
+    if (global.isSubmitting) {
+      executeCallback(callback);
+    }
+  }, [formErrors]);
+
   return {
     handleChange,
     handleSubmit,
+    clearForm,
     formValues,
     formErrors,
     authenticateUser,

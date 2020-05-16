@@ -11,7 +11,7 @@ export default function FieldGroup({ type, label, name, placeholder }) {
       <input
         type={type}
         name={name}
-        className={style.input}
+        className={formErrors[name] ? style.invalidInput : style.input}
         value={formValues[name]}
         onChange={handleChange}
       />

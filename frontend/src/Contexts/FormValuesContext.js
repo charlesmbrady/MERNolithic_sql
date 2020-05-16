@@ -9,5 +9,5 @@ export const FormValuesContext = createContext({
   lastName: null,
   email: null,
   password: null,
-  confirmPassword: null,
+  passwordConfirmation: null,
 });
