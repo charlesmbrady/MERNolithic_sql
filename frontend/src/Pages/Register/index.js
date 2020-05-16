@@ -3,6 +3,12 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import API from '../../Utilities/API';
 
+//Form Components
+import Form from '../../GenericComponents/Form';
+import FormFooter from '../../GenericComponents/FormFooter';
+import SubmitButton from '../../GenericComponents/SubmitButton';
+import FieldGroup from '../../GenericComponents/FieldGroup';
+
 export default function Register() {
   const [userCreated, setUserCreated] = useState(false);
   const [user, setUser] = useState({
