@@ -7,15 +7,21 @@ export default function FieldGroup({ type, label, name, placeholder }) {
 
   return (
     <div className={style.fieldGroup}>
-      <label className={style.label}>{label}</label>
+      <label className={style.label} data-test={`${name}-label`}>
+        {label}
+      </label>
       <input
         type={type}
         name={name}
+        placeholder={placeholder}
         className={formErrors[name] ? style.invalidInput : style.input}
         value={formValues[name]}
         onChange={handleChange}
+        data-test={`${name}-input`}
       />
-      <small className={style.error}>{formErrors[name]}</small>
+      <small className={style.error} data-test={`${name}-error`}>
+        {formErrors[name]}
+      </small>
     </div>
   );
 }

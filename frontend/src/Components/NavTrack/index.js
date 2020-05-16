@@ -16,12 +16,12 @@ export default function NavTrack() {
   const title = 'MERN Starter';
 
   const login = (
-    <Link className={style.navLink} to='/login'>
+    <Link className={style.navLink} data-test='login-navlink' to='/login'>
       Login
     </Link>
   );
   const register = (
-    <Link className={style.navLink} to='/register'>
+    <Link className={style.navLink} data-test='register-navlink' to='/register'>
       Register
     </Link>
   );
@@ -31,7 +31,11 @@ export default function NavTrack() {
     </Link>
   );
   const logoutButton = (
-    <button className={style.navLink} onClick={() => logout()}>
+    <button
+      className={style.navLink}
+      data-test='logout-button'
+      onClick={() => logout()}
+    >
       Logout
     </button>
   );

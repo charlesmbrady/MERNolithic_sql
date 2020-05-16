@@ -3,7 +3,11 @@ import React from 'react';
 
 export default function CancelButton({ text, cancelFunction }) {
   return (
-    <button className={style.cancelButton} onClick={cancelFunction}>
+    <button
+      className={style.cancelButton}
+      data-test='cancel-button'
+      onClick={cancelFunction}
+    >
       {text}
     </button>
   );
