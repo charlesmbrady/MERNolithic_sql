@@ -38,10 +38,55 @@ export default function Register() {
     return <Redirect to='/login' />;
   }
 
+  const fields = [
+    <FieldGroup
+      type='text'
+      label='First Name'
+      name='firstName'
+      placeholder='Enter first name'
+    />,
+    <FieldGroup
+      type='text'
+      label='Last Name'
+      name='lastName'
+      placeholder='Enter last name'
+    />,
+    <FieldGroup
+      type='text'
+      label='Email'
+      name='email'
+      placeholder='Enter email address'
+    />,
+    <FieldGroup
+      type='password'
+      label='Password'
+      name='password'
+      placeholder='Enter password'
+    />,
+    <FieldGroup
+      type='password'
+      label='Confirm Password'
+      name='confirmPassword'
+      placeholder='Confirm password'
+    />,
+  ];
+
+  const formFooterItems = [
+    <SubmitButton text='Submit' submitFunction={() => authenticateUser()} />,
+    <small className={style.option}>
+      <Link to='/login' data-test='register-to-login'>
+        Already have an account?
+      </Link>
+    </small>,
+  ];
+
   return (
     <div className={style.gridContainer}>
       <div className={style.container}>
-        <form
+        <Form title='Register With Us' />
+        {fields}
+        <FormFooter formFooterItems={formFooterItems} />
+        {/* <form
           id='form'
           className={style.form}
           onSubmit={(e) => e.preventDefault()}
@@ -183,7 +228,7 @@ export default function Register() {
               Already have an account?
             </Link>
           </small>
-        </form>
+        </form> */}
       </div>
     </div>
   );
