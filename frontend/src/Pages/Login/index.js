@@ -12,13 +12,12 @@ import FieldGroup from '../../GenericComponents/FieldGroup';
 
 export default function Login() {
   const { user } = useContext(UserContext);
-  const { authenticateUser } = useForm();
 
   if (user.isAuthenticated) {
     return <Redirect to='/dashboard' />;
   }
 
-  const fields = [
+  const fieldGroups = [
     <FieldGroup
       type='text'
       label='Email'
@@ -34,7 +33,7 @@ export default function Login() {
   ];
 
   const formFooterItems = [
-    <SubmitButton text='Submit' submitFunction={authenticateUser} />,
+    <SubmitButton text='Submit' />,
     <small className={style.option}>
       <Link to='/register' data-test='login-to-register'>
         Don't have an account yet?
@@ -42,12 +41,17 @@ export default function Login() {
     </small>,
   ];
 
+  const footer = <FormFooter formFooterItems={formFooterItems} />;
+
   return (
     <div className={style.gridContainer}>
       <div className={style.container}>
-        <Form title='Login' />
-        {fields}
-        <FormFooter formFooterItems={formFooterItems} />
+        <Form
+          title='Login'
+          submitFunction='authenticateUser'
+          fieldGroups={fieldGroups}
+          footer={footer}
+        />
       </div>
     </div>
   );

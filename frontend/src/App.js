@@ -42,7 +42,7 @@ export default function App() {
     lastName: null,
     email: null,
     password: null,
-    confirmPassword: null,
+    passwordConfirmation: null,
   });
   const formValuesValue = useMemo(() => ({ formValues, setFormValues }), [
     formValues,
@@ -52,11 +52,11 @@ export default function App() {
   // Set FormErrosContext provider values
   const [formErrors, setFormErrors] = useState({
     // All field names go here
-    firstName: null,
-    lastName: null,
-    email: null,
-    password: null,
-    confirmPassword: null,
+    // firstName: null,
+    // lastName: null,
+    // email: null,
+    // password: null,
+    // confirmPassword: null,
   });
   const formErrorsValue = useMemo(() => ({ formErrors, setFormErrors }), [
     formErrors,

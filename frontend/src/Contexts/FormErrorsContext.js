@@ -9,5 +9,5 @@ export const FormErrorsContext = createContext({
   lastName: '',
   email: '',
   password: '',
-  confirmPassword: '',
+  passwordConfirmation: '',
 });
