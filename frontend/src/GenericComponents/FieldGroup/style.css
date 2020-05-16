@@ -1,6 +1,7 @@
 .fieldGroup {
   display: grid;
   grid-gap: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .label,
