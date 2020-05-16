@@ -1,11 +1,12 @@
-import React, { useState, useMemo, useContext } from 'react';
+import React, { useState, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './style.css';
 import PrivateRoute from './PrivateRoute';
 import { UserContext } from './Contexts/UserContext';
 import { GlobalContext } from './Contexts/GlobalContext';
-import { FormContext } from './Contexts/FormContext';
+import { FormValuesContext } from './Contexts/FormValuesContext';
+import { FormErrorsContext } from './Contexts/FormErrorsContext';
 
 //********** Pages/Components **********//
 import NavTrack from './Components/NavTrack';
@@ -18,6 +19,7 @@ export default function App() {
   // Set UserContext provider values
   const [user, setUser] = useState({
     isAuthenticated: false,
+    isCreated: false,
     firstName: null,
     lastName: null,
     email: null,
@@ -33,49 +35,52 @@ export default function App() {
     setGlobal,
   ]);
 
-  // Set FormContext provider values
-  const [form, setForm] = useState({
+  // Set FormValuesContext provider values
+  const [formValues, setFormValues] = useState({
     // All field names go here
-    firstName: {
-      input: null,
-      error: null,
-    },
-    lastName: {
-      input: null,
-      error: null,
-    },
-    email: {
-      input: null,
-      error: null,
-    },
-    password: {
-      input: null,
-      error: null,
-    },
-    passwordConfirmation: {
-      input: null,
-      error: null,
-    },
+    firstName: null,
+    lastName: null,
+    email: null,
+    password: null,
+    confirmPassword: null,
   });
-  const formValue = useMemo(() => ({ form, setForm }), [form, setForm]);
+  const formValuesValue = useMemo(() => ({ formValues, setFormValues }), [
+    formValues,
+    setFormValues,
+  ]);
 
+  // Set FormErrosContext provider values
+  const [formErrors, setFormErrors] = useState({
+    // All field names go here
+    firstName: null,
+    lastName: null,
+    email: null,
+    password: null,
+    confirmPassword: null,
+  });
+  const formErrorsValue = useMemo(() => ({ formErrors, setFormErrors }), [
+    formErrors,
+    setFormErrors,
+  ]);
   return (
     <UserContext.Provider value={userValue}>
       <GlobalContext.Provider value={globalValue}>
-        <FormContext.Provider value={formValue}>
-          <Router>
-            <div className='app'>
-              <NavTrack />
-              <Switch>
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/register' component={Register} />
-                <PrivateRoute exact path='/dashboard' component={Dashboard} />
+        <FormValuesContext.Provider value={formValuesValue}>
+          <FormErrorsContext.Provider value={formErrorsValue}>
+            <Router>
+              <div className='app'>
+                <NavTrack />
+                <Switch>
+                  <Route exact path='/login' component={Login} />
+                  <Route exact path='/register' component={Register} />
+                  <PrivateRoute exact path='/dashboard' component={Dashboard} />
 
-                <Route path='/' component={Home} />
-              </Switch>
-            </div>
-          </Router>
-        </FormContext.Provider>
+                  <Route path='/' component={Home} />
+                </Switch>
+              </div>
+            </Router>
+          </FormErrorsContext.Provider>
+        </FormValuesContext.Provider>
       </GlobalContext.Provider>
     </UserContext.Provider>
   );

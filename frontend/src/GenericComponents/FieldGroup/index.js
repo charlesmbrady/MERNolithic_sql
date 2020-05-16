@@ -1,15 +1,9 @@
 import style from './style.css';
-import React, { useContext } from 'react';
-import { FormContext } from '../../Contexts/FormContext';
+import React from 'react';
+import useForm from '../../Hooks/useForm';
 
 export default function FieldGroup({ type, label, name, placeholder }) {
-  const { form, setForm } = useContext(FormContext);
-
-  const formUpdate = (fieldName, value) => {
-    let tempForm = { ...form };
-    tempForm[fieldName].input = value;
-    setForm(tempForm);
-  };
+  const { handleChange, formValues, formErrors } = useForm();
 
   return (
     <div className={style.fieldGroup}>
@@ -18,10 +12,10 @@ export default function FieldGroup({ type, label, name, placeholder }) {
         type={type}
         name={name}
         className={style.input}
-        value={form[name].input}
-        onChange={(e) => formUpdate(e.target.name, e.target.value)}
+        value={formValues[name]}
+        onChange={handleChange}
       />
-      <small className={style.error}>Put error here</small>
+      <small className={style.error}>{formErrors[name]}</small>
     </div>
   );
 }
