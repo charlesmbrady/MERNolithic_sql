@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 1,
-    "start": "2020-05-16T09:31:18.604Z",
-    "end": "2020-05-16T09:31:18.604Z",
-    "duration": 10805,
+    "start": "2020-05-17T01:30:09.995Z",
+    "end": "2020-05-17T01:30:09.995Z",
+    "duration": 10416,
     "testsRegistered": 6,
     "passPercent": 83.33333333333333,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ae5163ee-22e4-4d66-98c4-88b9037d86a3",
+      "uuid": "6391851e-f432-4e53-b7a0-8fada218b7f6",
       "title": "",
       "fullFile": "cypress/integration/test-spec.js",
       "file": "cypress/integration/test-spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2d46967b-271b-4fce-87e4-36e9921f22e4",
+          "uuid": "325203f9-b9f5-4d91-be8e-7c287c969496",
           "title": "home",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "can visit homepage",
               "fullTitle": "home can visit homepage",
               "timedOut": null,
-              "duration": 835,
+              "duration": 743,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "cy.visit('/');",
               "err": {},
-              "uuid": "3ef30ed2-1b01-4c95-b49c-b112b3f5ff53",
-              "parentUUID": "2d46967b-271b-4fce-87e4-36e9921f22e4",
+              "uuid": "91d9f947-1f09-4d54-a7b9-9de1bc70c52f",
+              "parentUUID": "325203f9-b9f5-4d91-be8e-7c287c969496",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3ef30ed2-1b01-4c95-b49c-b112b3f5ff53"
+            "91d9f947-1f09-4d54-a7b9-9de1bc70c52f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 835,
+          "duration": 743,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "d3b0b75c-5a1d-41f8-9613-00d5d8a709fa",
+          "uuid": "36f8c585-00e8-4d51-b080-12b147add9fc",
           "title": "Users",
           "fullFile": "",
           "file": "",
@@ -77,7 +77,7 @@
               "title": "Can create user",
               "fullTitle": "Users Can create user",
               "timedOut": null,
-              "duration": 180,
+              "duration": 159,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,8 +86,8 @@
               "context": null,
               "code": "cy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/user\"), {\n  firstName: 'charles',\n  lastName: 'brady',\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  // response.body is automatically serialized into JSON\n  expect(response.body).to.have.property('firstName', 'charles'); // true\n});",
               "err": {},
-              "uuid": "f779dd81-8cd9-412f-89ad-bcc5ac1976f0",
-              "parentUUID": "d3b0b75c-5a1d-41f8-9613-00d5d8a709fa",
+              "uuid": "e91ef525-dd2e-453d-aa91-f72f93837d78",
+              "parentUUID": "36f8c585-00e8-4d51-b080-12b147add9fc",
               "isHook": false,
               "skipped": false
             },
@@ -95,7 +95,7 @@
               "title": "Can authenticate user",
               "fullTitle": "Users Can authenticate user",
               "timedOut": null,
-              "duration": 170,
+              "duration": 160,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -104,21 +104,21 @@
               "context": null,
               "code": "cy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/authenticate\"), {\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  expect(response.body).to.equal('OK');\n});",
               "err": {},
-              "uuid": "5ae244ac-c1fa-4b31-b65b-cc8996515be3",
-              "parentUUID": "d3b0b75c-5a1d-41f8-9613-00d5d8a709fa",
+              "uuid": "5eff201f-e10c-46fd-8822-31c7fbbabdf7",
+              "parentUUID": "36f8c585-00e8-4d51-b080-12b147add9fc",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f779dd81-8cd9-412f-89ad-bcc5ac1976f0",
-            "5ae244ac-c1fa-4b31-b65b-cc8996515be3"
+            "e91ef525-dd2e-453d-aa91-f72f93837d78",
+            "5eff201f-e10c-46fd-8822-31c7fbbabdf7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 350,
+          "duration": 319,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -134,7 +134,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "a9c1ed3b-9383-4578-9e6a-ca912ca37bf9",
+      "uuid": "b27c2a60-2e30-4d11-8be2-d25b4df5c9e4",
       "title": "",
       "fullFile": "cypress/integration/test.js",
       "file": "cypress/integration/test.js",
@@ -143,7 +143,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "751c9bd4-321f-4b88-97e5-83ba333f6576",
+          "uuid": "a180b300-5608-48b8-bd7e-dddec5fdbbaa",
           "title": "Users",
           "fullFile": "",
           "file": "",
@@ -154,7 +154,7 @@
               "title": "Can create user",
               "fullTitle": "Users Can create user",
               "timedOut": null,
-              "duration": 2689,
+              "duration": 2554,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -163,8 +163,8 @@
               "context": null,
               "code": "cy.visit('/');\ncy.get('[data-test=\"register-navlink\"]').click();\ncy.get('[data-test=\"firstName-input\"]').type('Charles');\ncy.get('[data-test=\"lastName-input\"]').type('Charles');\ncy.get('[data-test=\"email-input\"]').type('charlesmbrady@gmail.com');\ncy.get('[data-test=\"password-input\"]').type('Password1!');\ncy.get('[data-test=\"passwordConfirmation-input\"]').type('Password1!');\ncy.get('[data-test=\"submit-button\"]').click();",
               "err": {},
-              "uuid": "6ac66c2f-bec8-4cb5-a869-3fe810c37e26",
-              "parentUUID": "751c9bd4-321f-4b88-97e5-83ba333f6576",
+              "uuid": "ade923d9-026a-48f5-8551-16569109661f",
+              "parentUUID": "a180b300-5608-48b8-bd7e-dddec5fdbbaa",
               "isHook": false,
               "skipped": false
             },
@@ -172,7 +172,7 @@
               "title": "Can login with existing user",
               "fullTitle": "Users Can login with existing user",
               "timedOut": null,
-              "duration": 1358,
+              "duration": 1292,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -181,8 +181,8 @@
               "context": null,
               "code": "cy.visit('/');\ncy.get('[data-test=\"login-navlink\"]').click();\ncy.get('[data-test=\"email-input\"]').type('charlesmbrady@gmail.com');\ncy.get('[data-test=\"password-input\"]').type('Password1!');\ncy.get('[data-test=\"submit-button\"]').click();\ncy.visit('/dashboard');",
               "err": {},
-              "uuid": "1a2002fa-9fba-47c2-95dd-6ba1b5d0dab3",
-              "parentUUID": "751c9bd4-321f-4b88-97e5-83ba333f6576",
+              "uuid": "f89c3beb-8634-492a-bdcb-8c9a9c3f77db",
+              "parentUUID": "a180b300-5608-48b8-bd7e-dddec5fdbbaa",
               "isHook": false,
               "skipped": false
             },
@@ -190,7 +190,7 @@
               "title": "Can logout",
               "fullTitle": "Users Can logout",
               "timedOut": null,
-              "duration": 5573,
+              "duration": 5508,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -203,23 +203,23 @@
                 "estack": "AssertionError: Timed out retrying: Expected to find element: `[data-test=\"logout-button\"]`, but never found it.\n    at ensureExistence (http://localhost:8081/__cypress/runner/cypress_runner.js:137673:32)\n    at Object.ensureElExistence (http://localhost:8081/__cypress/runner/cypress_runner.js:137691:12)\n    at ensureExistence (http://localhost:8081/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://localhost:8081/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:7102:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:7178:18)\n    at _drainQueueStep (http://localhost:8081/__cypress/runner/cypress_runner.js:3772:12)\n    at _drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:3651:14)",
                 "diff": null
               },
-              "uuid": "d38f0375-e6fa-418a-936b-f3c10eb54e9e",
-              "parentUUID": "751c9bd4-321f-4b88-97e5-83ba333f6576",
+              "uuid": "ee318675-5b81-4e7a-899d-16eba10703e7",
+              "parentUUID": "a180b300-5608-48b8-bd7e-dddec5fdbbaa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6ac66c2f-bec8-4cb5-a869-3fe810c37e26",
-            "1a2002fa-9fba-47c2-95dd-6ba1b5d0dab3"
+            "ade923d9-026a-48f5-8551-16569109661f",
+            "f89c3beb-8634-492a-bdcb-8c9a9c3f77db"
           ],
           "failures": [
-            "d38f0375-e6fa-418a-936b-f3c10eb54e9e"
+            "ee318675-5b81-4e7a-899d-16eba10703e7"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 9620,
+          "duration": 9354,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

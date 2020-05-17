@@ -83,7 +83,7 @@
     {
       "path": "cypress/reports/integration/public/report-tree-listing.json",
       "name": "report-tree-listing.json",
-      "size": 3801,
+      "size": 4497,
       "extension": ".json",
       "type": "file"
     },
@@ -112,16 +112,16 @@
             {
               "path": "cypress/reports/integration/public/screenshots/test.js/Users -- Can logout (failed).png",
               "name": "Users -- Can logout (failed).png",
-              "size": 100407,
+              "size": 100924,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 100407,
+          "size": 100924,
           "type": "directory"
         }
       ],
-      "size": 100407,
+      "size": 100924,
       "type": "directory"
     },
     {
@@ -131,22 +131,22 @@
         {
           "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
           "name": "test-spec.js.mp4",
-          "size": 128830,
+          "size": 150464,
           "extension": ".mp4",
           "type": "file"
         },
         {
           "path": "cypress/reports/integration/public/videos/test.js.mp4",
           "name": "test.js.mp4",
-          "size": 555447,
+          "size": 579639,
           "extension": ".mp4",
           "type": "file"
         }
       ],
-      "size": 684277,
+      "size": 730103,
       "type": "directory"
     }
   ],
-  "size": 1503317,
+  "size": 1550356,
   "type": "directory"
 }

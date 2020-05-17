@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2020-05-16T09:31:01.755Z",
-    "end": "2020-05-16T09:31:03.584Z",
-    "duration": 1829,
+    "start": "2020-05-17T01:29:53.819Z",
+    "end": "2020-05-17T01:29:55.520Z",
+    "duration": 1701,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ae5163ee-22e4-4d66-98c4-88b9037d86a3",
+      "uuid": "6391851e-f432-4e53-b7a0-8fada218b7f6",
       "title": "",
       "fullFile": "cypress/integration/test-spec.js",
       "file": "cypress/integration/test-spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2d46967b-271b-4fce-87e4-36e9921f22e4",
+          "uuid": "325203f9-b9f5-4d91-be8e-7c287c969496",
           "title": "home",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "can visit homepage",
               "fullTitle": "home can visit homepage",
               "timedOut": null,
-              "duration": 835,
+              "duration": 743,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "cy.visit('/');",
               "err": {},
-              "uuid": "3ef30ed2-1b01-4c95-b49c-b112b3f5ff53",
-              "parentUUID": "2d46967b-271b-4fce-87e4-36e9921f22e4",
+              "uuid": "91d9f947-1f09-4d54-a7b9-9de1bc70c52f",
+              "parentUUID": "325203f9-b9f5-4d91-be8e-7c287c969496",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3ef30ed2-1b01-4c95-b49c-b112b3f5ff53"
+            "91d9f947-1f09-4d54-a7b9-9de1bc70c52f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 835,
+          "duration": 743,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "d3b0b75c-5a1d-41f8-9613-00d5d8a709fa",
+          "uuid": "36f8c585-00e8-4d51-b080-12b147add9fc",
           "title": "Users",
           "fullFile": "",
           "file": "",
@@ -77,7 +77,7 @@
               "title": "Can create user",
               "fullTitle": "Users Can create user",
               "timedOut": null,
-              "duration": 180,
+              "duration": 159,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,8 +86,8 @@
               "context": null,
               "code": "cy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/user\"), {\n  firstName: 'charles',\n  lastName: 'brady',\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  // response.body is automatically serialized into JSON\n  expect(response.body).to.have.property('firstName', 'charles'); // true\n});",
               "err": {},
-              "uuid": "f779dd81-8cd9-412f-89ad-bcc5ac1976f0",
-              "parentUUID": "d3b0b75c-5a1d-41f8-9613-00d5d8a709fa",
+              "uuid": "e91ef525-dd2e-453d-aa91-f72f93837d78",
+              "parentUUID": "36f8c585-00e8-4d51-b080-12b147add9fc",
               "isHook": false,
               "skipped": false
             },
@@ -95,7 +95,7 @@
               "title": "Can authenticate user",
               "fullTitle": "Users Can authenticate user",
               "timedOut": null,
-              "duration": 170,
+              "duration": 160,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -104,21 +104,21 @@
               "context": null,
               "code": "cy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/authenticate\"), {\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  expect(response.body).to.equal('OK');\n});",
               "err": {},
-              "uuid": "5ae244ac-c1fa-4b31-b65b-cc8996515be3",
-              "parentUUID": "d3b0b75c-5a1d-41f8-9613-00d5d8a709fa",
+              "uuid": "5eff201f-e10c-46fd-8822-31c7fbbabdf7",
+              "parentUUID": "36f8c585-00e8-4d51-b080-12b147add9fc",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f779dd81-8cd9-412f-89ad-bcc5ac1976f0",
-            "5ae244ac-c1fa-4b31-b65b-cc8996515be3"
+            "e91ef525-dd2e-453d-aa91-f72f93837d78",
+            "5eff201f-e10c-46fd-8822-31c7fbbabdf7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 350,
+          "duration": 319,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

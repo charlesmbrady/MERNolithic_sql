@@ -9,6 +9,7 @@ import { FormValuesContext } from './Contexts/FormValuesContext';
 import { FormErrorsContext } from './Contexts/FormErrorsContext';
 
 //********** Pages/Components **********//
+import Mask from './GenericComponents/Mask';
 import NavTrack from './Components/NavTrack';
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
@@ -28,7 +29,8 @@ export default function App() {
 
   // Set GlobalContext provider values
   const [global, setGlobal] = useState({
-    sideDrawer: false,
+    isSubmitting: false,
+    isLoading: false,
   });
   const globalValue = useMemo(() => ({ global, setGlobal }), [
     global,
@@ -49,19 +51,17 @@ export default function App() {
     setFormValues,
   ]);
 
-  // Set FormErrosContext provider values
-  const [formErrors, setFormErrors] = useState({
-    // All field names go here
-    // firstName: null,
-    // lastName: null,
-    // email: null,
-    // password: null,
-    // confirmPassword: null,
-  });
+  // Set FormErrorsContext provider values
+  const [formErrors, setFormErrors] = useState({});
   const formErrorsValue = useMemo(() => ({ formErrors, setFormErrors }), [
     formErrors,
     setFormErrors,
   ]);
+
+  let mask;
+  if (global.isLoading) {
+    mask = <Mask />;
+  }
   return (
     <UserContext.Provider value={userValue}>
       <GlobalContext.Provider value={globalValue}>
@@ -69,6 +69,7 @@ export default function App() {
           <FormErrorsContext.Provider value={formErrorsValue}>
             <Router>
               <div className='app'>
+                {mask}
                 <NavTrack />
                 <Switch>
                   <Route exact path='/login' component={Login} />
