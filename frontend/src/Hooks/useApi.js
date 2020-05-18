@@ -12,21 +12,69 @@ const useApi = (apiFunction) => {
   const { global, setGlobal } = useContext(GlobalContext);
 
   const [data, setData] = useState(null);
-  // const [isLoading, setIsLoading] = useState(null);
-  // const [error, setError] = useState(null);
 
-  const executeCallback = (apiFunction, params) => {
+  const clearForm = () => {
+    setGlobal({ ...global, isSubmitting: false });
+    let tempValues = { ...formValues };
+    // let tempErrors = { ...formErrors };
+
+    // for each key in the form values array, set the value to null
+    for (let [key, value] of Object.entries(tempValues)) {
+      tempValues[key] = null;
+    }
+    setFormValues({});
+
+    // for each key in the form errors array, set the value to null
+    // for (let [key, value] of Object.entries(tempErrors)) {
+    //   tempErrors[key] = null;
+    // }
+    setFormErrors({});
+  };
+
+  const executeCallback = (apiFunction) => {
     switch (apiFunction) {
-      case 'authenticateUser':
-        API.authenticate(params);
+      case 'authenticate':
+        if (formErrors.email || formErrors.password) {
+          return 0;
+        }
+        API.authenticate({
+          email: formValues.email,
+          password: formValues.password,
+        });
+        break;
+      case 'register':
+        if (
+          formErrors.firstName ||
+          formErrors.lastName ||
+          formErrors.email ||
+          formErrors.password ||
+          formErrors.passwordConfirmation
+        ) {
+          return 0;
+        }
+        API.createUser({
+          firstName: formValues.firstName,
+          lastName: formValues.lastName,
+          email: formValues.email,
+          password: formValues.password,
+          passwordConfirmation: formValues.passwordConfirmation,
+        });
         break;
     }
   };
 
   useEffect(() => {
     executeCallback(apiFunction)
-      .then(({ data }) => {
-        setData(data);
+      .then((res) => {
+        if (apiFunction == 'authenticate' && res.status === 200) {
+          clearForm();
+          setUser({ ...user, isAuthenticated: true });
+        }
+        if (apiFunction == 'register' && res.status === 200) {
+          clearForm();
+          setUser({ ...user, isCreated: true });
+        }
+        setData(res.data);
         setGlobal({ ...global, isLoading: false });
       })
       .catch(() => {

@@ -66,7 +66,7 @@ export default function Register() {
       <div className={style.container}>
         <Form
           title='Register With Us'
-          submitFunction='registerUser'
+          submitFunction='register'
           fieldGroups={fieldGroups}
           footer={footer}
         />

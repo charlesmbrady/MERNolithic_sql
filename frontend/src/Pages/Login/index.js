@@ -48,7 +48,7 @@ export default function Login() {
       <div className={style.container}>
         <Form
           title='Login'
-          submitFunction='authenticateUser'
+          submitFunction='authenticate'
           fieldGroups={fieldGroups}
           footer={footer}
         />
