@@ -1,17 +1,5 @@
 .form {
-  padding: 20px 40px;
+  padding: 1rem 2rem;
   display: grid;
   grid-gap: 1rem;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.cancelButton {
-  background: red;
-  color: white;
-}
-
-.submitButton {
-  background: green;
-  color: white;
 }
