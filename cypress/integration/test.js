@@ -2,13 +2,13 @@
 
 import Nav from '../elements/nav';
 import Login from '../elements/login';
-import Register from '../elements/login';
-import Home from '../elements/login';
+import Register from '../elements/register';
+import Home from '../elements/home';
 
 describe('Users', function () {
   it('Can create user', () => {
     cy.visit('/');
-    cy.get(Nav.Register).click();
+    cy.get(Nav.REGISTER).click();
     cy.get(Register.FIRST_NAME).type('Charles');
     cy.get(Register.LAST_NAME).type('Brady');
     cy.get(Register.EMAIL).type('charlesmbrady@gmail.com');
@@ -23,7 +23,6 @@ describe('Users', function () {
     cy.get(Login.FIRST_NAME).type('charlesmbrady@gmail.com');
     cy.get(Login.PASSWORD).type('Password1!');
     cy.get(Login.SUBMIT).click();
-    cy.visit('/dashboard');
   });
 
   it('Can logout', () => {
@@ -32,7 +31,6 @@ describe('Users', function () {
     cy.get(Login.EMAIL).type('charlesmbrady@gmail.com');
     cy.get(Login.PASSWORD).type('Password1!');
     cy.get(Login.SUBMIT).click();
-    cy.visit('/dashboard');
     cy.get(Nav.LOGOUT).click();
   });
 

@@ -61,6 +61,9 @@ module.exports = {
     });
   },
   checkToken: function (req, res) {
+    if (req.cookies.token == undefined) {
+      res.json('no user');
+    }
     const decoded = jwt.decode(req.cookies.token);
     const user = {
       firstName: decoded.firstName,
@@ -68,7 +71,16 @@ module.exports = {
       email: decoded.email,
       id: decoded.id,
     };
-    res.status(200).send(user);
+    if (
+      decoded !== null &&
+      decoded.firstName !== null &&
+      decoded.firstName !== undefined
+    ) {
+      res.json(user);
+    } else {
+      res.json({ error: 'there was an error' });
+    }
+    // res.status(200).send(user);
   },
   getUser: function (req, res) {},
   getUsers: function (req, res) {

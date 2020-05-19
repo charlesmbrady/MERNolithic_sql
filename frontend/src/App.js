@@ -83,7 +83,6 @@ export default function App() {
     //   // setGlobal(isLoading)
     // }
     API.checkToken().then((res) => {
-      console.log(res);
       if (res.data.firstName) {
         setUser({ ...user, isAuthenticated: true });
       }
