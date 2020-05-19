@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 5,
+    "tests": 6,
     "passes": 3,
     "pending": 0,
-    "failures": 2,
-    "start": "2020-05-10T18:01:22.354Z",
-    "end": "2020-05-10T18:01:22.354Z",
-    "duration": 3241,
-    "testsRegistered": 5,
-    "passPercent": 60,
+    "failures": 3,
+    "start": "2020-05-19T05:14:40.989Z",
+    "end": "2020-05-19T05:14:40.989Z",
+    "duration": 12901,
+    "testsRegistered": 6,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "fe99cfd9-ceff-440a-9b55-2472684e609d",
+      "uuid": "976479fe-b585-4d8d-a68e-286d2f1ff659",
       "title": "",
       "fullFile": "cypress/integration/test-spec.js",
       "file": "cypress/integration/test-spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2cdcb9d3-659e-4b50-ae77-939123ae2a4e",
+          "uuid": "58821154-0bd9-4674-a49f-b8104038ba8d",
           "title": "home",
           "fullFile": "",
           "file": "",
@@ -35,24 +35,24 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "can click ping button",
-              "fullTitle": "home can click ping button",
+              "title": "can visit homepage",
+              "fullTitle": "home can visit homepage",
               "timedOut": null,
-              "duration": 1495,
+              "duration": 997,
               "state": "failed",
-              "speed": null,
+              "speed": "slow",
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.visit('/');\ncy.get('button').click();",
+              "code": "cy.visit('/');",
               "err": {
-                "message": "Uncaught Uncaught TypeError: _Utilities_API__WEBPACK_IMPORTED_MODULE_3__.default.authenticate is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
-                "estack": "Uncaught Uncaught TypeError: _Utilities_API__WEBPACK_IMPORTED_MODULE_3__.default.authenticate is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at authenticateUser (http://localhost:8081/main.bundle.js:47380:60)\n    at onClick (http://localhost:8081/main.bundle.js:47470:14)\n    at HTMLUnknownElement.callCallback (http://localhost:8081/main.bundle.js:7621:14)\n    at Object.invokeGuardedCallbackDev (http://localhost:8081/main.bundle.js:7670:16)\n    at invokeGuardedCallback (http://localhost:8081/main.bundle.js:7725:31)\n    at invokeGuardedCallbackAndCatchFirstError (http://localhost:8081/main.bundle.js:7739:25)\n    at executeDispatch (http://localhost:8081/main.bundle.js:7822:3)\n    at executeDispatchesInOrder (http://localhost:8081/main.bundle.js:7847:5)\n    at executeDispatchesAndRelease (http://localhost:8081/main.bundle.js:10711:5)\n    at executeDispatchesAndReleaseTopLevel (http://localhost:8081/main.bundle.js:10720:10)",
+                "message": "CypressError: `cy.task('coverageReport')` failed with the following error:\n\n> Error: Command failed with exit code 1: /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/.bin/nyc report --report-dir ./coverage --temp-dir /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/.nyc_output --reporter=lcov --reporter=clover --reporter=json\n    at makeError (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/lib/error.js:58:11)\n    at handlePromise (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/index.js:114:26)\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.task('coverageReport')` failed with the following error:\n\n> Error: Command failed with exit code 1: /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/.bin/nyc report --report-dir ./coverage --temp-dir /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/.nyc_output --reporter=lcov --reporter=clover --reporter=json\n    at makeError (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/lib/error.js:58:11)\n    at handlePromise (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/index.js:114:26)\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at cypressErr (http://localhost:8081/__cypress/runner/cypress_runner.js:146621:16)\n    at cypressErrByPath (http://localhost:8081/__cypress/runner/cypress_runner.js:146630:10)\n    at Object.throwErrByPath (http://localhost:8081/__cypress/runner/cypress_runner.js:146593:11)\n    at http://localhost:8081/__cypress/runner/cypress_runner.js:136354:26\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:7102:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:7178:18)\n    at _drainQueueStep (http://localhost:8081/__cypress/runner/cypress_runner.js:3772:12)\n    at _drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:3651:14)",
                 "diff": null
               },
-              "uuid": "05b3064e-5958-4686-9a6d-aca2f222bb9c",
-              "parentUUID": "2cdcb9d3-659e-4b50-ae77-939123ae2a4e",
+              "uuid": "63f112b2-5977-49a1-9317-371dc9cb53b3",
+              "parentUUID": "58821154-0bd9-4674-a49f-b8104038ba8d",
               "isHook": false,
               "skipped": false
             }
@@ -60,17 +60,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "05b3064e-5958-4686-9a6d-aca2f222bb9c"
+            "63f112b2-5977-49a1-9317-371dc9cb53b3"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 1495,
+          "duration": 997,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "00cec454-944c-4ef1-9a82-47023f6c5bb0",
+          "uuid": "445d5c1c-53d4-4277-b0d1-598f8c5a5f24",
           "title": "Users",
           "fullFile": "",
           "file": "",
@@ -78,51 +78,51 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Canary test",
-              "fullTitle": "Users Canary test",
-              "timedOut": null,
-              "duration": 30,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "expect(1).to.equal(1);",
-              "err": {},
-              "uuid": "55613e1f-8b8d-41fc-a9ec-17a7105341bf",
-              "parentUUID": "00cec454-944c-4ef1-9a82-47023f6c5bb0",
-              "isHook": false,
-              "skipped": false
-            },
-            {
               "title": "Can create user",
               "fullTitle": "Users Can create user",
               "timedOut": null,
-              "duration": 211,
+              "duration": 171,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// cy.visit('/');\ncy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/register\"), {\n  firstName: 'charles',\n  lastName: 'brady',\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  // response.body is automatically serialized into JSON\n  expect(response.body).to.have.property('firstName', 'charles'); // true\n});",
+              "code": "cy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/user\"), {\n  firstName: 'charles',\n  lastName: 'brady',\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  // response.body is automatically serialized into JSON\n  expect(response.body).to.have.property('firstName', 'charles'); // true\n});",
               "err": {},
-              "uuid": "12d8061f-b4d4-4afb-bdba-ca24311873dd",
-              "parentUUID": "00cec454-944c-4ef1-9a82-47023f6c5bb0",
+              "uuid": "a1e3be93-0b95-415e-ac7b-62a4cf7b8b2f",
+              "parentUUID": "445d5c1c-53d4-4277-b0d1-598f8c5a5f24",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Can authenticate user",
+              "fullTitle": "Users Can authenticate user",
+              "timedOut": null,
+              "duration": 152,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('POST', \"\".concat(Cypress.config('apiUrl'), \"/auth/authenticate\"), {\n  email: 'ranom',\n  password: 'myPassword1!'\n}).then(function (response) {\n  expect(response.body).to.equal('OK');\n});",
+              "err": {},
+              "uuid": "5054614c-ee61-4a29-b602-0395ffca9eb0",
+              "parentUUID": "445d5c1c-53d4-4277-b0d1-598f8c5a5f24",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "55613e1f-8b8d-41fc-a9ec-17a7105341bf",
-            "12d8061f-b4d4-4afb-bdba-ca24311873dd"
+            "a1e3be93-0b95-415e-ac7b-62a4cf7b8b2f",
+            "5054614c-ee61-4a29-b602-0395ffca9eb0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 241,
+          "duration": 323,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -138,7 +138,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "955acb2c-38ff-4831-a765-632f69e5c252",
+      "uuid": "e14bc51c-f52c-4efe-ad6e-e10e4bcadd4a",
       "title": "",
       "fullFile": "cypress/integration/test.js",
       "file": "cypress/integration/test.js",
@@ -147,83 +147,87 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "adbf94e4-c8c6-4f68-afcc-2adc9168048d",
-          "title": "coverage",
+          "uuid": "d5595c4e-de52-4a26-9575-5b6bfc0dc9a3",
+          "title": "Users",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "cover the tested code",
-              "fullTitle": "coverage cover the tested code",
+              "title": "Can create user",
+              "fullTitle": "Users Can create user",
               "timedOut": null,
-              "duration": 1455,
+              "duration": 4106,
+              "state": "failed",
+              "speed": "slow",
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('[data-test=\"register-navlink\"]').click();\ncy.get('[data-test=\"firstName-input\"]').type('Charles');\ncy.get('[data-test=\"lastName-input\"]').type('Charles');\ncy.get('[data-test=\"email-input\"]').type('charlesmbrady@gmail.com');\ncy.get('[data-test=\"password-input\"]').type('Password1!');\ncy.get('[data-test=\"passwordConfirmation-input\"]').type('Password1!');\ncy.get('[data-test=\"submit-button\"]').click();",
+              "err": {
+                "message": "CypressError: `cy.task('coverageReport')` failed with the following error:\n\n> Error: Command failed with exit code 1: /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/.bin/nyc report --report-dir ./coverage --temp-dir /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/.nyc_output --reporter=lcov --reporter=clover --reporter=json\n    at makeError (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/lib/error.js:58:11)\n    at handlePromise (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/index.js:114:26)\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.task('coverageReport')` failed with the following error:\n\n> Error: Command failed with exit code 1: /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/.bin/nyc report --report-dir ./coverage --temp-dir /Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/.nyc_output --reporter=lcov --reporter=clover --reporter=json\n    at makeError (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/lib/error.js:58:11)\n    at handlePromise (/Users/charlesbrady/Desktop/cleanup/Development/Starters/MERNolithic_sql/node_modules/@cypress/code-coverage/node_modules/execa/index.js:114:26)\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at cypressErr (http://localhost:8081/__cypress/runner/cypress_runner.js:146621:16)\n    at cypressErrByPath (http://localhost:8081/__cypress/runner/cypress_runner.js:146630:10)\n    at Object.throwErrByPath (http://localhost:8081/__cypress/runner/cypress_runner.js:146593:11)\n    at http://localhost:8081/__cypress/runner/cypress_runner.js:136354:26\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:7102:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:7178:18)\n    at _drainQueueStep (http://localhost:8081/__cypress/runner/cypress_runner.js:3772:12)\n    at _drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:3651:14)",
+                "diff": null
+              },
+              "uuid": "9e243ed8-00fd-41ee-893f-fe2f6be1d5d6",
+              "parentUUID": "d5595c4e-de52-4a26-9575-5b6bfc0dc9a3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Can login with existing user",
+              "fullTitle": "Users Can login with existing user",
+              "timedOut": null,
+              "duration": 1311,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('[data-test=\"login-navlink\"]').click();\ncy.get('[data-test=\"email-input\"]').type('charlesmbrady@gmail.com');\ncy.get('[data-test=\"password-input\"]').type('Password1!');\ncy.get('[data-test=\"submit-button\"]').click();\ncy.visit('/dashboard');",
+              "err": {},
+              "uuid": "518de81e-3979-4531-a3f9-3c61f03eaf7b",
+              "parentUUID": "d5595c4e-de52-4a26-9575-5b6bfc0dc9a3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Can logout",
+              "fullTitle": "Users Can logout",
+              "timedOut": null,
+              "duration": 6164,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.visit('/');\ncy.get('button').click();",
+              "code": "cy.visit('/');\ncy.get('[data-test=\"login-navlink\"]').click();\ncy.get('[data-test=\"email-input\"]').type('charlesmbrady@gmail.com');\ncy.get('[data-test=\"password-input\"]').type('Password1!');\ncy.get('[data-test=\"submit-button\"]').click();\ncy.visit('/dashboard');\ncy.get('[data-test=\"logout-button\"]').click();",
               "err": {
-                "message": "Uncaught Uncaught TypeError: _Utilities_API__WEBPACK_IMPORTED_MODULE_3__.default.authenticate is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
-                "estack": "Uncaught Uncaught TypeError: _Utilities_API__WEBPACK_IMPORTED_MODULE_3__.default.authenticate is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at authenticateUser (http://localhost:8081/main.bundle.js:47380:60)\n    at onClick (http://localhost:8081/main.bundle.js:47470:14)\n    at HTMLUnknownElement.callCallback (http://localhost:8081/main.bundle.js:7621:14)\n    at Object.invokeGuardedCallbackDev (http://localhost:8081/main.bundle.js:7670:16)\n    at invokeGuardedCallback (http://localhost:8081/main.bundle.js:7725:31)\n    at invokeGuardedCallbackAndCatchFirstError (http://localhost:8081/main.bundle.js:7739:25)\n    at executeDispatch (http://localhost:8081/main.bundle.js:7822:3)\n    at executeDispatchesInOrder (http://localhost:8081/main.bundle.js:7847:5)\n    at executeDispatchesAndRelease (http://localhost:8081/main.bundle.js:10711:5)\n    at executeDispatchesAndReleaseTopLevel (http://localhost:8081/main.bundle.js:10720:10)",
+                "message": "AssertionError: Timed out retrying: Expected to find element: `[data-test=\"logout-button\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `[data-test=\"logout-button\"]`, but never found it.\n    at ensureExistence (http://localhost:8081/__cypress/runner/cypress_runner.js:137673:32)\n    at Object.ensureElExistence (http://localhost:8081/__cypress/runner/cypress_runner.js:137691:12)\n    at ensureExistence (http://localhost:8081/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://localhost:8081/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://localhost:8081/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8081/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (http://localhost:8081/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromise0 (http://localhost:8081/__cypress/runner/cypress_runner.js:7102:10)\n    at Promise._settlePromises (http://localhost:8081/__cypress/runner/cypress_runner.js:7178:18)\n    at _drainQueueStep (http://localhost:8081/__cypress/runner/cypress_runner.js:3772:12)\n    at _drainQueue (http://localhost:8081/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (http://localhost:8081/__cypress/runner/cypress_runner.js:3651:14)",
                 "diff": null
               },
-              "uuid": "207d990d-d321-44ae-8b0c-3fef8d7ce9d3",
-              "parentUUID": "adbf94e4-c8c6-4f68-afcc-2adc9168048d",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [],
-          "failures": [
-            "207d990d-d321-44ae-8b0c-3fef8d7ce9d3"
-          ],
-          "pending": [],
-          "skipped": [],
-          "duration": 1455,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        },
-        {
-          "uuid": "65fc90c3-8a5f-40d1-ba13-114e505a1245",
-          "title": "coverage2",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "should pass",
-              "fullTitle": "coverage2 should pass",
-              "timedOut": null,
-              "duration": 50,
-              "state": "passed",
-              "speed": "medium",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "expect(1).to.equal(1);",
-              "err": {},
-              "uuid": "3940fa02-3963-4e89-85f0-a35280544629",
-              "parentUUID": "65fc90c3-8a5f-40d1-ba13-114e505a1245",
+              "uuid": "e3c6da25-0fb3-480d-adff-c1dec907724d",
+              "parentUUID": "d5595c4e-de52-4a26-9575-5b6bfc0dc9a3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3940fa02-3963-4e89-85f0-a35280544629"
+            "518de81e-3979-4531-a3f9-3c61f03eaf7b"
           ],
-          "failures": [],
+          "failures": [
+            "9e243ed8-00fd-41ee-893f-fe2f6be1d5d6",
+            "e3c6da25-0fb3-480d-adff-c1dec907724d"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 50,
+          "duration": 11581,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

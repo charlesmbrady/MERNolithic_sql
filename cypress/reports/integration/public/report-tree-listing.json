@@ -83,21 +83,21 @@
     {
       "path": "cypress/reports/integration/public/report-tree-listing.json",
       "name": "report-tree-listing.json",
-      "size": 3799,
+      "size": 5068,
       "extension": ".json",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.html",
       "name": "report.html",
-      "size": 13902,
+      "size": 18421,
       "extension": ".html",
       "type": "file"
     },
     {
       "path": "cypress/reports/integration/public/report.json",
       "name": "report.json",
-      "size": 12610,
+      "size": 16610,
       "extension": ".json",
       "type": "file"
     },
@@ -110,14 +110,14 @@
           "name": "test-spec.js",
           "children": [
             {
-              "path": "cypress/reports/integration/public/screenshots/test-spec.js/home -- can click ping button (failed).png",
-              "name": "home -- can click ping button (failed).png",
-              "size": 62869,
+              "path": "cypress/reports/integration/public/screenshots/test-spec.js/can visit homepage -- after all hook generateReport (failed).png",
+              "name": "can visit homepage -- after all hook generateReport (failed).png",
+              "size": 84026,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 62869,
+          "size": 84026,
           "type": "directory"
         },
         {
@@ -125,18 +125,25 @@
           "name": "test.js",
           "children": [
             {
-              "path": "cypress/reports/integration/public/screenshots/test.js/coverage -- cover the tested code (failed).png",
-              "name": "coverage -- cover the tested code (failed).png",
-              "size": 62946,
+              "path": "cypress/reports/integration/public/screenshots/test.js/Can create user -- after all hook generateReport (failed).png",
+              "name": "Can create user -- after all hook generateReport (failed).png",
+              "size": 125437,
+              "extension": ".png",
+              "type": "file"
+            },
+            {
+              "path": "cypress/reports/integration/public/screenshots/test.js/Users -- Can logout (failed).png",
+              "name": "Users -- Can logout (failed).png",
+              "size": 108589,
               "extension": ".png",
               "type": "file"
             }
           ],
-          "size": 62946,
+          "size": 234026,
           "type": "directory"
         }
       ],
-      "size": 125815,
+      "size": 318052,
       "type": "directory"
     },
     {
@@ -146,22 +153,22 @@
         {
           "path": "cypress/reports/integration/public/videos/test-spec.js.mp4",
           "name": "test-spec.js.mp4",
-          "size": 266852,
+          "size": 199022,
           "extension": ".mp4",
           "type": "file"
         },
         {
           "path": "cypress/reports/integration/public/videos/test.js.mp4",
           "name": "test.js.mp4",
-          "size": 252077,
+          "size": 989840,
           "extension": ".mp4",
           "type": "file"
         }
       ],
-      "size": 518929,
+      "size": 1188862,
       "type": "directory"
     }
   ],
-  "size": 1366934,
+  "size": 2238892,
   "type": "directory"
 }
