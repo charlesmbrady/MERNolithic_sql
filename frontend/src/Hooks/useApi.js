@@ -28,7 +28,7 @@ const useApi = (apiFunction, params) => {
           isLoading: false,
         });
       });
-  }, [apiFunction, params]);
+  }, []);
 
   return [data];
 };

@@ -1,12 +1,19 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 import './style.css';
 import PrivateRoute from './PrivateRoute';
 import { UserContext } from './Contexts/UserContext';
 import { GlobalContext } from './Contexts/GlobalContext';
 import { FormValuesContext } from './Contexts/FormValuesContext';
 import { FormErrorsContext } from './Contexts/FormErrorsContext';
+import useApi from './Hooks/useApi';
+import API from './Utilities/API';
 
 //********** Pages/Components **********//
 import Mask from './GenericComponents/Mask';
@@ -17,6 +24,9 @@ import Register from './Pages/Register';
 import Home from './Pages/Home';
 
 export default function App() {
+  // const [data] = useApi(API.checkToken);
+  // console.log(' the data ' + JSON.stringify(data));
+
   // Set UserContext provider values
   const [user, setUser] = useState({
     isAuthenticated: false,
@@ -64,6 +74,22 @@ export default function App() {
   if (global.isLoading) {
     mask = <Mask />;
   }
+
+  // If user already logged in, redirect them to dashboard
+  useEffect(() => {
+    // const [data] = useApi(API.checkToken);
+    // if (data) {
+    //   console.log('data ' + data);
+    //   // setGlobal(isLoading)
+    // }
+    API.checkToken().then((res) => {
+      console.log(res);
+      if (res.data.firstName) {
+        setUser({ ...user, isAuthenticated: true });
+      }
+    });
+  }, []);
+
   return (
     <UserContext.Provider value={userValue}>
       <GlobalContext.Provider value={globalValue}>
@@ -72,6 +98,7 @@ export default function App() {
             <Router>
               <div className='main-container'>
                 {mask}
+                {user.isAuthenticated && <Redirect to='/dashboard' />}
                 <NavTrack />
                 <Switch>
                   <Route exact path='/login' component={Login} />

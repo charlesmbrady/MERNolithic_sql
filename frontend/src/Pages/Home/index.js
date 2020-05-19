@@ -14,6 +14,7 @@ import RightDrawer from '../../Components/RightDrawer';
 
 export default function Home() {
   const { global, setGlobal } = useContext(GlobalContext);
+
   const leftDrawerOpen = global.leftDrawerOpen;
 
   const mainItem = (
