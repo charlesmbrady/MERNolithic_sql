@@ -31,6 +31,8 @@ export default function App() {
   const [global, setGlobal] = useState({
     isSubmitting: false,
     isLoading: false,
+    leftDrawerOpen: false,
+    rightDrawerOpen: false,
   });
   const globalValue = useMemo(() => ({ global, setGlobal }), [
     global,
@@ -68,7 +70,7 @@ export default function App() {
         <FormValuesContext.Provider value={formValuesValue}>
           <FormErrorsContext.Provider value={formErrorsValue}>
             <Router>
-              <div className='app'>
+              <div className='main-container'>
                 {mask}
                 <NavTrack />
                 <Switch>

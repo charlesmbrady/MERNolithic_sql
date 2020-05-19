@@ -1,9 +1,34 @@
 .gridContainer {
   display: grid;
+  border: 1px solid blue;
+  grid-template-columns: 50px 10fr 0px;
+  height: 100vh;
+  overflow: scroll;
+}
+.gridContainerLeftDrawerOpen {
+  display: grid;
+  border: 1px solid blue;
+  grid-template-columns: 100px 10fr 0px;
+  height: 100vh;
+  overflow: scroll;
+}
+.gridContainerRightDrawerOpen {
+  grid-template-columns: 50px 10fr 350px;
+}
+.gridContainerBothDrawersOpen {
+  grid-template-columns: 100px 10fr 350px;
+}
+
+.contentContainer {
+  height: 100%;
+}
+.leftDrawer {
+}
+
+.rightDrawer {
 }
 
 .heroContainer {
-  height: 50%;
 }
 
 .heroHeader {
@@ -13,6 +38,6 @@
 .divide {
   color: black;
   border: 1px solid black;
-  width: 95%;
+  /* width: 98%; */
   border-radius: 100%;
 }
