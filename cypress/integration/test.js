@@ -41,7 +41,9 @@ describe('Users', function () {
     let password = 'mypassword1!';
     let passwordConfirmation = 'mypassword1!';
 
-    cy.registerNewUser((firstName, lastName, email, password, passwordConfirmation)
+    cy.registerNewUser(
+      (firstName, lastName, email, password, passwordConfirmation)
+    );
   });
 });
 
