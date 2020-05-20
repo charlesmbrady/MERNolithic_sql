@@ -34,25 +34,34 @@ describe('Users', function () {
     cy.get(Nav.LOGOUT).click();
   });
 
-  it('visit hompage with previously logged in user should redirect you to dashboard', () => {});
+  it('visit hompage with previously logged in user should redirect you to dashboard', () => {
+    let firstName = 'Chuck';
+    let lastName = 'Brady';
+    let email = 'chuckbrady@gmail.com';
+    let password = 'mypassword1!';
+    let passwordConfirmation = 'mypassword1!';
+
+    cy.registerNewUser((firstName, lastName, email, password, passwordConfirmation)
+  });
 });
 
 describe('api tests', () => {
   it('Can create user', function () {
     cy.request('POST', `${Cypress.config('apiUrl')}/auth/user`, {
-      firstName: 'charles',
-      lastName: 'brady',
-      email: 'ranom',
+      firstName: 'username',
+      lastName: 'lastname',
+      email: 'ranom@email.com',
       password: 'myPassword1!',
     }).then((response) => {
       // response.body is automatically serialized into JSON
-      expect(response.body).to.have.property('firstName', 'charles'); // true
+      console.log(response.body);
+      expect(response.body).to.have.property('firstName', 'username'); // true
     });
   });
 
   it('Can authenticate user', function () {
     cy.request('POST', `${Cypress.config('apiUrl')}/auth/authenticate`, {
-      email: 'ranom',
+      email: 'ranom@email.com',
       password: 'myPassword1!',
     }).then((response) => {
       expect(response.body).to.equal('OK');
