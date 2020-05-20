@@ -20,7 +20,7 @@ describe('Users', function () {
   it('Can login with existing user', () => {
     cy.visit('/');
     cy.get(Nav.LOGIN).click();
-    cy.get([Login.FIRST_NAME]).type('charlesmbrady@gmail.com');
+    cy.get([Login.EMAIL]).type('charlesmbrady@gmail.com');
     cy.get(Login.PASSWORD).type('Password1!');
     cy.get(Login.SUBMIT).click();
   });
