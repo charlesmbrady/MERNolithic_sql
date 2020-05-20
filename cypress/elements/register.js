@@ -5,5 +5,5 @@ module.exports = {
   PASSWORD: '[data-test="password-input"]',
   PASSWORD_CONFIRMATION: '[data-test="passwordConfirmation-input"]',
   SUBMIT: '[data-test="submit-button"]',
-  TO_LOGIN: '[data-test="register-to-login]',
+  TO_LOGIN: '[data-test="register-to-login"]',
 };
