@@ -1,32 +1,34 @@
-import style from './style.css';
-import React, { useContext } from 'react';
-import { GlobalContext } from '../../Contexts/GlobalContext';
+import './style.css';
+import React from 'react';
 import Hero from '../../GenericComponents/Hero';
 
 export default function Home() {
-  const { global, setGlobal } = useContext(GlobalContext);
-  const leftDrawerOpen = global.leftDrawerOpen;
-
-  const mainItem = (
-    <h2 className={style.heroHeader}>Hello main item passed as prop</h2>
+  const mainItemTwo = (
+    <h3 className='mernolithic-info'>
+      This project was made with the{' '}
+      <a
+        href='https://github.com/charlesmbrady/MERNolithic_sql'
+        target='_blank'
+      >
+        MERNolithic
+      </a>{' '}
+      starter project <br></br> developed by Charles Brady.
+    </h3>
   );
-  const subItem = <p>Hello sub item passed as prop</p>;
+  const subItemTwo = <p></p>;
+  const mainItem = (
+    <h2 className='head'>
+      <a href='https://github.com/charlesmbrady/MERNolithic_sql'>Get Started</a>{' '}
+      with MERNolithic!
+    </h2>
+  );
+  const subItem = <div></div>;
 
   return (
-    <div
-      className={
-        leftDrawerOpen ? style.gridContainerLeftDrawerOpen : style.gridContainer
-      }
-    >
-      <LeftDrawer className={style.leftDrawer} />
-      <div className={style.contentContainer}>
-        <div className={style.heroContainer}>
-          <Hero mainItem={mainItem} subItem={subItem} />
-        </div>
+    <div className='homeContainer'>
+      <Hero mainItem={mainItemTwo} subItem={subItemTwo} />
 
-        <hr className={style.divide} />
-      </div>
-      <RightDrawer className={style.rightDrawer} />
+      <Hero mainItem={mainItem} subItem={subItem} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import style from './style.css';
+import './style.css';
 import React, { useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { UserContext } from '../../Contexts/UserContext';
@@ -34,7 +34,7 @@ export default function Login() {
 
   const formFooterItems = [
     <SubmitButton text='Submit' />,
-    <small className={style.option}>
+    <small>
       <Link to='/register' data-test='login-to-register'>
         Don't have an account yet?
       </Link>
@@ -44,8 +44,8 @@ export default function Login() {
   const footer = <FormFooter formFooterItems={formFooterItems} />;
 
   return (
-    <div className={style.gridContainer}>
-      <div className={style.container}>
+    <div>
+      <div>
         <Form
           title='Login'
           submitFunction='authenticateUser'
