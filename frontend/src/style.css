@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+
+:root {
+  --main-color: #eafff9;
+  --second: #00aeef;
+  --third: #13e6af;
+  --fourth: #19090b;
+  --fifth: #780c56;
+  --sixth: #d5ece6;
+  --success: #00b989;
+}
+
 body,
 html,
 #root,
@@ -6,5 +18,24 @@ html,
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  display: grid;
+  font-family: 'Hind', sans-serif;
 }
+
+body {
+  background-image: url(Images/logo.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* html {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.418),
+    white
+  );
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */

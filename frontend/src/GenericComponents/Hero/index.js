@@ -1,9 +1,10 @@
-import style from './style.css';
+import './style.css';
 import React from 'react';
 
-export default function Hero({ mainItem, subItem }) {
+export default function Hero({ children, mainItem, subItem }) {
   return (
-    <div className={style.hero}>
+    <div className='hero'>
+      {children}
       {mainItem}
       {subItem}
     </div>

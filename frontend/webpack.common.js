@@ -39,13 +39,13 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              // modules: true,
             },
           },
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|ico|svg)$/i,
         loader: 'file-loader',
         options: {
           outputPath: 'images',

@@ -1,4 +1,4 @@
-import style from './style.css';
+import './style.css';
 import React, { useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { UserContext } from '../../Contexts/UserContext';
@@ -52,7 +52,7 @@ export default function Register() {
 
   const formFooterItems = [
     <SubmitButton text='Submit' />,
-    <small className={style.option}>
+    <small>
       <Link to='/login' data-test='register-to-login'>
         Already have an account?
       </Link>
@@ -62,8 +62,8 @@ export default function Register() {
   const footer = <FormFooter formFooterItems={formFooterItems} />;
 
   return (
-    <div className={style.gridContainer}>
-      <div className={style.container}>
+    <div>
+      <div>
         <Form
           title='Register With Us'
           submitFunction='registerUser'
