@@ -42,7 +42,7 @@ jobs:
           command: cd frontend && yarn install
       - run:
           name: Run cypress tests
-          command: yarn test:create-reports-local-ci
+          command: yarn test:create-reports-local
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
@@ -61,7 +61,7 @@ jobs:
           command: cd frontend && yarn install
       - run:
           name: Run cypress tests
-          command: yarn test:create-reports-local-ci
+          command: yarn cy:run-ci-local
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
@@ -84,10 +84,6 @@ jobs:
       - run:
           name: Test line coverage threshold
           command: yarn get-line-coverage
-      - store_artifacts:
-          path: coverage/lcov-report
-      - store_artifacts:
-          path: cypress/reports/integration/public/
 
 workflows:
   version: 2
