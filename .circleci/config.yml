@@ -83,7 +83,7 @@ jobs:
           command: yarn test:create-reports-local
       - run:
           name: Test line coverage threshold
-          command: yarn get-line-coverage
+          command: yarn get-coverage
 
 workflows:
   version: 2
