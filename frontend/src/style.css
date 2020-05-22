@@ -28,14 +28,14 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-html {
+/* html {
   background-image: linear-gradient(
     to bottom right,
-    rgba(0, 0, 255, 0.418),
+    rgba(0, 0, 0, 0.418),
     white
   );
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
+} */
