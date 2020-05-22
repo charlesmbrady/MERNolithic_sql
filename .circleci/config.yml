@@ -117,15 +117,3 @@ workflows:
       - coverage_threshold:
           requires:
             - build
-      - test_staging:
-          requires:
-            - cypress_tests
-          branches:
-            only:
-              - master
-      - test_production:
-          requires:
-            - test_staging
-          branches:
-            only:
-              - master
