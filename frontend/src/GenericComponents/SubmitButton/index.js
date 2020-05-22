@@ -1,14 +1,15 @@
-import style from './style.css';
+import './style.css';
 import React from 'react';
 
-export default function SubmitButton({ text, submitFunction }) {
+export default function SubmitButton({ children, text, submitFunction }) {
   return (
     <button
       type='submit'
       data-test='submit-button'
-      className={style.submitButton}
+      className='submitButton'
       onClick={submitFunction}
     >
+      {children}
       {text}
     </button>
   );

@@ -1,6 +1,6 @@
-import style from './style.css';
+import './style.css';
 import React from 'react';
 
 export default function Mask() {
-  return <div className={style.mask}></div>;
+  return <div className='mask'></div>;
 }

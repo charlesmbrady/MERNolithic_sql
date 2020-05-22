@@ -1,6 +1,11 @@
-import style from './style.css';
+import './style.css';
 import React from 'react';
 
-export default function FormFooter({ formFooterItems }) {
-  return <div className={style.formFooter}>{formFooterItems}</div>;
+export default function FormFooter({ children, formFooterItems }) {
+  return (
+    <div className='formFooter'>
+      {children}
+      {formFooterItems}
+    </div>
+  );
 }
