@@ -61,7 +61,7 @@ jobs:
           command: cd frontend && yarn install
       - run:
           name: Run cypress tests
-          command: yarn cy:run-ci-local
+          command: yarn test-cypress
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
