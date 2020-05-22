@@ -85,6 +85,24 @@ jobs:
           name: Test line coverage threshold
           command: yarn get-coverage
 
+  test_staging:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - run:
+          name: Run cypress tests against the staging environment
+          command: yarn cy:run-ci-staging
+
+  test_production:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - run:
+          name: Run cypress tests against the production environment
+          command: yarn cy:run-ci-production
+
 workflows:
   version: 2
   starter-workflow:
