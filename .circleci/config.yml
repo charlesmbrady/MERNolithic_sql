@@ -93,7 +93,7 @@ workflows:
       - cypress_tests:
           requires:
             - build
-      - coverage_threshold:
+      - test_reports:
           requires:
             - build
       - coverage_threshold:
