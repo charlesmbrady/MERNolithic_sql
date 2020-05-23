@@ -86,7 +86,7 @@ jobs:
 
 workflows:
   version: 2
-  starter-workflow:
+  build_test_deploy:
     jobs:
       - build
       - cypress_tests:
@@ -96,9 +96,8 @@ workflows:
           requires:
             - build
       - deploy:
-          branches:
-            only:
-              - develop
-              - master
           requires:
             - build
+          filters:
+            branches:
+              only: development
