@@ -1,7 +1,7 @@
 case $CIRCLE_BRANCH in
     "develop")
-        export ENVIRONMENT="dev"
-        export HEROKU_APP="mernolithic-staging" >> $BASH_ENV
+        echo 'export ENVIRONMENT=dev' >> $BASH_ENV
+        echo 'export HEROKU_APP=mernolithic-staging' >> $BASH_ENV
         ;;
     "master")
         export ENVIRONMENT="production"
