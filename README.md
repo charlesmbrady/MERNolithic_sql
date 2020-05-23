@@ -2,8 +2,8 @@
 
 MySQL-Express-React-Node app with custom webpack config, docker, CI config, test suites, and JWT authentication stored as cookie
 
-- Staging environment: https://mernolithic-sql-staging.herokuapp.com/
-- Production environment: https://mernolithic-sql-production.herokuapp.com/
+- Staging environment: https://mernolithic-staging.herokuapp.com/
+- Production environment: https://mernolithic.herokuapp.com/
 
 ## Getting started
 

@@ -95,3 +95,11 @@ workflows:
       - test_reports_and_coverage:
           requires:
             - build
+      - deploy:
+          filters:
+          branches:
+            only:
+              - develop
+              - master
+          requires:
+            - build
