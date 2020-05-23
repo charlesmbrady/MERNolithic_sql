@@ -35,7 +35,7 @@
     "merge_reports": "mochawesome-merge --reportDir=cypress/reports/integration/reports/mocha > cypress/reports/integration/public/report.json",
     "generate_html_report": "marge cypress/reports/integration/public/report.json -f report -o cypress/reports/integration/public/",
     "test:cy:local": "run-p --race start:coverage test-no-exit",
-    "ci:cy:run:local": "cypress run -C cypress.local.json",
+    "ci:cy:run:local": "cypress run",
     "ci:test:cy:local": "run-p --race start-dev ci:cy:run:local",
     "cy:run": "cypress run",
     "test-no-exit": "npm run cy:run --force",
