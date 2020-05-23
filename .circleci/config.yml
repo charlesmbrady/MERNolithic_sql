@@ -29,7 +29,7 @@ jobs:
           name: Build frontend
           command: cd frontend && yarn build
 
-  cypress_tests:
+  test_reports_and_coverage:
     <<: *defaults
 
     steps:
@@ -44,12 +44,45 @@ jobs:
           name: Run cypress tests
           command: yarn test:create-reports-local
       - run:
-          name: Test coverage threshold
+          name: Test line coverage threshold
           command: yarn get-coverage
       - store_artifacts:
           path: coverage/lcov-report
       - store_artifacts:
           path: cypress/reports/integration/public/
+
+  cypress_tests:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - run:
+          name: install general dependencies
+          command: yarn install
+      - run:
+          name: install frontend dependencies
+          command: cd frontend && yarn install
+      - run:
+          name: Run cypress tests
+          command: yarn ci:test:cy:local
+
+  test_staging:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - run:
+          name: Run cypress tests against the staging environment
+          command: yarn cy:run-ci-staging
+
+  test_production:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - run:
+          name: Run cypress tests against the production environment
+          command: yarn cy:run-ci-production
 
 workflows:
   version: 2
@@ -57,5 +90,8 @@ workflows:
     jobs:
       - build
       - cypress_tests:
+          requires:
+            - build
+      - test_reports_and_coverage:
           requires:
             - build

@@ -2,7 +2,6 @@
   "baseUrl": "http://localhost:8081",
   "reporter": "./node_modules/mochawesome/src/mochawesome.js",
   "apiUrl": "http://localhost:8080",
-  "coverageFolder": "coverage",
   "env": {
     "apiUrl": "http://localhost:8080",
     "codeCoverage": {
