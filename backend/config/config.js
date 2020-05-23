@@ -18,7 +18,7 @@ module.exports = {
     password: process.env.MYSQL_PASSWORD,
     database: 'mernolithic_test',
     details: {
-      host: '127.0.0.1', // use 'localhost' if go back to using this step in CI
+      host: 'localhost', // use 'localhost' if go back to using this step in CI
       port: 3306,
       dialect: 'mysql',
     },
