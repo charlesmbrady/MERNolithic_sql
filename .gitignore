@@ -113,3 +113,4 @@ cypress/reports/integration/public/screenshots
 cypress/reports/integration/public/videos
 cypress/screenshots/*
 /cypress/videos/*
+/developmentbranch
