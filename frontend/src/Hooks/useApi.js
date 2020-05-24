@@ -16,8 +16,8 @@ export default function useApi(apiFunction, params) {
         setData(data);
         setIsLoading(false);
       })
-      .catch(() => {
-        setError('Something went wrong');
+      .catch((err) => {
+        setError(err.data);
         setIsLoading(false);
       });
   }, [apiFunction, params]);
