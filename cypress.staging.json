@@ -2,7 +2,12 @@
   "baseUrl": "https://mernolithic-staging.herokuapp.com",
   "reporter": "./node_modules/mochawesome/src/mochawesome.js",
   "apiUrl": "https://mernolithic-staging.herokuapp.com",
-  "env": {},
+  "env": {
+    "user_firstName": "Charles",
+    "user_lastName": "Brady",
+    "user_email": "charlesmbrady+test@gmail.com",
+    "user_password": "password1"
+  },
   "reporterOptions": {
     "reportDir": "cypress/reports/integration/reports/mocha",
     "quiet": true,

@@ -5,32 +5,22 @@ import { FormErrorsContext } from '../Contexts/FormErrorsContext';
 import { GlobalContext } from '../Contexts/GlobalContext';
 import API from '../Utilities/API';
 
-const useApi = (apiFunction, params) => {
-  const { user, setUser } = useContext(UserContext);
-  const { global, setGlobal } = useContext(GlobalContext);
-
+export default function useApi(apiFunction, params) {
   const [data, setData] = useState(null);
-
-  const executeCallback = () => {
-    // switch statment here...
-  };
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     apiFunction(params)
       .then(({ data }) => {
         setData(data);
-        setGlobal({ ...global, isLoading: false });
+        setIsLoading(false);
       })
-      .catch(() => {
-        setGlobal({
-          ...global,
-          error: 'Something went wrong',
-          isLoading: false,
-        });
+      .catch((err) => {
+        setError(err.data);
+        setIsLoading(false);
       });
   }, [apiFunction, params]);
 
-  return [data];
-};
-
-export default useApi;
+  return [isLoading, data, error];
+}
