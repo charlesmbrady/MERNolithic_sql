@@ -204,6 +204,7 @@ workflows:
           type: approval
           requires:
             - test_staging
+            - test_reports_staging
       - deploy_production:
           requires:
             - hold
