@@ -61,12 +61,12 @@ module.exports = {
     });
   },
   checkToken: function (req, res) {
-    const decoded = jwt.decode(req.cookies.token);
+    // const decoded = jwt.decode(req.cookies.token);
     const user = {
-      firstName: decoded.firstName,
-      lastName: decoded.lastName,
-      email: decoded.email,
-      id: decoded.id,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      UserId: req.body.UserId,
     };
     res.status(200).send(user);
   },
