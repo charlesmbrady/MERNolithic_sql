@@ -51,6 +51,7 @@ export default function App() {
     email: null,
     password: null,
     passwordConfirmation: null,
+    agreement: null,
   });
   const formValuesValue = useMemo(() => ({ formValues, setFormValues }), [
     formValues,
