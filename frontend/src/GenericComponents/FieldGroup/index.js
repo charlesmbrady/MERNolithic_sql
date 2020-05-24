@@ -8,11 +8,12 @@ export default function FieldGroup({
   label,
   name,
   placeholder,
+  className,
 }) {
   const { handleChange, formValues, formErrors } = useForm();
 
   return (
-    <div className='fieldGroup'>
+    <div className={`${className} fieldGroup`}>
       {children}
       <label className='label' data-test={`${name}-label`}>
         {label}

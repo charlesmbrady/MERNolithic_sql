@@ -1,9 +1,9 @@
 import './style.css';
 import React from 'react';
 
-export default function Hero({ children, mainItem, subItem }) {
+export default function Hero({ children, mainItem, subItem, className }) {
   return (
-    <div className='hero'>
+    <div className={`${className} hero`}>
       {children}
       {mainItem}
       {subItem}

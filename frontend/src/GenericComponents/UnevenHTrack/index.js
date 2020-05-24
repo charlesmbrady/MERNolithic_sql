@@ -1,15 +1,14 @@
 import './style.css';
 import React from 'react';
 
-export default function UnevenHTrack({ children, items }) {
+export default function UnevenHTrack({ children, className }) {
   return (
-    <div className='track'>
-      {children}
-      {items &&
-        items.length > 0 &&
-        items.map((item, i) => (
+    <div className={`${className} unevenTrack`}>
+      {children &&
+        children.length > 0 &&
+        children.map((child, i) => (
           <div className='trackItemContainer' key={i}>
-            {item}
+            {child}
           </div>
         ))}
     </div>

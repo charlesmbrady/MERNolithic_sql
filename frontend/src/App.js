@@ -12,7 +12,7 @@ import useApi from './Hooks/useApi';
 
 //********** Pages/Components **********//
 import Mask from './GenericComponents/Mask';
-import NavTrack from './Components/NavTrack';
+import Header from './Components/Header';
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
@@ -72,7 +72,7 @@ export default function App() {
             <Router>
               <div className='main-container'>
                 {isLoading && <Mask />}
-                <NavTrack />
+                <Header />
                 <Switch>
                   <Route exact path='/login' component={Login} />
                   <Route exact path='/register' component={Register} />
