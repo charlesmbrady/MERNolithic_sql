@@ -18,7 +18,7 @@ const withAuth = function (req, res, next) {
       }
     });
   } else {
-    res.status(500).send('Unauthorized: No token.');
+    res.status(401).send('Unauthorized: No token.');
   }
 };
 module.exports = withAuth;

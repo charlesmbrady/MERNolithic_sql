@@ -7,6 +7,8 @@ import { UserContext } from './Contexts/UserContext';
 import { GlobalContext } from './Contexts/GlobalContext';
 import { FormValuesContext } from './Contexts/FormValuesContext';
 import { FormErrorsContext } from './Contexts/FormErrorsContext';
+import API from './Utilities/API';
+import useApi from './Hooks/useApi';
 
 //********** Pages/Components **********//
 import Mask from './GenericComponents/Mask';
@@ -17,6 +19,8 @@ import Register from './Pages/Register';
 import Home from './Pages/Home';
 
 export default function App() {
+  const [isLoading, data, error] = useApi(API.checkToken);
+
   // Set UserContext provider values
   const [user, setUser] = useState({
     isAuthenticated: false,
@@ -59,7 +63,9 @@ export default function App() {
     formErrors,
     setFormErrors,
   ]);
-
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   let mask;
   if (global.isLoading) {
     mask = <Mask />;

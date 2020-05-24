@@ -68,7 +68,7 @@ module.exports = {
       email: req.body.email,
       UserId: req.body.UserId,
     };
-    res.status(200).send(user);
+    res.status(200).send('hello');
   },
   getUser: function (req, res) {},
   getUsers: function (req, res) {
