@@ -12,7 +12,7 @@ import useApi from './Hooks/useApi';
 
 //********** Pages/Components **********//
 import Mask from './GenericComponents/Mask';
-import NavTrack from './Components/NavTrack';
+import Header from './Components/Header';
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
@@ -63,13 +63,7 @@ export default function App() {
     formErrors,
     setFormErrors,
   ]);
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-  let mask;
-  if (global.isLoading) {
-    mask = <Mask />;
-  }
+
   return (
     <UserContext.Provider value={userValue}>
       <GlobalContext.Provider value={globalValue}>
@@ -77,8 +71,8 @@ export default function App() {
           <FormErrorsContext.Provider value={formErrorsValue}>
             <Router>
               <div className='main-container'>
-                {mask}
-                <NavTrack />
+                {isLoading && <Mask />}
+                <Header />
                 <Switch>
                   <Route exact path='/login' component={Login} />
                   <Route exact path='/register' component={Register} />
