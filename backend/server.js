@@ -45,7 +45,7 @@ app.use(function (err, req, res, next) {
 });
 
 const syncOptions = {
-  force: false,
+  force: true,
 };
 
 if (app.get('env') === 'test') {
@@ -53,9 +53,9 @@ if (app.get('env') === 'test') {
 }
 
 db.sequelize.sync(syncOptions).then(() => {
-  if (app.get('env') === 'test' || syncOptions.force === 'true') {
-    require('./db/seed');
-  }
+  // if (app.get('env') === 'test' || syncOptions.force === 'true') {
+  //   require('./db/seed');
+  // }
 
   console.log(`Starting the server in ${process.env.NODE_ENV} mode...`);
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); // Turn server on

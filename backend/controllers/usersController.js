@@ -31,10 +31,10 @@ module.exports = {
       });
   },
   authenticate: function (req, res) {
-    // const { email, password } = req.body;
+    const { email, password } = req.body;
     db.User.findAll({
       where: {
-        email: req.body.email,
+        email: email,
       },
     }).then((userMatch) => {
       //check username
@@ -43,7 +43,7 @@ module.exports = {
       }
 
       //check password
-      else if (!bcrypt.compareSync(req.body.password, userMatch[0].password)) {
+      else if (!bcrypt.compareSync(password, userMatch[0].password)) {
         res.status(401).json({ message: 'Error: Incorrect password' });
       } else {
         const payload = {
@@ -61,25 +61,15 @@ module.exports = {
     });
   },
   checkToken: function (req, res) {
-    // const decoded = jwt.decode(req.cookies.token);
     const user = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
       UserId: req.body.UserId,
     };
-    res.status(200).send('hello');
+    res.status(200).send('user authenticated');
   },
   getUser: function (req, res) {},
-  getUsers: function (req, res) {
-    db.User.findAll({})
-      .then((data) => {
-        res.json(data);
-      })
-      .catch((err) => {
-        res.json(err);
-      });
-  },
   logout: function (req, res) {
     res.clearCookie('token');
     res.send('cookie cleared');
