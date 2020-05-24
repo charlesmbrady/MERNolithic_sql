@@ -45,7 +45,7 @@ app.use(function (err, req, res, next) {
 });
 
 const syncOptions = {
-  force: true,
+  force: false,
 };
 
 if (app.get('env') === 'test') {
