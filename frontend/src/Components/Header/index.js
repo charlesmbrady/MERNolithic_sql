@@ -69,7 +69,11 @@ export default function Header({ className }) {
         )}
 
         {user.isAuthenticated && (
-          <Link className='headerLink' to='/dashboard'>
+          <Link
+            className='headerLink'
+            to='/dashboard'
+            onClick={() => clearForm()}
+          >
             Dashboard
           </Link>
         )}
