@@ -72,6 +72,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: install general dependencies
+          command: yarn install
+      - run:
           name: Run cypress tests against the staging environment
           command: yarn cy:run-ci-staging
 
