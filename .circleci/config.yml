@@ -184,6 +184,7 @@ workflows:
       - deploy_staging:
           requires:
             - cypress_tests
+            - test_reports_and_coverage
           filters:
             branches:
               only: development
