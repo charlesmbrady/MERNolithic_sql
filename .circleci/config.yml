@@ -130,3 +130,6 @@ workflows:
       - test_staging:
           requires:
             - deploy
+          filters:
+            branches:
+              only: development
