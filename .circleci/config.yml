@@ -183,7 +183,7 @@ workflows:
             - build
       - deploy_staging:
           requires:
-            - build
+            - cypress_tests
           filters:
             branches:
               only: development
