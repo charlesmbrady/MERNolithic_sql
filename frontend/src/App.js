@@ -63,13 +63,7 @@ export default function App() {
     formErrors,
     setFormErrors,
   ]);
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-  let mask;
-  if (global.isLoading) {
-    mask = <Mask />;
-  }
+
   return (
     <UserContext.Provider value={userValue}>
       <GlobalContext.Provider value={globalValue}>
@@ -77,7 +71,7 @@ export default function App() {
           <FormErrorsContext.Provider value={formErrorsValue}>
             <Router>
               <div className='main-container'>
-                {mask}
+                {isLoading && <Mask />}
                 <NavTrack />
                 <Switch>
                   <Route exact path='/login' component={Login} />
