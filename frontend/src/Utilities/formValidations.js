@@ -48,5 +48,9 @@ export default function validateForm(values) {
     errors.passwordConfirmation = 'Passwords must match';
   }
 
+  // Agreement to Terms of Use and Privacy Policy
+  if (!values.agreement) {
+    errors.agreement = 'You must agree to the Terms of Use and Privacy Policy';
+  }
   return errors;
 }

@@ -10,4 +10,5 @@ export const FormErrorsContext = createContext({
   email: '',
   password: '',
   passwordConfirmation: '',
+  agreement: '',
 });

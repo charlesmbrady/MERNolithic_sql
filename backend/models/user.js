@@ -8,52 +8,55 @@ module.exports = (sequelize, DataTypes) => {
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
       },
       firstName: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
       },
       lastName: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
       },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: {
           args: true,
-          msg: 'User already exists'
-        }
+          msg: 'User already exists',
+        },
       },
       password: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+      },
+      agreement: {
+        type: DataTypes.BOOLEAN,
       },
       isAdmin: {
         type: DataTypes.BOOLEAN,
-        defaultValue: false
-      }
+        defaultValue: false,
+      },
     },
     {
       timestamps: true,
       hooks: {
-        beforeValidate: function(user) {
+        beforeValidate: function (user) {
           if (user.changed('password')) {
-            return bcrypt.hash(user.password, 10).then(password => {
+            return bcrypt.hash(user.password, 10).then((password) => {
               user.password = password;
             });
           }
-        }
-      }
+        },
+      },
     }
   );
 
   // This will check if an unhashed password can be compared to the hashed password stored in our database
-  User.prototype.validPassword = function(password) {
+  User.prototype.validPassword = function (password) {
     return bcrypt.compareSync(password, this.password);
   };
 
   // Compares passwords
-  User.prototype.comparePasswords = function(password, callback) {
+  User.prototype.comparePasswords = function (password, callback) {
     bcrypt.compare(password, this.password, (error, isMatch) => {
       if (error) {
         return callback(error);
@@ -62,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
-  User.prototype.toJSON = function() {
+  User.prototype.toJSON = function () {
     const values = Object.assign({}, this.get());
     delete values.password;
     return values;

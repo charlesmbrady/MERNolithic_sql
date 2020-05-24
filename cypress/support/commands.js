@@ -24,6 +24,7 @@ Cypress.Commands.add('registerNewUser', (user) => {
   cy.get(Register.EMAIL).type(user.email);
   cy.get(Register.PASSWORD).type(user.password);
   cy.get(Register.PASSWORD_CONFIRMATION).type(user.passwordConfirmation);
+  cy.get(Register.AGREEMENT).check();
   cy.get(Register.SUBMIT).click();
 });
 

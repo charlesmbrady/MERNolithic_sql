@@ -26,6 +26,23 @@ const useForm = (callback) => {
     });
   };
 
+  const handleCheckbox = (e) => {
+    const { name, checked } = e.target;
+
+    if (checked == true) {
+      console.log('hey there');
+      setFormValues({
+        ...formValues,
+        [name]: true,
+      });
+    } else {
+      setFormValues({
+        ...formValues,
+        [name]: false,
+      });
+    }
+  };
+
   const clearForm = () => {
     setGlobal({ ...global, isSubmitting: false });
     let tempValues = { ...formValues };
@@ -74,6 +91,7 @@ const useForm = (callback) => {
       formErrors.firstName ||
       formErrors.lastName ||
       formErrors.email ||
+      formErrors.agreement ||
       formErrors.password ||
       formErrors.passwordConfirmation
     ) {
@@ -83,6 +101,7 @@ const useForm = (callback) => {
       firstName: formValues.firstName,
       lastName: formValues.lastName,
       email: formValues.email,
+      agreement: formValues.agreement,
       password: formValues.password,
       passwordConfirmation: formValues.passwordConfirmation,
     }).then((res) => {
@@ -104,6 +123,7 @@ const useForm = (callback) => {
   return {
     handleChange,
     handleSubmit,
+    handleCheckbox,
     clearForm,
     formValues,
     formErrors,
