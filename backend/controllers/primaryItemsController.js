@@ -5,11 +5,8 @@ require('dotenv').config();
 // Defining methods for the primary items controller
 module.exports = {
   create: function (req, res) {
-    const decoded = jwt.decode(req.cookies.token);
     const primary = req.body;
-    primary.UserId = decoded.id;
 
-    // const { name } = req.body;
     db.Primary.create(primary)
       .then((result) => {
         res.json(result);
@@ -20,11 +17,9 @@ module.exports = {
       });
   },
   getById: function (req, res) {
-    const decoded = jwt.decode(req.cookies.token);
-
     db.Primary.findAll({
       where: {
-        UserId: decoded.id,
+        UserId: req.body.UserId,
       },
     }).then((dbPrimaries, err) => {
       if (err) {
@@ -35,11 +30,9 @@ module.exports = {
     });
   },
   getAllByUserId: function (req, res) {
-    const decoded = jwt.decode(req.cookies.token);
-
     db.Primary.findAll({
       where: {
-        UserId: decoded.id,
+        UserId: req.body.UserId,
       },
     }).then((dbPrimaries, err) => {
       if (err) {
@@ -49,11 +42,9 @@ module.exports = {
     });
   },
   updateById: function (req, res) {
-    const decoded = jwt.decode(req.cookies.token);
-
     db.Primary.findAll({
       where: {
-        UserId: decoded.id,
+        UserId: req.body.UserId,
       },
     }).then((dbPrimaries, err) => {
       if (err) {
