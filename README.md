@@ -33,6 +33,31 @@ MySQL-Express-React-Node app with custom webpack config, docker, CI config, test
    PORT=8080
    ```
 
+   also create another one in the /backend directory to be accessed by the server.js and the /config
+
+   ```
+   MYSQL_USER="root"
+   MYSQL_PASSWORD="12345678"
+   MYSQL_HOST="localhost"
+   AUTH_SECRET=your_auth_secret_key
+   ADMIN_USER_PWD=admin_password
+   USER_PWD="12345678"
+   FORCE_SYNC=false
+   NODE_ENV=test
+   PROD_DATABASE_USER=
+   PROD_DATABASE_PASSWORD=
+   PROD_DATABASE_HOST=
+   PROD_DATABASE=
+   STAGE_DATABASE_USER=
+   STAGE_DATABASE_PASSWORD=
+   STAGE_DATABASE_HOST=
+   STAGE_DATABASE=
+   LOCAL_DATABASE_USER=
+   LOCAL_DATABASE_PASSWORD=
+   LOCAL_DATABASE_HOST=
+   LOCAL_DATABASE=
+   ```
+
 4. Run `yarn install` from the project root to install project dependencies
 
 5. `cd backend` and run `yarn install` to install backend server dependencies
@@ -97,3 +122,7 @@ Help with SQL associations and file seperation - https://github.com/sequelize/se
 - [Awesome video on cypress fullstack code coverage](https://www.youtube.com/watch?v=C8g5X4vCZJA)
 - https://webpack.js.org/guides/production/ use this to split webpack config
 - https://github.com/cypress-io/code-coverage
+
+```
+
+```
