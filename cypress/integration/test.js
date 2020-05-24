@@ -6,9 +6,8 @@ import Login from '../elements/login';
 import Register from '../elements/register';
 
 describe('User Authentication', function () {
-  const userOne = new User();
   it('User can register for new account', () => {
-    console.log(userOne);
+    const userOne = new User();
     cy.visit('/');
     cy.get(Nav.REGISTER).click();
     cy.url().should('include', '/register');
@@ -22,30 +21,23 @@ describe('User Authentication', function () {
   });
 
   it('User can login', () => {
+    const userOne = new User();
     cy.visit('/');
+    cy.registerNewUser(userOne);
     cy.get(Nav.LOGIN).click();
     cy.url().should('include', '/login');
     cy.get(Login.EMAIL).type(userOne.email);
     cy.get(Login.PASSWORD).type(userOne.password);
     cy.get(Login.SUBMIT).click();
-    // cy.url().should('include', '/dashboard');
+    cy.url().should('include', '/dashboard');
   });
 
   it('Can logout', () => {
+    const userOne = new User();
     cy.visit('/');
-    cy.get(Nav.LOGIN).click();
-    cy.get(Login.EMAIL).type(userOne.email);
-    cy.get(Login.PASSWORD).type(userOne.password);
-    cy.get(Login.SUBMIT).click();
+    cy.registerNewUser(userOne);
+    cy.login(userOne);
     cy.get(Nav.LOGOUT).click();
-  });
-
-  it('Authenticated user will be directed to dashboard after successful login', () => {
-    const userTwo = new User();
-
-    cy.registerNewUser(userTwo);
-    cy.login(userTwo);
-    cy.url().should('contain', 'dashboard');
   });
 
   it('Non-authenticated user will be redirect to login from protected route', () => {
