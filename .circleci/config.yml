@@ -84,7 +84,7 @@ jobs:
           name: Run cypress tests against the production environment
           command: yarn cy:run-ci-production
 
-  deploy:
+  deploy_staging:
     docker:
       - image: circleci/node:12.16.3-browsers # replace with the image you need
     steps:
@@ -101,12 +101,14 @@ jobs:
             sudo ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
       - run:
           name: Deploy heroku app
-          command: bash deploy-heroku.sh
+          command: |
+            echo "Pushing branch ${CIRCLE_BRANCH} to app ${HEROKU_APP_STAGING}"
+            git remote add heroku https://git.heroku.com/${HEROKU_APP_STAGING}.git
+            git push heroku ${CIRCLE_BRANCH}:master
       - run:
           name: Set BUILD_NUM and COMPARE_URL on Heroku to CIRCLECI values
           command: |
-            source ./setup-env.sh
-            heroku config:set BUILD_NUM=${CIRCLE_BUILD_NUM} COMPARE_URL=${CIRCLE_COMPARE_URL} -a ${HEROKU_APP}
+            heroku config:set BUILD_NUM=${CIRCLE_BUILD_NUM} COMPARE_URL=${CIRCLE_COMPARE_URL} -a ${HEROKU_APP_STAGING}
 
 workflows:
   version: 2
@@ -119,12 +121,15 @@ workflows:
       - test_reports_and_coverage:
           requires:
             - build
-      # - deploy:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: development
-      # - test_staging:
-      #     requires:
-      #       - deploy
+      - deploy_staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only: development
+      - test_staging:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only: development
