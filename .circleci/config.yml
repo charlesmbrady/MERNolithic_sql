@@ -78,6 +78,20 @@ jobs:
           name: Run cypress tests against the staging environment
           command: yarn cy:run-ci-staging
 
+  test_reports_staging:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - run:
+          name: install general dependencies
+          command: yarn install
+      - run:
+          name: Run cypress tests
+          command: yarn test:create-reports-staging
+      - store_artifacts:
+          path: cypress/reports/integration/public/
+
   test_production:
     <<: *defaults
 
@@ -89,6 +103,20 @@ jobs:
       - run:
           name: Run cypress tests against the production environment
           command: yarn cy:run-ci-production
+
+  test_reports_production:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - run:
+          name: install general dependencies
+          command: yarn install
+      - run:
+          name: Run cypress tests
+          command: yarn test:create-reports-production
+      - store_artifacts:
+          path: cypress/reports/integration/public/
 
   deploy_staging:
     docker:
@@ -162,6 +190,34 @@ workflows:
       - test_staging:
           requires:
             - deploy_staging
+          filters:
+            branches:
+              only: development
+      - test_reports_staging:
+          requires:
+            - deploy_staging
+          filters:
+            branches:
+              only: development
+      - hold: # <<< A job that will require manual approval in the CircleCI web application.
+          type: approval
+          requires:
+            - test_staging
+      - deploy_production:
+          requires:
+            - hold
+          filters:
+            branches:
+              only: development
+      - test_production:
+          requires:
+            - deploy_production
+          filters:
+            branches:
+              only: development
+      - test_reports_production:
+          requires:
+            - deploy_production
           filters:
             branches:
               only: development
