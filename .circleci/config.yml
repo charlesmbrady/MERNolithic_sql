@@ -119,12 +119,12 @@ workflows:
       - test_reports_and_coverage:
           requires:
             - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: development
-      - test_staging:
-          requires:
-            - deploy
+      # - deploy:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: development
+      # - test_staging:
+      #     requires:
+      #       - deploy
