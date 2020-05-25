@@ -23,5 +23,6 @@
   "screenshotsFolder": "cypress/reports/integration/public/screenshots",
   "videoCompression": false,
   "browser": "electron",
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 4000
 }

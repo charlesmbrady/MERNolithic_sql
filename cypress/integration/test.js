@@ -16,20 +16,21 @@ describe('User Authentication', function () {
     cy.get(Register.EMAIL).type(userOne.email);
     cy.get(Register.PASSWORD).type(userOne.password);
     cy.get(Register.PASSWORD_CONFIRMATION).type(userOne.passwordConfirmation);
+    cy.get(Register.AGREEMENT).check();
     cy.get(Register.SUBMIT).click();
-    // cy.url().should('include', '/login');
+    cy.url().should('include', '/login');
   });
 
   it('User can login', () => {
     const userTwo = new User();
     cy.visit('/');
-    cy.registerNewUser(userTwo);
-    cy.get(Nav.LOGIN).click();
-    cy.url().should('include', '/login');
-    cy.get(Login.EMAIL).type(userTwo.email);
-    cy.get(Login.PASSWORD).type(userTwo.password);
-    cy.get(Login.SUBMIT).click();
-    cy.url().should('include', '/dashboard');
+    cy.registerNewUser(userTwo).then((res) => {
+      cy.wait(2000);
+      cy.get(Login.EMAIL).type(userTwo.email);
+      cy.get(Login.PASSWORD).type(userTwo.password);
+      cy.get(Login.SUBMIT).click();
+      cy.url().should('include', '/dashboard');
+    });
   });
 
   it('Can logout', () => {
