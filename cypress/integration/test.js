@@ -21,13 +21,13 @@ describe('User Authentication', function () {
   });
 
   it('User can login', () => {
-    const userOne = new User();
+    const userTwo = new User();
     cy.visit('/');
-    cy.registerNewUser(userOne);
+    cy.registerNewUser(userTwo);
     cy.get(Nav.LOGIN).click();
     cy.url().should('include', '/login');
-    cy.get(Login.EMAIL).type(userOne.email);
-    cy.get(Login.PASSWORD).type(userOne.password);
+    cy.get(Login.EMAIL).type(userTwo.email);
+    cy.get(Login.PASSWORD).type(userTwo.password);
     cy.get(Login.SUBMIT).click();
     cy.url().should('include', '/dashboard');
   });
