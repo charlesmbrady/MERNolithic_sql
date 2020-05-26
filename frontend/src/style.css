@@ -9,6 +9,9 @@
   --sixth: #d5ece6;
   --success: #00b989;
 }
+* {
+  box-sizing: border-box;
+}
 
 body,
 html,
@@ -17,7 +20,6 @@ html,
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  box-sizing: border-box;
   font-family: 'Hind', sans-serif;
 }
 
