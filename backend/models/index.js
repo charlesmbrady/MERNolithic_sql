@@ -15,7 +15,7 @@ config.details.operatorsAliases = {
   $gt: Sequelize.Op.gt,
   $lt: Sequelize.Op.lt,
   $lte: Sequelize.Op.lte,
-  $like: Sequelize.Op.like
+  $like: Sequelize.Op.like,
 };
 
 if (process.env[config.use_env_variable]) {
@@ -40,7 +40,7 @@ if (process.env[config.use_env_variable]) {
 }
 
 fs.readdirSync(__dirname)
-  .filter(file => {
+  .filter((file) => {
     return (
       file.indexOf('.') !== 0 &&
       file !== basename &&
@@ -48,12 +48,12 @@ fs.readdirSync(__dirname)
       file !== 'index.js'
     );
   })
-  .forEach(file => {
+  .forEach((file) => {
     const model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;
   });
 
-Object.keys(db).forEach(modelName => {
+Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }

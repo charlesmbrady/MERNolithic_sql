@@ -29,6 +29,7 @@ describe('User Authentication', function () {
       cy.get(Login.EMAIL).type(userTwo.email);
       cy.get(Login.PASSWORD).type(userTwo.password);
       cy.get(Login.SUBMIT).click();
+      cy.wait(2000);
       cy.url().should('include', '/dashboard');
     });
   });
