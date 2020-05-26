@@ -1,5 +1,5 @@
 const path = require('path'); // Lets us use __dirname as the relative filepath from this file
-require('dotenv').config(path.join(__dirname, '../.env'));
+require('dotenv').config();
 const express = require('express'); // Require express
 const app = express(); // Make app with express
 const PORT = process.env.PORT || 8080; // Set port to .env or default
