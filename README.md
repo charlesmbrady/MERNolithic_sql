@@ -1,6 +1,8 @@
 # MERNolithic_sql
 
-MySQL-Express-React-Node app with custom webpack config, docker, CI config, test suites, and JWT authentication stored as cookie
+**Overview**
+
+MySQL-Express-React-Node application boilerplate with custom webpack config, docker, CI/CD config, Test-Driven Development, and JWT authentication stored as cookie
 
 - Staging environment: https://mernolithic-staging.herokuapp.com/
 - Production environment: https://mernolithic.herokuapp.com/
@@ -85,44 +87,14 @@ Make sure your default git branch for this project is called "development" inste
 
 ## Testing
 
-You can easily run tests against your different environments with these commands. After the tests complete, your browser will automatically open with the test results report. If you ran in the local environment, it will also open a fullstack coverage report of your entire project.
+You can easily take advantage of Live Test-Driven Development by running the command `yarn dev`. This will automatically start your application and open the cypress test runner. Simply tell cypress which test files to run and whenever you save your code, it will hot reload and rerun the specified tests.
 
-**Local** _\*First make sure you run `yarn build`_
+If you set up the CI/CD pipeline with CircleCI, tests reports will be stored there as artifacts for all three environments, but you can run tests and get reports at anytime locally by simply running `yarn test:local:test-and-report`
 
-> `yarn test:local:test-and-report`
+### Contributing
 
-**Staging** _\*First to add stage database credentials to .env file or ~/backend/config/config.js_
+If you'd like to help improve MERNolithic, please submit a Pull Request with detailed comments!
 
-> `yarn test:staging:test-and-report`
+### Credits
 
-**Production** _\*First to add stage database credentials to .env file or ~/backend/config/config.js_
-
-> `yarn test:production:test-and-report`
-
-### Results
-
-- Run tests and generate a test report using mochawesome. From the root, use command `test:create-reports` which will run all `cypress/integration/*-spec.js` files. Then you can open the `cypress/reports/integration/public/report.html` file to view the test report in the browser
-
-### Code Coverage
-
-- run tests using cypress.io. From the root, use command `yarn dev:coverage` which will open the test runner. Then select "run all specs" to run all the tests. Then you can open the `coverage/lcov-report/index.html` file to view the fullstack code coverage report in the browser
-- `npx nyc report --reporter=text-summary` will print out a coverage summary in the console
-
-#### Helpful Links
-
-Starting with React/Webpack/Babel from scratch - https://www.valentinog.com/blog/babel/
-Using CSS Grids - https://css-tricks.com/snippets/css/complete-guide-grid/
-Help with SQL associations and file seperation - https://github.com/sequelize/sequelize/issues/4578
-
-- [Sequelize Queries](http://docs.sequelizejs.com/en/latest/docs/querying/)
-- [Sequelize Associations Part 1](http://docs.sequelizejs.com/en/latest/docs/associations/)
-- [Sequelize Association Part 2](http://docs.sequelizejs.com/en/latest/api/associations/)
-- [Sequelize Migrations](http://docs.sequelizejs.com/en/latest/docs/migrations/)
-- [bcrypt (NPM)](https://www.npmjs.com/package/bcrypt)
-- [Awesome video on cypress fullstack code coverage](https://www.youtube.com/watch?v=C8g5X4vCZJA)
-- https://webpack.js.org/guides/production/ use this to split webpack config
-- https://github.com/cypress-io/code-coverage
-
-```
-
-```
+MERNolithic is currently being developed and maintained by charlesmbrady.

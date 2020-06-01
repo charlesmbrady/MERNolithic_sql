@@ -5,3 +5,12 @@
   background: rgba(0, 0, 0, 0.424);
   z-index: 10;
 }
+
+.loader {
+  color: white;
+  width: 20%;
+  height: 20%;
+  margin: 0 auto;
+  justify-content: center;
+  vertical-align: center;
+}
