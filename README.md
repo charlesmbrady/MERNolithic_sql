@@ -1,6 +1,8 @@
 # MERNolithic_sql
 
-MySQL-Express-React-Node app with custom webpack config, docker, CI config, test suites, and JWT authentication stored as cookie
+**Overview**
+
+MySQL-Express-React-Node application boilerplate with custom webpack config, docker, CI/CD config, Test-Driven Development, and JWT authentication stored as cookie
 
 - Staging environment: https://mernolithic-staging.herokuapp.com/
 - Production environment: https://mernolithic.herokuapp.com/
@@ -123,6 +125,10 @@ Help with SQL associations and file seperation - https://github.com/sequelize/se
 - https://webpack.js.org/guides/production/ use this to split webpack config
 - https://github.com/cypress-io/code-coverage
 
-```
+### Contributing
 
-```
+If you'd like to help improve MERNolithic, please submit a Pull Request with detailed comments!
+
+### Credits
+
+MERNolithic is currently being developed and maintained by charlesmbrady.
