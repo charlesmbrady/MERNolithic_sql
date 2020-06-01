@@ -1,14 +1,5 @@
 import './style.css';
 import React from 'react';
-import Hero from '../../GenericComponents/Hero';
-import mysql from '../../Images/mysql.svg';
-import express from '../../Images/expressjs.svg';
-import heroku from '../../Images/heroku.svg';
-import nodejs from '../../Images/nodejs.svg';
-import docker from '../../Images/docker.svg';
-import cypress from '../../Images/cypress.svg';
-import circleci from '../../Images/circleci.svg';
-import react from '../../Images/react.svg';
 
 export default function Home() {
   return (
