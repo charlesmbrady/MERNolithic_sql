@@ -21,44 +21,28 @@ MySQL-Express-React-Node application boilerplate with custom webpack config, doc
    - ~/cypress.staging.json and ~/cypress.production.json
    - App title in ~/frontend/src/index.html
 
-3. Create `.env` file in project root with following properties (note: open mysql workbench and put in credentials for you local connection)
+3. Create a `.env` file with the following info in the /backend directory to be accessed by the server.js and config.js. To run against the local database, you may need to change the LOCAL_USER and LOCAL_PASSWORD names, but you will definitely need to add the local database name to match the one you create locally. If you want to run the app with the stage or production database for some reason, be sure to fill in that information as well.
 
-   ```
-   MYSQL_USER=root
-   MYSQL_PASSWORD=12345678
-   MYSQL_HOST=localhost
-   AUTH_SECRET=your_auth_secret_key
-   ADMIN_USER_PWD=admin_password
-   USER_PWD=12345678
-   FORCE_SYNC=false
-   NODE_ENV=test
-   PORT=8080
-   ```
+```
+AUTH_SECRET="mysecret"
+NODE_ENV=test
+FORCE_SYNC=false
+PORT=8080
 
-   also create another one in the /backend directory to be accessed by the server.js and the /config
+LOCAL_USER="root"
+LOCAL_PASSWORD="12345678"
+LOCAL_DATABASE_NAME="mernolithic_test"
 
-   ```
-   MYSQL_USER="root"
-   MYSQL_PASSWORD="12345678"
-   MYSQL_HOST="localhost"
-   AUTH_SECRET=your_auth_secret_key
-   ADMIN_USER_PWD=admin_password
-   USER_PWD="12345678"
-   FORCE_SYNC=false
-   NODE_ENV=test
-   PROD_DATABASE_USER=
-   PROD_DATABASE_PASSWORD=
-   PROD_DATABASE_HOST=
-   PROD_DATABASE=
-   STAGE_DATABASE_USER=
-   STAGE_DATABASE_PASSWORD=
-   STAGE_DATABASE_HOST=
-   STAGE_DATABASE=
-   LOCAL_DATABASE_USER=
-   LOCAL_DATABASE_PASSWORD=
-   LOCAL_DATABASE_HOST=
-   LOCAL_DATABASE=
-   ```
+PROD_DATABASE_USER=
+PROD_DATABASE_PASSWORD=
+PROD_DATABASE_HOST=
+PROD_DATABASE_NAME=
+
+STAGE_DATABASE_USER=
+STAGE_DATABASE_PASSWORD=
+STAGE_DATABASE_HOST=
+STAGE_DATABASE_NAME=
+```
 
 4. Run `yarn install` from the project root to install project dependencies
 
@@ -77,7 +61,7 @@ MySQL-Express-React-Node application boilerplate with custom webpack config, doc
 
 ## Deploying to Heroku
 
-- After running the `initialize.sh` script, you will have a Staging and a Production environment already deployed to Heroku.
+- After running the `initialize.sh` script, you will have a Staging and a Production environment already deployed to Heroku. Go to each respective environment and create the AUTH_SECRET environment variable in the "Settings" tab of your app and enter the value you created for your auth secret.
 
 - To deploy whatever is on your git master branch again later, use command `git push staging master` or `git push production master` depending on which environment you want to deploy
 
