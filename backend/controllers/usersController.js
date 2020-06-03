@@ -13,12 +13,14 @@ module.exports = {
       lastName,
       email,
       password,
+      agreement,
       passwordConfirmation,
     } = req.body;
     db.User.create({
       firstName,
       lastName,
       email,
+      agreement,
       password,
       passwordConfirmation,
     })
