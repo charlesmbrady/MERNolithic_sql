@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 require('dotenv').config();
 const cookieParser = require('cookie-parser'); // for the auth token
-const moment = require('moment');
+const secret = process.env.AUTH_SECRET;
 
 // Defining methods for the usersController
 module.exports = {
@@ -13,12 +13,14 @@ module.exports = {
       lastName,
       email,
       password,
+      agreement,
       passwordConfirmation,
     } = req.body;
     db.User.create({
       firstName,
       lastName,
       email,
+      agreement,
       password,
       passwordConfirmation,
     })
@@ -55,7 +57,7 @@ module.exports = {
         const signOptions = {
           expiresIn: '2h',
         };
-        const token = jwt.sign(payload, 'secret', signOptions);
+        const token = jwt.sign(payload, secret, signOptions);
         res.cookie('token', token, { httpOnly: true }).sendStatus(200);
       }
     });

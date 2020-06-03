@@ -17,7 +17,7 @@ if (global.__coverage__) {
 }
 
 app.use(cookieParser());
-app.use(routes); // Link routesx
+app.use(routes); // Link routes
 
 app.get('/healthcheck', (req, res) => {
   res.send('App is running!');
@@ -45,12 +45,12 @@ app.use(function (err, req, res, next) {
 });
 
 const syncOptions = {
-  force: true,
+  force: process.env.FORCE_SYNC,
 };
 
-if (app.get('env') === 'test') {
-  syncOptions.force = true;
-}
+// if (app.get('env') === 'test') {
+//   syncOptions.force = true;
+// }
 
 db.sequelize.sync(syncOptions).then(() => {
   // if (app.get('env') === 'test' || syncOptions.force === 'true') {
