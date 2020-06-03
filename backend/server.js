@@ -7,7 +7,6 @@ const db = require('./models/index.js'); // Require the database connection for 
 const routes = require('./routes'); // Require the routes to use for api endpoints
 const cookieParser = require('cookie-parser'); // for the auth token
 const withAuth = require('./middleware');
-console.log(process.env);
 
 // Middlewares
 app.use(express.urlencoded({ limit: '100mb', extended: true }));

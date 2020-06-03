@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const secret = process.env.AUTH_SECRET;
 
 const withAuth = function (req, res, next) {
   //set token to any thing it could be stored in
@@ -9,7 +10,7 @@ const withAuth = function (req, res, next) {
     req.cookies.token;
 
   if (token) {
-    jwt.verify(token, 'secret', (err, decoded) => {
+    jwt.verify(token, secret, (err, decoded) => {
       if (err) {
         res.status(401).send('Unauthorized: Invalid token... ' + err);
       } else {
