@@ -55,12 +55,12 @@ heroku addons:create jawsdb --remote production
 # #initial deploys ########################################
 # staging
 echo "Deploying to staging..."
-git push staging master
+git push staging development:master
 echo "...completed"
 
 # production
 echo "Deploying to production..."
-git push production master
+git push production development:master
 echo "...completed"
 
 

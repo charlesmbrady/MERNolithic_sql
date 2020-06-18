@@ -52,12 +52,11 @@ STAGE_DATABASE_NAME=
 
 7. Run `initialize.sh` command from the project root to automatically create staging and production Heroku remotes with MySql databases provisioned and deployed.
 
-8. You can run the application locally by running command `yarn start-dev` from the project root to start the server on localhost:8080, and then `cd frontend` in another terminal and run `yarn start-dev` to start the Webpack dev server for the React frontend which you can view at localhost:8081
-   this has hot reloading for easier development
+8. You can run the application locally by running command `yarn start-dev` from the project root which will start the client and server in development mode with hot reloading, accessible in your browser at localhost:8080
 
-9. To setup circleci, first go to your dashboard on circleci.com. Click "Add Project" and choose the repo for your project. Then select "Build Now" to start building the project. Update the "working_directory" variable at the top of ~/.circleci/config.yml to match your repo name as well
+9. To setup the CI/CD pipeline, first go to your dashboard on circleci.com. Click "Add Project" and choose the repo for your project. Then select "Build Now" to start building the project. Update the "working_directory" variable at the top of ~/.circleci/config.yml to match your repo name as well
 
-10. to rename your Heroku staging and production apps, use command `heroku apps:rename --remote staging newname`. Insert the desired name of the app instead of "newname" and you can select the "production" remote instead of staging to rename produciton as well. Be sure to update the database names in mysql ~/backend/config/config.js to match your app name too. copy and paste the new app names in readme.md
+10. to rename your Heroku staging and production apps, use command `heroku apps:rename --remote staging newname`. Insert the desired name of the app instead of "newname" and you can select the "production" remote instead of staging to rename produciton as well. copy and paste the new app names in readme.md
 
 ## Deploying to Heroku
 
@@ -73,7 +72,7 @@ Make sure your default git branch for this project is called "development" inste
 
 You can easily take advantage of Live Test-Driven Development by running the command `yarn dev`. This will automatically start your application and open the cypress test runner. Simply tell cypress which test files to run and whenever you save your code, it will hot reload and rerun the specified tests.
 
-If you set up the CI/CD pipeline with CircleCI, tests reports will be stored there as artifacts for all three environments, but you can run tests and get reports at anytime locally by simply running `yarn test:local:test-and-report`
+If you set up the CI/CD pipeline with CircleCI, tests reports will be stored there as artifacts for all three (local, staging, production) environments, but you can run tests and get reports at anytime locally by simply running `yarn test:local:test-and-report`, which will launch the app, run tests, and automatically open your test results and coverage reports in your browser.
 
 ### Contributing
 
